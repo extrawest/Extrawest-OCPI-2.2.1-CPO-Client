@@ -1,0 +1,71 @@
+name: Build Project with OpenAPI Generator and Publish to Maven
+
+on: [push]
+
+jobs:
+  build-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: 17
+          distribution: 'adopt'
+
+      - name: Backup original pom.xml
+        run: |
+          cp pom.xml pom_backup.xml
+
+      - name: Exclude OpenAPI Generator Plugin
+        run: |
+            mvn help:effective-pom -Doutput=effective-pom.xml
+            sed -i '/<plugin>.*openapi-generator-maven-plugin<\/artifactId>/{:a;N;/<\/plugin>/!ba};/<plugin>.*openapi-generator-maven-plugin<\/artifactId>/d' effective-pom.xml
+            mv effective-pom.xml pom.xml
+            mvn clean install -DskipTests
+
+      - name: Start Java application
+        run: |
+          mvn spring-boot:run &
+
+      - name: Wait for Java application to start
+        run: sleep 40
+
+      - name: Download file
+        run: |
+          wget http://localhost:8080/v3/api-docs -O downloaded_file.json
+
+      - name: Turn off Java application
+        run: |
+          # Find and kill the Java application process
+          # Replace the following line with your actual command to turn off the Java application
+          kill $(lsof -t -i:8080)
+
+      - name: Restore original pom.xml
+        run: |
+          mv pom_backup.xml pom.xml
+
+#      - name: Include OpenAPI Generator Plugin with previous configuration
+#        run: |
+#          cp effective-pom.xml pom.xml
+
+      - name: Exclude dependencies and packages
+        run: |
+          sed -i 's/<exclusion>/<exclusion><groupId>com.extrawest<\/groupId><artifactId>Extrawest-OCPI-2.2.1-EMSP-Server<\/artifactId><\/exclusion><exclusion>/g' pom.xml
+          sed -i 's/<exclude>com.extrawest.ocpi221emsp_client.service\/**<\/exclude>//g' pom.xml
+
+      - name: Build project with OpenAPI Generator
+        run: |
+          mvn clean generate-sources -Dopenapi.generator.inputSpec=downloaded_file
+
+      - name: Publish to Maven repository
+        run: |
+          mvn clean deploy --settings settings.xml
+
+      - name: Display build output
+        run: |
+          # Replace the following line with your actual command to display build output
+          cat target/build.log

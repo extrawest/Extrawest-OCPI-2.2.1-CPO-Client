@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.extrawest</groupId>
+	<artifactId>Extrawest-OCPI-2.2.1-CPO-Client</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>Extrawest-OCPI-2.2.1-CPO-Client</name>
+	<description>Extrawest-OCPI-2.2.1-CPO-Client</description>
+	<url>https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client</url>
+	<inceptionYear>2023</inceptionYear>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Vladyslav Tertyshnyi</name>
+			<email>vladyslav.tertyshnyi@extrawest.com</email>
+			<organization>extrawest</organization>
+			<organizationUrl>https://www.extrawest.com/</organizationUrl>
+		</developer>
+	</developers>
+	<organization>
+		<name>Extrawest</name>
+		<url>https://www.extrawest.com/</url>
+	</organization>
+	<scm>
+		<connection>scm:git:git://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client.git</connection>
+		<developerConnection>scm:git:ssh://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client.git</developerConnection>
+		<url>https://github.com/extrawest/Extrawest-OCPI-2.2.1</url>
+	</scm>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.extrawest</groupId>
+			<artifactId>Extrawest-OCPI-2.2.1-CPO-Server</artifactId>
+			<version>2023.7.12</version>
+		</dependency>
+
+
+<!--_________________________________________________________________________________________________________________-->
+		<!-- dependencies are needed for the client being generated -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>1.6.8</version>
+		</dependency>
+
+		<!-- You can find the dependencies for the library configuration you chose by looking in JavaClientCodegen.
+             Then find the corresponding dependency on Maven Central, and set the versions in the property section below -->
+
+		<!-- HTTP client: jersey-client -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+
+		<!-- @Nullable annotation -->
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>jsr305</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
+		<!-- JSON processing: jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-base</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.fasterxml.jackson.core</groupId>-->
+<!--			<artifactId>jackson-core</artifactId>-->
+<!--			<version>2.14.2</version>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.15.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+			<version>2.14.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>2.14.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>jackson-databind-nullable</artifactId>
+			<version>0.2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.scribejava</groupId>
+			<artifactId>scribejava-apis</artifactId>
+			<version>8.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tomitribe</groupId>
+			<artifactId>tomitribe-http-signatures</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+		<!-- Joda time: if you use it -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-joda</artifactId>
+			<version>2.14.2</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.12.5</version>
+		</dependency>
+
+		<!-- Base64 encoding that works in both JVM and Android -->
+		<dependency>
+			<groupId>com.brsanthu</groupId>
+			<artifactId>migbase64</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<!--    Date        -->
+		<dependency>
+			<groupId>org.threeten</groupId>
+			<artifactId>threetenbp</artifactId>
+			<version>1.6.8</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.name}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<skip>true</skip>
+					<classifier>exec</classifier>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-compiler-plugin</artifactId>-->
+<!--				<configuration>-->
+<!--					<excludes>-->
+<!--						<exclude>com/extrawest/ocpi221emsp_client/service/**</exclude>-->
+<!--					</excludes>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-source</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.jreleaser</groupId>
+				<artifactId>jreleaser-maven-plugin</artifactId>
+				<version>1.5.0</version>
+				<configuration>
+					<jreleaser>
+						<project>
+							<description>OCPP operation tester for the Charge Points</description>
+							<website>https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/tree/main</website>
+							<docsUrl>https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/tree/main</docsUrl>
+							<license>APACHE-2.0</license>
+							<copyright>2023 Extrawest</copyright>
+						</project>
+						<signing>
+							<active>ALWAYS</active>
+							<armored>true</armored>
+						</signing>
+						<deploy>
+							<maven>
+								<nexus2>
+									<maven-central>
+										<active>ALWAYS</active>
+										<url>https://s01.oss.sonatype.org/service/local</url>;
+										<closeRepository>false</closeRepository>
+										<releaseRepository>false</releaseRepository>
+										<stagingRepositories>target/staging-deploy</stagingRepositories>
+										<snapshotUrl>https://s01.oss.sonatype.org/content/repositories/snapshots/</snapshotUrl>
+									</maven-central>
+								</nexus2>
+							</maven>
+						</deploy>
+					</jreleaser>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.openapitools</groupId>
+				<artifactId>openapi-generator-maven-plugin</artifactId>
+				<version>5.4.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>
+								downloaded_file.json
+							</inputSpec>
+							<generatorName>java</generatorName>
+							<library>resttemplate</library>
+							<apiPackage>com.openapi.generated.springboot.api</apiPackage>
+							<modelPackage>com.openapi.generated.springboot.dto</modelPackage>
+							<supportingFilesToGenerate>
+								ApiCallback.java,ApiClient.java,ApiException.java,ApiResponse.java,Configuration.java,Pair.java,ProgressRequestBody.java,ProgressResponseBody.java,StringUtil.java,ApiKeyAuth.java,Authentication.java,HttpBasicAuth.java,JSON.java,OAuth.java,EncodingUtils.java,JavaTimeFormatter.java,RFC3339DateFormat.java,<!--CustomInstantDeserializer.java-->
+							</supportingFilesToGenerate>
+							<configOptions>
+								<generateSupportingFiles>true</generateSupportingFiles>
+								<!--                                <generateApis>false</generateApis>-->
+								<!--                                <delegatePattern>true</delegatePattern>-->
+								<!--                                <serializableModel>true</serializableModel>-->
+								<sourceFolder>src/main/java</sourceFolder>
+								<dateLibrary>java8</dateLibrary>
+							</configOptions>
+							<typeMappings>
+								<typeMapping>OffsetDateTime=java.time.LocalDateTime</typeMapping>
+							</typeMappings>
+							<importMappings>
+								<importMapping>org.threeten.bp.OffsetDateTime=java.time.LocalDateTime</importMapping>
+							</importMappings>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>3.5.0</version>
+						<configuration>
+							<doclint>none</doclint>
+						</configuration>
+						<executions>
+							<execution>
+								<id>attach-javadoc</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<distributionManagement>
+		<!-- Sonatype Repository -->
+		<repository>
+			<id>sonatype-nexus-releases</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+
+		<!-- GitHub Releases -->
+		<snapshotRepository>
+			<id>github-releases</id>
+			<url>https://maven.pkg.github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client</url>
+			<name>GitHub Package Registry</name>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>
