@@ -3,7 +3,7 @@
 
 ![build](https://img.shields.io/github/actions/workflow/status/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/docker-image.yml?style=for-the-badge)
 ![release](https://img.shields.io/github/v/release/extrawest/Extrawest-OCPI-2.2.1-CPO-Client?style=for-the-badge)
-[![Java CI with Maven](https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/actions/workflows/release-publish.yml/badge.svg)](https://github.com/extrawest/Extrawest-OCPI-2.2.1-EMSP-Client/actions/workflows/snapshot-publish.yml)
+[![Java CI with Maven](https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/actions/workflows/release-publish.yml/badge.svg)](https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/actions/workflows/snapshot-publish.yml)
 ![contr](https://img.shields.io/github/contributors/extrawest/Extrawest-OCPI-2.2.1-CPO-Client?style=for-the-badge)
 ![commits](https://img.shields.io/github/commit-activity/m/extrawest/Extrawest-OCPI-2.2.1-CPO-Client?style=for-the-badge)
 ![lastcommit](https://img.shields.io/github/last-commit/extrawest/Extrawest-OCPI-2.2.1-CPO-Client?style=for-the-badge)
@@ -19,7 +19,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
-- [Use in Spring Boot App](#using-extrawest-ocpi-221-emsp-client-in-spring-boot-application)
+- [Use in Spring Boot App](#using-extrawest-ocpi-221-cpo-client-in-spring-boot-application)
 - [Documentation for API Endpoints](#documentation-for-api-endpoints)
 - [Documentation for Models](#documentation-for-models)
 - [Documentation for Authorization](#documentation-for-authorization)
@@ -121,9 +121,9 @@ public class ClientInfoControllerApiExample {
 }
 
 ```
-### Using Extrawest-OCPI-2.2.1-EMSP-Client in Spring Boot Application
+### Using Extrawest-OCPI-2.2.1-CPO-Client in Spring Boot Application
 
-1. To access the EMSP API classes, we need to configure them as beans:
+1. To access the CPO API classes, we need to configure them as beans:
 ```java
 @Configuration
 public class CpoClientConfig {
@@ -162,7 +162,7 @@ public class CpoTariffServiceImpl implements  CpoTariffService {
 
 ```
 
-Spring Boot application, where we have tested Extrawest-OCPI-2.2.1-EMSP-Client, has below Spring dependencies. In case of library and your project dependencies versions incompatibility, try to add next spring versions into you projects:
+Spring Boot application, where we have tested Extrawest-OCPI-2.2.1-CPO-Client, has below Spring dependencies. In case of library and your project dependencies versions incompatibility, try to add next spring versions into you projects:
 ```java
         <dependency>
             <groupId>org.springframework</groupId>
