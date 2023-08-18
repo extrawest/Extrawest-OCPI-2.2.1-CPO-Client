@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getLocationEvseController1**](CpoLocationControllerApi.md#getLocationEvseController1) | **GET** /cpo/api/2.2.1/locations |  |
+| [**getLocationEvseController**](CpoLocationControllerApi.md#getLocationEvseController) | **GET** /cpo/api/2.2.1/locations |  |
 | [**getLocations**](CpoLocationControllerApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations/getLocations |  |
 
 
 
-## getLocationEvseController1
+## getLocationEvseController
 
-> Object getLocationEvseController1(locationId, evseUid, connectorId)
+> Object getLocationEvseController(locationId, evseUid, connectorId)
 
 
 
@@ -35,10 +35,10 @@ public class Example {
         String evseUid = "evseUid_example"; // String | 
         String connectorId = "connectorId_example"; // String | 
         try {
-            Object result = apiInstance.getLocationEvseController1(locationId, evseUid, connectorId);
+            Object result = apiInstance.getLocationEvseController(locationId, evseUid, connectorId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoLocationControllerApi#getLocationEvseController1");
+            System.err.println("Exception when calling CpoLocationControllerApi#getLocationEvseController");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -26,7 +26,7 @@ import java.util.Objects;
   EnergyContract.JSON_PROPERTY_SUPPLIER_NAME,
   EnergyContract.JSON_PROPERTY_CONTRACT_ID
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class EnergyContract {
   public static final String JSON_PROPERTY_SUPPLIER_NAME = "supplier_name";
   private String supplierName;

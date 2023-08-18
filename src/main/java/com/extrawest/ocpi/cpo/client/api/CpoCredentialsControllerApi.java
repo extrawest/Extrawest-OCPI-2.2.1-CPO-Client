@@ -12,7 +12,7 @@ import org.springframework.web.client.RestClientException;
 import java.util.Collections;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class CpoCredentialsControllerApi {
     private ApiClient apiClient;
 
@@ -39,8 +39,8 @@ public class CpoCredentialsControllerApi {
      * @param credentialsDTO  (required)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void deleteCredentials1(CredentialsDTO credentialsDTO) throws RestClientException {
-        deleteCredentials1WithHttpInfo(credentialsDTO);
+    public void deleteCredentials(CredentialsDTO credentialsDTO) throws RestClientException {
+        deleteCredentialsWithHttpInfo(credentialsDTO);
     }
 
     /**
@@ -51,12 +51,12 @@ public class CpoCredentialsControllerApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> deleteCredentials1WithHttpInfo(CredentialsDTO credentialsDTO) throws RestClientException {
+    public ResponseEntity<Void> deleteCredentialsWithHttpInfo(CredentialsDTO credentialsDTO) throws RestClientException {
         Object localVarPostBody = credentialsDTO;
         
         // verify the required parameter 'credentialsDTO' is set
         if (credentialsDTO == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'credentialsDTO' when calling deleteCredentials1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'credentialsDTO' when calling deleteCredentials");
         }
         
 
@@ -84,8 +84,8 @@ public class CpoCredentialsControllerApi {
      * @return CredentialsDTO
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public CredentialsDTO getCredentials1() throws RestClientException {
-        return getCredentials1WithHttpInfo().getBody();
+    public CredentialsDTO getCredentials() throws RestClientException {
+        return getCredentialsWithHttpInfo().getBody();
     }
 
     /**
@@ -95,7 +95,7 @@ public class CpoCredentialsControllerApi {
      * @return ResponseEntity&lt;CredentialsDTO&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<CredentialsDTO> getCredentials1WithHttpInfo() throws RestClientException {
+    public ResponseEntity<CredentialsDTO> getCredentialsWithHttpInfo() throws RestClientException {
         Object localVarPostBody = null;
         
 
@@ -123,8 +123,8 @@ public class CpoCredentialsControllerApi {
      * @param credentialsDTO  (required)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void postCredentials1(CredentialsDTO credentialsDTO) throws RestClientException {
-        postCredentials1WithHttpInfo(credentialsDTO);
+    public void postCredentials(CredentialsDTO credentialsDTO) throws RestClientException {
+        postCredentialsWithHttpInfo(credentialsDTO);
     }
 
     /**
@@ -135,12 +135,12 @@ public class CpoCredentialsControllerApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> postCredentials1WithHttpInfo(CredentialsDTO credentialsDTO) throws RestClientException {
+    public ResponseEntity<Void> postCredentialsWithHttpInfo(CredentialsDTO credentialsDTO) throws RestClientException {
         Object localVarPostBody = credentialsDTO;
         
         // verify the required parameter 'credentialsDTO' is set
         if (credentialsDTO == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'credentialsDTO' when calling postCredentials1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'credentialsDTO' when calling postCredentials");
         }
         
 
@@ -168,8 +168,8 @@ public class CpoCredentialsControllerApi {
      * @param credentialsDTO  (required)
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public void putCredentials1(CredentialsDTO credentialsDTO) throws RestClientException {
-        putCredentials1WithHttpInfo(credentialsDTO);
+    public void putCredentials(CredentialsDTO credentialsDTO) throws RestClientException {
+        putCredentialsWithHttpInfo(credentialsDTO);
     }
 
     /**
@@ -180,12 +180,12 @@ public class CpoCredentialsControllerApi {
      * @return ResponseEntity&lt;Void&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Void> putCredentials1WithHttpInfo(CredentialsDTO credentialsDTO) throws RestClientException {
+    public ResponseEntity<Void> putCredentialsWithHttpInfo(CredentialsDTO credentialsDTO) throws RestClientException {
         Object localVarPostBody = credentialsDTO;
         
         // verify the required parameter 'credentialsDTO' is set
         if (credentialsDTO == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'credentialsDTO' when calling putCredentials1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'credentialsDTO' when calling putCredentials");
         }
         
 

@@ -13,7 +13,7 @@ import java.time.OffsetDateTime;
 import java.util.Collections;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class CpoLocationControllerApi {
     private ApiClient apiClient;
 
@@ -43,8 +43,8 @@ public class CpoLocationControllerApi {
      * @return Object
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Object getLocationEvseController1(String locationId, String evseUid, String connectorId) throws RestClientException {
-        return getLocationEvseController1WithHttpInfo(locationId, evseUid, connectorId).getBody();
+    public Object getLocationEvseController(String locationId, String evseUid, String connectorId) throws RestClientException {
+        return getLocationEvseControllerWithHttpInfo(locationId, evseUid, connectorId).getBody();
     }
 
     /**
@@ -57,12 +57,12 @@ public class CpoLocationControllerApi {
      * @return ResponseEntity&lt;Object&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<Object> getLocationEvseController1WithHttpInfo(String locationId, String evseUid, String connectorId) throws RestClientException {
+    public ResponseEntity<Object> getLocationEvseControllerWithHttpInfo(String locationId, String evseUid, String connectorId) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'locationId' is set
         if (locationId == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'locationId' when calling getLocationEvseController1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'locationId' when calling getLocationEvseController");
         }
         
 

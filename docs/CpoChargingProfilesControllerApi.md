@@ -6,7 +6,7 @@ All URIs are relative to *http://localhost:8080*
 |------------- | ------------- | -------------|
 | [**deleteChargingProfile**](CpoChargingProfilesControllerApi.md#deleteChargingProfile) | **DELETE** /cpo/api/2.2.1/chargingProfiles/{session_id}/{response_url} |  |
 | [**getChargingProfile**](CpoChargingProfilesControllerApi.md#getChargingProfile) | **GET** /cpo/api/2.2.1/chargingProfiles/{session_id}/{duration}/{response_url} |  |
-| [**putChargingProfile1**](CpoChargingProfilesControllerApi.md#putChargingProfile1) | **PUT** /cpo/api/2.2.1/chargingProfiles/{session_id} |  |
+| [**putChargingProfile**](CpoChargingProfilesControllerApi.md#putChargingProfile) | **PUT** /cpo/api/2.2.1/chargingProfiles/{session_id} |  |
 
 
 
@@ -144,9 +144,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## putChargingProfile1
+## putChargingProfile
 
-> ChargingProfileResponseDTO putChargingProfile1(sessionId, setChargingProfileRequestDTO)
+> ChargingProfileResponseDTO putChargingProfile(sessionId, setChargingProfileRequestDTO)
 
 
 
@@ -169,10 +169,10 @@ public class Example {
         String sessionId = "sessionId_example"; // String | 
         SetChargingProfileRequestDTO setChargingProfileRequestDTO = new SetChargingProfileRequestDTO(); // SetChargingProfileRequestDTO | 
         try {
-            ChargingProfileResponseDTO result = apiInstance.putChargingProfile1(sessionId, setChargingProfileRequestDTO);
+            ChargingProfileResponseDTO result = apiInstance.putChargingProfile(sessionId, setChargingProfileRequestDTO);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoChargingProfilesControllerApi#putChargingProfile1");
+            System.err.println("Exception when calling CpoChargingProfilesControllerApi#putChargingProfile");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**deleteCredentials1**](CpoCredentialsControllerApi.md#deleteCredentials1) | **DELETE** /cpo/api/2.2.1/credentials |  |
-| [**getCredentials1**](CpoCredentialsControllerApi.md#getCredentials1) | **GET** /cpo/api/2.2.1/credentials |  |
-| [**postCredentials1**](CpoCredentialsControllerApi.md#postCredentials1) | **POST** /cpo/api/2.2.1/credentials |  |
-| [**putCredentials1**](CpoCredentialsControllerApi.md#putCredentials1) | **PUT** /cpo/api/2.2.1/credentials |  |
+| [**deleteCredentials**](CpoCredentialsControllerApi.md#deleteCredentials) | **DELETE** /cpo/api/2.2.1/credentials |  |
+| [**getCredentials**](CpoCredentialsControllerApi.md#getCredentials) | **GET** /cpo/api/2.2.1/credentials |  |
+| [**postCredentials**](CpoCredentialsControllerApi.md#postCredentials) | **POST** /cpo/api/2.2.1/credentials |  |
+| [**putCredentials**](CpoCredentialsControllerApi.md#putCredentials) | **PUT** /cpo/api/2.2.1/credentials |  |
 
 
 
-## deleteCredentials1
+## deleteCredentials
 
-> deleteCredentials1(credentialsDTO)
+> deleteCredentials(credentialsDTO)
 
 
 
@@ -35,9 +35,9 @@ public class Example {
         CpoCredentialsControllerApi apiInstance = new CpoCredentialsControllerApi(defaultClient);
         CredentialsDTO credentialsDTO = new CredentialsDTO(); // CredentialsDTO | 
         try {
-            apiInstance.deleteCredentials1(credentialsDTO);
+            apiInstance.deleteCredentials(credentialsDTO);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoCredentialsControllerApi#deleteCredentials1");
+            System.err.println("Exception when calling CpoCredentialsControllerApi#deleteCredentials");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -74,9 +74,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## getCredentials1
+## getCredentials
 
-> CredentialsDTO getCredentials1()
+> CredentialsDTO getCredentials()
 
 
 
@@ -97,10 +97,10 @@ public class Example {
 
         CpoCredentialsControllerApi apiInstance = new CpoCredentialsControllerApi(defaultClient);
         try {
-            CredentialsDTO result = apiInstance.getCredentials1();
+            CredentialsDTO result = apiInstance.getCredentials();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoCredentialsControllerApi#getCredentials1");
+            System.err.println("Exception when calling CpoCredentialsControllerApi#getCredentials");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -134,9 +134,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## postCredentials1
+## postCredentials
 
-> postCredentials1(credentialsDTO)
+> postCredentials(credentialsDTO)
 
 
 
@@ -158,9 +158,9 @@ public class Example {
         CpoCredentialsControllerApi apiInstance = new CpoCredentialsControllerApi(defaultClient);
         CredentialsDTO credentialsDTO = new CredentialsDTO(); // CredentialsDTO | 
         try {
-            apiInstance.postCredentials1(credentialsDTO);
+            apiInstance.postCredentials(credentialsDTO);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoCredentialsControllerApi#postCredentials1");
+            System.err.println("Exception when calling CpoCredentialsControllerApi#postCredentials");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -197,9 +197,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## putCredentials1
+## putCredentials
 
-> putCredentials1(credentialsDTO)
+> putCredentials(credentialsDTO)
 
 
 
@@ -221,9 +221,9 @@ public class Example {
         CpoCredentialsControllerApi apiInstance = new CpoCredentialsControllerApi(defaultClient);
         CredentialsDTO credentialsDTO = new CredentialsDTO(); // CredentialsDTO | 
         try {
-            apiInstance.putCredentials1(credentialsDTO);
+            apiInstance.putCredentials(credentialsDTO);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoCredentialsControllerApi#putCredentials1");
+            System.err.println("Exception when calling CpoCredentialsControllerApi#putCredentials");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

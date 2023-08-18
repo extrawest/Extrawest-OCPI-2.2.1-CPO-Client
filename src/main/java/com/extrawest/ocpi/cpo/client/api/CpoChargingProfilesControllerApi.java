@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class CpoChargingProfilesControllerApi {
     private ApiClient apiClient;
 
@@ -165,8 +165,8 @@ public class CpoChargingProfilesControllerApi {
      * @return ChargingProfileResponseDTO
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ChargingProfileResponseDTO putChargingProfile1(String sessionId, SetChargingProfileRequestDTO setChargingProfileRequestDTO) throws RestClientException {
-        return putChargingProfile1WithHttpInfo(sessionId, setChargingProfileRequestDTO).getBody();
+    public ChargingProfileResponseDTO putChargingProfile(String sessionId, SetChargingProfileRequestDTO setChargingProfileRequestDTO) throws RestClientException {
+        return putChargingProfileWithHttpInfo(sessionId, setChargingProfileRequestDTO).getBody();
     }
 
     /**
@@ -178,17 +178,17 @@ public class CpoChargingProfilesControllerApi {
      * @return ResponseEntity&lt;ChargingProfileResponseDTO&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ChargingProfileResponseDTO> putChargingProfile1WithHttpInfo(String sessionId, SetChargingProfileRequestDTO setChargingProfileRequestDTO) throws RestClientException {
+    public ResponseEntity<ChargingProfileResponseDTO> putChargingProfileWithHttpInfo(String sessionId, SetChargingProfileRequestDTO setChargingProfileRequestDTO) throws RestClientException {
         Object localVarPostBody = setChargingProfileRequestDTO;
         
         // verify the required parameter 'sessionId' is set
         if (sessionId == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'sessionId' when calling putChargingProfile1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'sessionId' when calling putChargingProfile");
         }
         
         // verify the required parameter 'setChargingProfileRequestDTO' is set
         if (setChargingProfileRequestDTO == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'setChargingProfileRequestDTO' when calling putChargingProfile1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'setChargingProfileRequestDTO' when calling putChargingProfile");
         }
         
         // create path and map variables

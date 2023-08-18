@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class CpoTokensControllerApi {
     private ApiClient apiClient;
 
@@ -44,8 +44,8 @@ public class CpoTokensControllerApi {
      * @return TokenDTO
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public TokenDTO getToken1(String countryCode, String partyId, String tokenUid, String type) throws RestClientException {
-        return getToken1WithHttpInfo(countryCode, partyId, tokenUid, type).getBody();
+    public TokenDTO getToken(String countryCode, String partyId, String tokenUid, String type) throws RestClientException {
+        return getTokenWithHttpInfo(countryCode, partyId, tokenUid, type).getBody();
     }
 
     /**
@@ -59,27 +59,27 @@ public class CpoTokensControllerApi {
      * @return ResponseEntity&lt;TokenDTO&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<TokenDTO> getToken1WithHttpInfo(String countryCode, String partyId, String tokenUid, String type) throws RestClientException {
+    public ResponseEntity<TokenDTO> getTokenWithHttpInfo(String countryCode, String partyId, String tokenUid, String type) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'countryCode' is set
         if (countryCode == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'countryCode' when calling getToken1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'countryCode' when calling getToken");
         }
         
         // verify the required parameter 'partyId' is set
         if (partyId == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'partyId' when calling getToken1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'partyId' when calling getToken");
         }
         
         // verify the required parameter 'tokenUid' is set
         if (tokenUid == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'tokenUid' when calling getToken1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'tokenUid' when calling getToken");
         }
         
         // verify the required parameter 'type' is set
         if (type == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'type' when calling getToken1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'type' when calling getToken");
         }
         
         // create path and map variables

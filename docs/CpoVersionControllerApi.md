@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost:8080*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**getVersion**](CpoVersionControllerApi.md#getVersion) | **GET** /cpo/api/2.2.1/versions |  |
-| [**getVersionDetails1**](CpoVersionControllerApi.md#getVersionDetails1) | **GET** /cpo/api/2.2.1/versions/details/{version} |  |
+| [**getVersionDetails**](CpoVersionControllerApi.md#getVersionDetails) | **GET** /cpo/api/2.2.1/versions/details/{version} |  |
 
 
 
@@ -69,9 +69,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## getVersionDetails1
+## getVersionDetails
 
-> VersionDetailsResponseDTO getVersionDetails1(version)
+> VersionDetailsResponseDTO getVersionDetails(version)
 
 
 
@@ -93,10 +93,10 @@ public class Example {
         CpoVersionControllerApi apiInstance = new CpoVersionControllerApi(defaultClient);
         String version = "2.0"; // String | 
         try {
-            VersionDetailsResponseDTO result = apiInstance.getVersionDetails1(version);
+            VersionDetailsResponseDTO result = apiInstance.getVersionDetails(version);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoVersionControllerApi#getVersionDetails1");
+            System.err.println("Exception when calling CpoVersionControllerApi#getVersionDetails");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

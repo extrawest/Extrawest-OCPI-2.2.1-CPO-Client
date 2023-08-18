@@ -37,7 +37,7 @@ import java.util.Objects;
   TokenDTO.JSON_PROPERTY_ENERGY_CONTRACT,
   TokenDTO.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class TokenDTO {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "country_code";
   private String countryCode;

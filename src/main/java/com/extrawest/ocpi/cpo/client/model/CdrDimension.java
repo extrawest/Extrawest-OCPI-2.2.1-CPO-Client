@@ -24,7 +24,7 @@ import java.util.Objects;
   CdrDimension.JSON_PROPERTY_TYPE,
   CdrDimension.JSON_PROPERTY_VOLUME
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class CdrDimension {
   /**
    * Gets or Sets type

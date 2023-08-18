@@ -1,16 +1,16 @@
-# EmspVersionControllerApi
+# HubClientInfoControllerApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getVersionDetails**](EmspVersionControllerApi.md#getVersionDetails) | **GET** /emsp/api/2.2.1/versions/details/{version} |  |
+| [**getClientInfoList**](HubClientInfoControllerApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} |  |
 
 
 
-## getVersionDetails
+## getClientInfoList
 
-> VersionDetailsResponseDTO getVersionDetails(version)
+> List&lt;ClientInfoDTO&gt; getClientInfoList(dateFrom, dateTo, offset, limit)
 
 
 
@@ -22,20 +22,23 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.EmspVersionControllerApi;
+import com.extrawest.ocpi.cpo.client.api.HubClientInfoControllerApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        EmspVersionControllerApi apiInstance = new EmspVersionControllerApi(defaultClient);
-        String version = "2.0"; // String | 
+        HubClientInfoControllerApi apiInstance = new HubClientInfoControllerApi(defaultClient);
+        OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
+        OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
+        Integer offset = 56; // Integer | 
+        Integer limit = 56; // Integer | 
         try {
-            VersionDetailsResponseDTO result = apiInstance.getVersionDetails(version);
+            List<ClientInfoDTO> result = apiInstance.getClientInfoList(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling EmspVersionControllerApi#getVersionDetails");
+            System.err.println("Exception when calling HubClientInfoControllerApi#getClientInfoList");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -50,11 +53,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **version** | **String**|  | [enum: 2.0, 2.1, 2.1.1, 2.2, 2.2.1] |
+| **dateFrom** | **OffsetDateTime**|  | |
+| **dateTo** | **OffsetDateTime**|  | |
+| **offset** | **Integer**|  | |
+| **limit** | **Integer**|  | |
 
 ### Return type
 
-[**VersionDetailsResponseDTO**](VersionDetailsResponseDTO.md)
+[**List&lt;ClientInfoDTO&gt;**](ClientInfoDTO.md)
 
 ### Authorization
 

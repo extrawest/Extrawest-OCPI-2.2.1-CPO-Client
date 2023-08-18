@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class CpoVersionControllerApi {
     private ApiClient apiClient;
 
@@ -82,8 +82,8 @@ public class CpoVersionControllerApi {
      * @return VersionDetailsResponseDTO
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public VersionDetailsResponseDTO getVersionDetails1(String version) throws RestClientException {
-        return getVersionDetails1WithHttpInfo(version).getBody();
+    public VersionDetailsResponseDTO getVersionDetails(String version) throws RestClientException {
+        return getVersionDetailsWithHttpInfo(version).getBody();
     }
 
     /**
@@ -94,12 +94,12 @@ public class CpoVersionControllerApi {
      * @return ResponseEntity&lt;VersionDetailsResponseDTO&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<VersionDetailsResponseDTO> getVersionDetails1WithHttpInfo(String version) throws RestClientException {
+    public ResponseEntity<VersionDetailsResponseDTO> getVersionDetailsWithHttpInfo(String version) throws RestClientException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'version' is set
         if (version == null) {
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'version' when calling getVersionDetails1");
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'version' when calling getVersionDetails");
         }
         
         // create path and map variables

@@ -30,7 +30,7 @@ import java.util.Objects;
   ChargingPeriod.JSON_PROPERTY_DIMENSIONS,
   ChargingPeriod.JSON_PROPERTY_TARIFF_ID
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class ChargingPeriod {
   public static final String JSON_PROPERTY_START_DATE_TIME = "start_date_time";
   private OffsetDateTime startDateTime;

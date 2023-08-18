@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getToken1**](CpoTokensControllerApi.md#getToken1) | **GET** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |  |
+| [**getToken**](CpoTokensControllerApi.md#getToken) | **GET** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |  |
 | [**patchToken**](CpoTokensControllerApi.md#patchToken) | **PATCH** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |  |
 | [**putToken**](CpoTokensControllerApi.md#putToken) | **PUT** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |  |
 
 
 
-## getToken1
+## getToken
 
-> TokenDTO getToken1(countryCode, partyId, tokenUid, type)
+> TokenDTO getToken(countryCode, partyId, tokenUid, type)
 
 
 
@@ -37,10 +37,10 @@ public class Example {
         String tokenUid = "tokenUid_example"; // String | 
         String type = "AD_HOC_USER"; // String | 
         try {
-            TokenDTO result = apiInstance.getToken1(countryCode, partyId, tokenUid, type);
+            TokenDTO result = apiInstance.getToken(countryCode, partyId, tokenUid, type);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoTokensControllerApi#getToken1");
+            System.err.println("Exception when calling CpoTokensControllerApi#getToken");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

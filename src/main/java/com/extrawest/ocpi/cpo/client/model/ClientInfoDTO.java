@@ -28,7 +28,7 @@ import java.util.Objects;
   ClientInfoDTO.JSON_PROPERTY_STATUS,
   ClientInfoDTO.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class ClientInfoDTO {
   public static final String JSON_PROPERTY_PARTY_ID = "party_id";
   private String partyId;

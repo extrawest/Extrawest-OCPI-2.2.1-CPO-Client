@@ -26,7 +26,7 @@ import java.util.Objects;
   StatusSchedule.JSON_PROPERTY_PERIOD_END,
   StatusSchedule.JSON_PROPERTY_STATUS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-17T17:07:56.219565+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
 public class StatusSchedule {
   public static final String JSON_PROPERTY_PERIOD_BEGIN = "period_begin";
   private OffsetDateTime periodBegin;
