@@ -19,11 +19,11 @@ All URIs are relative to *http://localhost:8080*
 
 ```java
 // Import classes:
-import com.extrawest.ocpi.client.invoker.ApiClient;
-import com.extrawest.ocpi.client.invoker.ApiException;
-import com.extrawest.ocpi.client.invoker.Configuration;
-import com.extrawest.ocpi.client.invoker.models.*;
-import com.extrawest.ocpi.client.api.ClientInfoControllerApi;
+import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
+import com.extrawest.ocpi.cpo.client.invoker.ApiException;
+import com.extrawest.ocpi.cpo.client.invoker.Configuration;
+import com.extrawest.ocpi.cpo.client.invoker.models.*;
+import com.extrawest.ocpi.cpo.client.api.ClientInfoControllerApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -85,11 +85,11 @@ No authorization required
 
 ```java
 // Import classes:
-import com.extrawest.ocpi.client.invoker.ApiClient;
-import com.extrawest.ocpi.client.invoker.ApiException;
-import com.extrawest.ocpi.client.invoker.Configuration;
-import com.extrawest.ocpi.client.invoker.models.*;
-import com.extrawest.ocpi.client.api.ClientInfoControllerApi;
+import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
+import com.extrawest.ocpi.cpo.client.invoker.ApiException;
+import com.extrawest.ocpi.cpo.client.invoker.Configuration;
+import com.extrawest.ocpi.cpo.client.invoker.models.*;
+import com.extrawest.ocpi.cpo.client.api.ClientInfoControllerApi;
 
 public class Example {
     public static void main(String[] args) {
