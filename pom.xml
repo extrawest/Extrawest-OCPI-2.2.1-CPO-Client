@@ -8,7 +8,7 @@
 	<version>2023.8.17</version>
 
 	<name>Extrawest-OCPI-2.2.1-CPO-Client</name>
-	<description>Extrawest-OCPI-2.2.1-CPO-Client</description>
+	<description>Extrawest Client for OCPI 2.2.1 CPO Operations</description>
 	<url>https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client</url>
 	<inceptionYear>2023</inceptionYear>
 	<licenses>
@@ -164,7 +164,7 @@
 				<configuration>
 					<jreleaser>
 						<project>
-							<description>OCPI operation tester for the CPO</description>
+							<description>OCPI client for CPO operations</description>
 							<website>https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/tree/main</website>
 							<docsUrl>https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client/tree/main</docsUrl>
 							<license>APACHE-2.0</license>
