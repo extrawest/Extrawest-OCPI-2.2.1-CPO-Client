@@ -5,6 +5,9 @@ on:
       - v*
   pull_request:
     branches: [ main ]
+
+#on: [push]
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -24,3 +27,6 @@ jobs:
           JRELEASER_GPG_PUBLIC_KEY: ${{ secrets.JRELEASER_GPG_PUBLIC_KEY }}
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mvn -Prelease deploy jreleaser:deploy -DaltDeploymentRepository=local::file:./target/staging-deploy
+
+
+
