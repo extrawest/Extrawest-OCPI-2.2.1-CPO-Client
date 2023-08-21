@@ -28,7 +28,7 @@
 - [About Extrawest.com](#about-extrawestcom)
 
 ## Field of use
-Client library for [OCPI CPO Server](https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Server). Library for OCPI eMSP can be found [here] (https://github.com/extrawest/Extrawest-OCPI-2.2.1-EMSP-Client).
+Client library for [OCPI CPO Server](https://github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Server). Library for OCPI eMSP can be found [here](https://github.com/extrawest/Extrawest-OCPI-2.2.1-EMSP-Client).
 
 This API exposes endpoints to manage OCPI entities. Open Charge Point Interface (OCPI) is an open protocol used for connections between charging station operators and service providers. Simply put, this protocol facilitates automated roaming for EV drivers between different EV charging networks.
 
