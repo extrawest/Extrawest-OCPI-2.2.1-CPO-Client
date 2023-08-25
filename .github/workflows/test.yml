@@ -1,11 +1,7 @@
 name: Build Project with OpenAPI Generator and Publish to Maven
 
 on:
-  push:
-    tags:
-      - v*
-  pull_request:
-    branches: [ main ]
+  push: [server-services]
 
 jobs:
   build-project:
