@@ -22,7 +22,7 @@
 - [Use in Spring Boot App](#using-extrawest-ocpi-221-cpo-client-in-spring-boot-application)
 - [Documentation for API Endpoints](#documentation-for-api-endpoints)
 - [Documentation for Models](#documentation-for-models)
-- [Documentation for Authorization](#documentation-for-authorization)
+- [Documentation for Authorization](#documentation-for-authentication-and-authorization)
 - [Recommendation](#recommendation)
 - [License](#license)
 - [About Extrawest.com](#about-extrawestcom)
@@ -164,7 +164,7 @@ public class CpoTariffServiceImpl implements  CpoTariffService {
 ```
 
 Spring Boot application, where we have tested Extrawest-OCPI-2.2.1-CPO-Client, has below Spring dependencies. In case of library and your project dependencies versions incompatibility, try to add next spring versions into you projects:
-```java
+```
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -263,9 +263,8 @@ Class | Method | HTTP request | Description
  - [VersionResponseDTO](docs/VersionResponseDTO.md)
 
 
-## Documentation for Authorization
-
-All endpoints do not require authorization.
+## Documentation for Authentication and Authorization
+All endpoints do not require authorization or authentication.
 
 ## Recommendation
 
