@@ -222,18 +222,18 @@
 
 	<distributionManagement>
 		<!-- Sonatype Repository -->
-		<repository>
-			<id>sonatype-nexus-releases</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
+<!--		<repository>-->
+<!--			<id>sonatype-nexus-releases</id>-->
+<!--			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--		</repository>-->
 
 		<!-- GitHub Releases -->
-		<snapshotRepository>
+		<repository>
 			<id>github</id>
 			<url>https://maven.pkg.github.com/extrawest/Extrawest-OCPI-2.2.1-CPO-Client</url>
 			<name>GitHub Package Registry</name>
 			<uniqueVersion>false</uniqueVersion>
-		</snapshotRepository>
+		</repository>
 	</distributionManagement>
 
 </project>
