@@ -2,12 +2,8 @@ name: Publish Snapshot to GitHub Packages
 
 on:
   push:
-    tags:
-      - v*
-#  push:
-#    branches:
-#      - dev
-
+    branches:
+      - dev
 
 jobs:
   publish:
