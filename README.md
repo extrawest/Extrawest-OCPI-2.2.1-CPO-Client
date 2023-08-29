@@ -13,11 +13,11 @@ java -jar openapi-generator-cli-6.6.0.jar generate \
                 --invoker-package com.extrawest.ocpi.cpo.client.invoker \
                 --group-id com.extrawest \
                 --artifact-id Extrawest-OCPI-2.2.1-CPO-Client \
-                --artifact-version 2023.8.29 \
+                --artifact-version 2023.8.28 \
                 --additional-properties=useTags=true \
                 -g java \
                 -p java11=true \
                 --library resttemplate \
-                -o ./cpo-client
+                -o ./cpo-resttemplate-client
 ```
 
