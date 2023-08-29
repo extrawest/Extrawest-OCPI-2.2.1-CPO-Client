@@ -14,15 +14,15 @@ import java.time.OffsetDateTime;
 import java.util.Collections;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
-public class CpoSessionsControllerApi {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+public class CpoSessionsApi {
     private ApiClient apiClient;
 
-    public CpoSessionsControllerApi() {
+    public CpoSessionsApi() {
         this(new ApiClient());
     }
 
-    public CpoSessionsControllerApi(ApiClient apiClient) {
+    public CpoSessionsApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 

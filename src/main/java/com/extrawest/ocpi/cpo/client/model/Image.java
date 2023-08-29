@@ -21,14 +21,14 @@ import java.util.Objects;
  * Image
  */
 @JsonPropertyOrder({
-  Image.JSON_PROPERTY_URL,
-  Image.JSON_PROPERTY_THUMBNAIL,
-  Image.JSON_PROPERTY_CATEGORY,
-  Image.JSON_PROPERTY_TYPE,
-  Image.JSON_PROPERTY_WIDTH,
-  Image.JSON_PROPERTY_HEIGHT
+        Image.JSON_PROPERTY_URL,
+        Image.JSON_PROPERTY_THUMBNAIL,
+        Image.JSON_PROPERTY_CATEGORY,
+        Image.JSON_PROPERTY_TYPE,
+        Image.JSON_PROPERTY_WIDTH,
+        Image.JSON_PROPERTY_HEIGHT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class Image {
   public static final String JSON_PROPERTY_URL = "url";
   private String url;

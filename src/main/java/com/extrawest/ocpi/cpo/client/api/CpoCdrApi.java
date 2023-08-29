@@ -13,15 +13,15 @@ import java.time.OffsetDateTime;
 import java.util.Collections;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
-public class CpoCdrControllerApi {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+public class CpoCdrApi {
     private ApiClient apiClient;
 
-    public CpoCdrControllerApi() {
+    public CpoCdrApi() {
         this(new ApiClient());
     }
 
-    public CpoCdrControllerApi(ApiClient apiClient) {
+    public CpoCdrApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 

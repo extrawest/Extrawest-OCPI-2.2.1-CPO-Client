@@ -21,11 +21,11 @@ import java.util.Objects;
  * Endpoint
  */
 @JsonPropertyOrder({
-  Endpoint.JSON_PROPERTY_IDENTIFIER,
-  Endpoint.JSON_PROPERTY_ROLE,
-  Endpoint.JSON_PROPERTY_URL
+        Endpoint.JSON_PROPERTY_IDENTIFIER,
+        Endpoint.JSON_PROPERTY_ROLE,
+        Endpoint.JSON_PROPERTY_URL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class Endpoint {
   /**
    * Gets or Sets identifier

@@ -23,11 +23,11 @@ import java.util.Objects;
  * CommandResponseDTO
  */
 @JsonPropertyOrder({
-  CommandResponseDTO.JSON_PROPERTY_RESULT,
-  CommandResponseDTO.JSON_PROPERTY_TIMEOUT,
-  CommandResponseDTO.JSON_PROPERTY_MESSAGE
+        CommandResponseDTO.JSON_PROPERTY_RESULT,
+        CommandResponseDTO.JSON_PROPERTY_TIMEOUT,
+        CommandResponseDTO.JSON_PROPERTY_MESSAGE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class CommandResponseDTO {
   /**
    * Gets or Sets result

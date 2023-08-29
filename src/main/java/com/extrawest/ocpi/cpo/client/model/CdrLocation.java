@@ -26,17 +26,17 @@ import java.util.Objects;
   CdrLocation.JSON_PROPERTY_ADDRESS,
   CdrLocation.JSON_PROPERTY_CITY,
   CdrLocation.JSON_PROPERTY_POSTAL_CODE,
-  CdrLocation.JSON_PROPERTY_STATE,
-  CdrLocation.JSON_PROPERTY_COUNTRY,
-  CdrLocation.JSON_PROPERTY_COORDINATES,
-  CdrLocation.JSON_PROPERTY_EVSE_UID,
-  CdrLocation.JSON_PROPERTY_EVSE_ID,
-  CdrLocation.JSON_PROPERTY_CONNECTOR_ID,
-  CdrLocation.JSON_PROPERTY_CONNECTOR_STANDARD,
-  CdrLocation.JSON_PROPERTY_CONNECTOR_FORMAT,
-  CdrLocation.JSON_PROPERTY_CONNECTOR_POWER_TYPE
+        CdrLocation.JSON_PROPERTY_STATE,
+        CdrLocation.JSON_PROPERTY_COUNTRY,
+        CdrLocation.JSON_PROPERTY_COORDINATES,
+        CdrLocation.JSON_PROPERTY_EVSE_UID,
+        CdrLocation.JSON_PROPERTY_EVSE_ID,
+        CdrLocation.JSON_PROPERTY_CONNECTOR_ID,
+        CdrLocation.JSON_PROPERTY_CONNECTOR_STANDARD,
+        CdrLocation.JSON_PROPERTY_CONNECTOR_FORMAT,
+        CdrLocation.JSON_PROPERTY_CONNECTOR_POWER_TYPE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class CdrLocation {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

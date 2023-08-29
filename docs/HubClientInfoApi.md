@@ -1,10 +1,10 @@
-# HubClientInfoControllerApi
+# HubClientInfoApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getClientInfoList**](HubClientInfoControllerApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} |  |
+| [**getClientInfoList**](HubClientInfoApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} |  |
 
 
 
@@ -22,14 +22,14 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.HubClientInfoControllerApi;
+import com.extrawest.ocpi.cpo.client.api.HubClientInfoApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        HubClientInfoControllerApi apiInstance = new HubClientInfoControllerApi(defaultClient);
+        HubClientInfoApi apiInstance = new HubClientInfoApi(defaultClient);
         OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
         OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
         Integer offset = 56; // Integer | 
@@ -38,7 +38,7 @@ public class Example {
             List<ClientInfoDTO> result = apiInstance.getClientInfoList(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling HubClientInfoControllerApi#getClientInfoList");
+            System.err.println("Exception when calling HubClientInfoApi#getClientInfoList");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

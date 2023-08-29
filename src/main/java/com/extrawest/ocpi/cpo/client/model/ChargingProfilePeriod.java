@@ -23,10 +23,10 @@ import java.util.Objects;
  * ChargingProfilePeriod
  */
 @JsonPropertyOrder({
-  ChargingProfilePeriod.JSON_PROPERTY_START_PERIOD,
-  ChargingProfilePeriod.JSON_PROPERTY_LIMIT
+        ChargingProfilePeriod.JSON_PROPERTY_START_PERIOD,
+        ChargingProfilePeriod.JSON_PROPERTY_LIMIT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class ChargingProfilePeriod {
   public static final String JSON_PROPERTY_START_PERIOD = "start_period";
   private Integer startPeriod;

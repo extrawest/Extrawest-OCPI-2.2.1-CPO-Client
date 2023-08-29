@@ -30,7 +30,7 @@ import java.time.OffsetDateTime;
 import java.util.*;
 import java.util.Map.Entry;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class ApiClient extends JavaTimeFormatter {
     public enum CollectionFormat {
         CSV(","), TSV("\t"), SSV(" "), PIPES("|"), MULTI(null);
@@ -602,7 +602,7 @@ public class ApiClient extends JavaTimeFormatter {
     private String buildCookieHeader(MultiValueMap<String, String> cookies) {
         final StringBuilder cookieValue = new StringBuilder();
         String delimiter = "";
-        for (final Entry<String, List<String>> entry : cookies.entrySet()) {
+        for (final Map.Entry<String, List<String>> entry : cookies.entrySet()) {
             final String value = entry.getValue().get(entry.getValue().size() - 1);
             cookieValue.append(String.format("%s%s=%s", delimiter, entry.getKey(), value));
             delimiter = "; ";

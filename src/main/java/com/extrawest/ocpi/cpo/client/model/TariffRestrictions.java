@@ -23,22 +23,22 @@ import java.util.Objects;
  * TariffRestrictions
  */
 @JsonPropertyOrder({
-  TariffRestrictions.JSON_PROPERTY_RESERVATION,
-  TariffRestrictions.JSON_PROPERTY_START_TIME,
-  TariffRestrictions.JSON_PROPERTY_END_TIME,
-  TariffRestrictions.JSON_PROPERTY_START_DATE,
-  TariffRestrictions.JSON_PROPERTY_END_DATE,
-  TariffRestrictions.JSON_PROPERTY_MIN_KWH,
-  TariffRestrictions.JSON_PROPERTY_MAX_KWH,
-  TariffRestrictions.JSON_PROPERTY_MIN_CURRENT,
-  TariffRestrictions.JSON_PROPERTY_MAX_CURRENT,
-  TariffRestrictions.JSON_PROPERTY_MIN_POWER,
-  TariffRestrictions.JSON_PROPERTY_MAX_POWER,
-  TariffRestrictions.JSON_PROPERTY_MIN_DURATION,
-  TariffRestrictions.JSON_PROPERTY_MAX_DURATION,
-  TariffRestrictions.JSON_PROPERTY_DAY_OF_WEEK
+        TariffRestrictions.JSON_PROPERTY_RESERVATION,
+        TariffRestrictions.JSON_PROPERTY_START_TIME,
+        TariffRestrictions.JSON_PROPERTY_END_TIME,
+        TariffRestrictions.JSON_PROPERTY_START_DATE,
+        TariffRestrictions.JSON_PROPERTY_END_DATE,
+        TariffRestrictions.JSON_PROPERTY_MIN_KWH,
+        TariffRestrictions.JSON_PROPERTY_MAX_KWH,
+        TariffRestrictions.JSON_PROPERTY_MIN_CURRENT,
+        TariffRestrictions.JSON_PROPERTY_MAX_CURRENT,
+        TariffRestrictions.JSON_PROPERTY_MIN_POWER,
+        TariffRestrictions.JSON_PROPERTY_MAX_POWER,
+        TariffRestrictions.JSON_PROPERTY_MIN_DURATION,
+        TariffRestrictions.JSON_PROPERTY_MAX_DURATION,
+        TariffRestrictions.JSON_PROPERTY_DAY_OF_WEEK
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class TariffRestrictions {
   /**
    * Gets or Sets reservation

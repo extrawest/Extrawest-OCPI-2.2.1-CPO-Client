@@ -190,77 +190,77 @@ All URIs are relative to *http://localhost:8080*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ClientInfoControllerApi* | [**getHubClientInfo**](docs/ClientInfoControllerApi.md#getHubClientInfo) | **GET** /api/2.2.1/hubClientInfo/{country_code}/{party_id} | 
-*ClientInfoControllerApi* | [**putHubClientInfo**](docs/ClientInfoControllerApi.md#putHubClientInfo) | **PUT** /api/2.2.1/hubClientInfo/{country_code}/{party_id} | 
-*CpoCdrControllerApi* | [**getCdr**](docs/CpoCdrControllerApi.md#getCdr) | **GET** /cpo/api/2.2.1/cdr | 
-*CpoChargingProfilesControllerApi* | [**deleteChargingProfile**](docs/CpoChargingProfilesControllerApi.md#deleteChargingProfile) | **DELETE** /cpo/api/2.2.1/chargingProfiles/{session_id}/{response_url} | 
-*CpoChargingProfilesControllerApi* | [**getChargingProfile**](docs/CpoChargingProfilesControllerApi.md#getChargingProfile) | **GET** /cpo/api/2.2.1/chargingProfiles/{session_id}/{duration}/{response_url} | 
-*CpoChargingProfilesControllerApi* | [**putChargingProfile**](docs/CpoChargingProfilesControllerApi.md#putChargingProfile) | **PUT** /cpo/api/2.2.1/chargingProfiles/{session_id} | 
-*CpoCommandsControllerApi* | [**postCommand**](docs/CpoCommandsControllerApi.md#postCommand) | **POST** /cpo/api/2.2.1/commands/{command} | 
-*CpoCredentialsControllerApi* | [**deleteCredentials**](docs/CpoCredentialsControllerApi.md#deleteCredentials) | **DELETE** /cpo/api/2.2.1/credentials | 
-*CpoCredentialsControllerApi* | [**getCredentials**](docs/CpoCredentialsControllerApi.md#getCredentials) | **GET** /cpo/api/2.2.1/credentials | 
-*CpoCredentialsControllerApi* | [**postCredentials**](docs/CpoCredentialsControllerApi.md#postCredentials) | **POST** /cpo/api/2.2.1/credentials | 
-*CpoCredentialsControllerApi* | [**putCredentials**](docs/CpoCredentialsControllerApi.md#putCredentials) | **PUT** /cpo/api/2.2.1/credentials | 
-*CpoLocationControllerApi* | [**getLocationEvseController**](docs/CpoLocationControllerApi.md#getLocationEvseController) | **GET** /cpo/api/2.2.1/locations | 
-*CpoLocationControllerApi* | [**getLocations**](docs/CpoLocationControllerApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations/getLocations | 
-*CpoSessionsControllerApi* | [**getSessions**](docs/CpoSessionsControllerApi.md#getSessions) | **GET** /cpo/api/2.2.1/sessions | 
-*CpoSessionsControllerApi* | [**putChargingPreferences**](docs/CpoSessionsControllerApi.md#putChargingPreferences) | **PUT** /cpo/api/2.2.1/sessions | 
-*CpoTariffControllerApi* | [**getTariffs**](docs/CpoTariffControllerApi.md#getTariffs) | **GET** /cpo/api/2.2.1/tariffs | 
-*CpoTokensControllerApi* | [**getToken**](docs/CpoTokensControllerApi.md#getToken) | **GET** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} | 
-*CpoTokensControllerApi* | [**patchToken**](docs/CpoTokensControllerApi.md#patchToken) | **PATCH** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} | 
-*CpoTokensControllerApi* | [**putToken**](docs/CpoTokensControllerApi.md#putToken) | **PUT** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} | 
-*CpoVersionControllerApi* | [**getVersion**](docs/CpoVersionControllerApi.md#getVersion) | **GET** /cpo/api/2.2.1/versions | 
-*CpoVersionControllerApi* | [**getVersionDetails**](docs/CpoVersionControllerApi.md#getVersionDetails) | **GET** /cpo/api/2.2.1/versions/details/{version} | 
-*HubClientInfoControllerApi* | [**getClientInfoList**](docs/HubClientInfoControllerApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} | 
+*ClientInfoApi* | [**getHubClientInfo**](docs/ClientInfoApi.md#getHubClientInfo) | **GET** /api/2.2.1/hubClientInfo/{country_code}/{party_id} |
+*ClientInfoApi* | [**putHubClientInfo**](docs/ClientInfoApi.md#putHubClientInfo) | **PUT** /api/2.2.1/hubClientInfo/{country_code}/{party_id} |
+*CpoCdrApi* | [**getCdr**](docs/CpoCdrApi.md#getCdr) | **GET** /cpo/api/2.2.1/cdr |
+*CpoChargingProfilesApi* | [**deleteChargingProfile**](docs/CpoChargingProfilesApi.md#deleteChargingProfile) | **DELETE** /cpo/api/2.2.1/chargingProfiles/{session_id}/{response_url} |
+*CpoChargingProfilesApi* | [**getChargingProfile**](docs/CpoChargingProfilesApi.md#getChargingProfile) | **GET** /cpo/api/2.2.1/chargingProfiles/{session_id}/{duration}/{response_url} |
+*CpoChargingProfilesApi* | [**putChargingProfile**](docs/CpoChargingProfilesApi.md#putChargingProfile) | **PUT** /cpo/api/2.2.1/chargingProfiles/{session_id} |
+*CpoCommandsApi* | [**postCommand**](docs/CpoCommandsApi.md#postCommand) | **POST** /cpo/api/2.2.1/commands/{command} |
+*CpoCredentialsApi* | [**deleteCredentials**](docs/CpoCredentialsApi.md#deleteCredentials) | **DELETE** /cpo/api/2.2.1/credentials |
+*CpoCredentialsApi* | [**getCredentials**](docs/CpoCredentialsApi.md#getCredentials) | **GET** /cpo/api/2.2.1/credentials |
+*CpoCredentialsApi* | [**postCredentials**](docs/CpoCredentialsApi.md#postCredentials) | **POST** /cpo/api/2.2.1/credentials |
+*CpoCredentialsApi* | [**putCredentials**](docs/CpoCredentialsApi.md#putCredentials) | **PUT** /cpo/api/2.2.1/credentials |
+*CpoLocationApi* | [**getLocationEvseController**](docs/CpoLocationApi.md#getLocationEvseController) | **GET** /cpo/api/2.2.1/locations |
+*CpoLocationApi* | [**getLocations**](docs/CpoLocationApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations/getLocations |
+*CpoSessionsApi* | [**getSessions**](docs/CpoSessionsApi.md#getSessions) | **GET** /cpo/api/2.2.1/sessions |
+*CpoSessionsApi* | [**putChargingPreferences**](docs/CpoSessionsApi.md#putChargingPreferences) | **PUT** /cpo/api/2.2.1/sessions |
+*CpoTariffApi* | [**getTariffs**](docs/CpoTariffApi.md#getTariffs) | **GET** /cpo/api/2.2.1/tariffs |
+*CpoTokensApi* | [**getToken**](docs/CpoTokensApi.md#getToken) | **GET** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |
+*CpoTokensApi* | [**patchToken**](docs/CpoTokensApi.md#patchToken) | **PATCH** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |
+*CpoTokensApi* | [**putToken**](docs/CpoTokensApi.md#putToken) | **PUT** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |
+*CpoVersionApi* | [**getVersion**](docs/CpoVersionApi.md#getVersion) | **GET** /cpo/api/2.2.1/versions |
+*CpoVersionApi* | [**getVersionDetails**](docs/CpoVersionApi.md#getVersionDetails) | **GET** /cpo/api/2.2.1/versions/details/{version} |
+*HubClientInfoApi* | [**getClientInfoList**](docs/HubClientInfoApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} |
 
 
 ## Documentation for Models
 
- - [AbstractCommand](docs/AbstractCommand.md)
- - [AdditionalGeoLocation](docs/AdditionalGeoLocation.md)
- - [BusinessDetails](docs/BusinessDetails.md)
- - [CdrDTO](docs/CdrDTO.md)
- - [CdrDimension](docs/CdrDimension.md)
- - [CdrLocation](docs/CdrLocation.md)
- - [CdrToken](docs/CdrToken.md)
- - [ChargingPeriod](docs/ChargingPeriod.md)
- - [ChargingPreferencesDTO](docs/ChargingPreferencesDTO.md)
- - [ChargingProfile](docs/ChargingProfile.md)
- - [ChargingProfilePeriod](docs/ChargingProfilePeriod.md)
- - [ChargingProfileResponseDTO](docs/ChargingProfileResponseDTO.md)
- - [ClientInfoDTO](docs/ClientInfoDTO.md)
- - [CommandResponseDTO](docs/CommandResponseDTO.md)
- - [Connector](docs/Connector.md)
- - [CredentialsDTO](docs/CredentialsDTO.md)
- - [CredentialsRole](docs/CredentialsRole.md)
- - [DisplayText](docs/DisplayText.md)
- - [EVSE](docs/EVSE.md)
- - [Endpoint](docs/Endpoint.md)
- - [EnergyContract](docs/EnergyContract.md)
- - [EnergyMix](docs/EnergyMix.md)
- - [EnergySource](docs/EnergySource.md)
- - [EnvironmentalImpact](docs/EnvironmentalImpact.md)
- - [ExceptionalPeriod](docs/ExceptionalPeriod.md)
- - [GeoLocation](docs/GeoLocation.md)
- - [Hours](docs/Hours.md)
- - [Image](docs/Image.md)
- - [LocationDTO](docs/LocationDTO.md)
- - [Price](docs/Price.md)
- - [PriceComponent](docs/PriceComponent.md)
- - [PublishTokenType](docs/PublishTokenType.md)
- - [RegularHours](docs/RegularHours.md)
- - [SessionDTO](docs/SessionDTO.md)
- - [SetChargingProfileRequestDTO](docs/SetChargingProfileRequestDTO.md)
- - [SignedData](docs/SignedData.md)
- - [SignedValue](docs/SignedValue.md)
- - [StatusSchedule](docs/StatusSchedule.md)
- - [Tariff](docs/Tariff.md)
- - [TariffDTO](docs/TariffDTO.md)
- - [TariffElement](docs/TariffElement.md)
- - [TariffRestrictions](docs/TariffRestrictions.md)
- - [TokenDTO](docs/TokenDTO.md)
- - [VersionDetailsResponseDTO](docs/VersionDetailsResponseDTO.md)
- - [VersionResponseDTO](docs/VersionResponseDTO.md)
+- [AbstractCommand](docs/AbstractCommand.md)
+- [AdditionalGeoLocation](docs/AdditionalGeoLocation.md)
+- [BusinessDetails](docs/BusinessDetails.md)
+- [CdrDTO](docs/CdrDTO.md)
+- [CdrDimension](docs/CdrDimension.md)
+- [CdrLocation](docs/CdrLocation.md)
+- [CdrToken](docs/CdrToken.md)
+- [ChargingPeriod](docs/ChargingPeriod.md)
+- [ChargingPreferencesDTO](docs/ChargingPreferencesDTO.md)
+- [ChargingProfile](docs/ChargingProfile.md)
+- [ChargingProfilePeriod](docs/ChargingProfilePeriod.md)
+- [ChargingProfileResponseDTO](docs/ChargingProfileResponseDTO.md)
+- [ClientInfoDTO](docs/ClientInfoDTO.md)
+- [CommandResponseDTO](docs/CommandResponseDTO.md)
+- [Connector](docs/Connector.md)
+- [CredentialsDTO](docs/CredentialsDTO.md)
+- [CredentialsRole](docs/CredentialsRole.md)
+- [DisplayText](docs/DisplayText.md)
+- [EVSE](docs/EVSE.md)
+- [Endpoint](docs/Endpoint.md)
+- [EnergyContract](docs/EnergyContract.md)
+- [EnergyMix](docs/EnergyMix.md)
+- [EnergySource](docs/EnergySource.md)
+- [EnvironmentalImpact](docs/EnvironmentalImpact.md)
+- [ExceptionalPeriod](docs/ExceptionalPeriod.md)
+- [GeoLocation](docs/GeoLocation.md)
+- [Hours](docs/Hours.md)
+- [Image](docs/Image.md)
+- [LocationDTO](docs/LocationDTO.md)
+- [Price](docs/Price.md)
+- [PriceComponent](docs/PriceComponent.md)
+- [PublishTokenType](docs/PublishTokenType.md)
+- [RegularHours](docs/RegularHours.md)
+- [SessionDTO](docs/SessionDTO.md)
+- [SetChargingProfileRequestDTO](docs/SetChargingProfileRequestDTO.md)
+- [SignedData](docs/SignedData.md)
+- [SignedValue](docs/SignedValue.md)
+- [StatusSchedule](docs/StatusSchedule.md)
+- [Tariff](docs/Tariff.md)
+- [TariffDTO](docs/TariffDTO.md)
+- [TariffElement](docs/TariffElement.md)
+- [TariffRestrictions](docs/TariffRestrictions.md)
+- [TokenDTO](docs/TokenDTO.md)
+- [VersionDetailsResponseDTO](docs/VersionDetailsResponseDTO.md)
+- [VersionResponseDTO](docs/VersionResponseDTO.md)
 
 
 ## Documentation for Authentication and Authorization

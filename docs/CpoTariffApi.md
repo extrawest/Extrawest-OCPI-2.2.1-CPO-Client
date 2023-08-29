@@ -1,16 +1,16 @@
-# CpoCommandsControllerApi
+# CpoTariffApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**postCommand**](CpoCommandsControllerApi.md#postCommand) | **POST** /cpo/api/2.2.1/commands/{command} |  |
+| [**getTariffs**](CpoTariffApi.md#getTariffs) | **GET** /cpo/api/2.2.1/tariffs |  |
 
 
 
-## postCommand
+## getTariffs
 
-> CommandResponseDTO postCommand(command, abstractCommand)
+> List&lt;TariffDTO&gt; getTariffs(dateFrom, dateTo, offset, limit)
 
 
 
@@ -22,21 +22,23 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoCommandsControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoTariffApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoCommandsControllerApi apiInstance = new CpoCommandsControllerApi(defaultClient);
-        String command = "CANCEL_RESERVATION"; // String | 
-        AbstractCommand abstractCommand = new AbstractCommand(); // AbstractCommand | 
+        CpoTariffApi apiInstance = new CpoTariffApi(defaultClient);
+        OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
+        OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
+        Integer offset = 0; // Integer | 
+        Integer limit = 56; // Integer | 
         try {
-            CommandResponseDTO result = apiInstance.postCommand(command, abstractCommand);
+            List<TariffDTO> result = apiInstance.getTariffs(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoCommandsControllerApi#postCommand");
+            System.err.println("Exception when calling CpoTariffApi#getTariffs");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -51,12 +53,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **command** | **String**|  | [enum: CANCEL_RESERVATION, RESERVE_NOW, START_SESSION, STOP_SESSION, UNLOCK_CONNECTOR] |
-| **abstractCommand** | [**AbstractCommand**](AbstractCommand.md)|  | |
+| **dateFrom** | **OffsetDateTime**|  | [optional] |
+| **dateTo** | **OffsetDateTime**|  | [optional] |
+| **offset** | **Integer**|  | [optional] [default to 0] |
+| **limit** | **Integer**|  | [optional] |
 
 ### Return type
 
-[**CommandResponseDTO**](CommandResponseDTO.md)
+[**List&lt;TariffDTO&gt;**](TariffDTO.md)
 
 ### Authorization
 
@@ -64,7 +68,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: */*
 
 

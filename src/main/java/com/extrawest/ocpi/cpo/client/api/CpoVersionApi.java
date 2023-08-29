@@ -15,15 +15,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
-public class CpoVersionControllerApi {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+public class CpoVersionApi {
     private ApiClient apiClient;
 
-    public CpoVersionControllerApi() {
+    public CpoVersionApi() {
         this(new ApiClient());
     }
 
-    public CpoVersionControllerApi(ApiClient apiClient) {
+    public CpoVersionApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 

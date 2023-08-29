@@ -24,19 +24,19 @@ import java.util.Objects;
  * Connector
  */
 @JsonPropertyOrder({
-  Connector.JSON_PROPERTY_URL,
-  Connector.JSON_PROPERTY_ID,
-  Connector.JSON_PROPERTY_STANDARD,
-  Connector.JSON_PROPERTY_FORMAT,
-  Connector.JSON_PROPERTY_POWER_TYPE,
-  Connector.JSON_PROPERTY_MAX_VOLTAGE,
-  Connector.JSON_PROPERTY_MAX_AMPERAGE,
-  Connector.JSON_PROPERTY_MAX_ELECTRIC_POWER,
-  Connector.JSON_PROPERTY_TARIFF_IDS,
-  Connector.JSON_PROPERTY_TERMS_AND_CONDITIONS,
-  Connector.JSON_PROPERTY_LAST_UPDATED
+        Connector.JSON_PROPERTY_URL,
+        Connector.JSON_PROPERTY_ID,
+        Connector.JSON_PROPERTY_STANDARD,
+        Connector.JSON_PROPERTY_FORMAT,
+        Connector.JSON_PROPERTY_POWER_TYPE,
+        Connector.JSON_PROPERTY_MAX_VOLTAGE,
+        Connector.JSON_PROPERTY_MAX_AMPERAGE,
+        Connector.JSON_PROPERTY_MAX_ELECTRIC_POWER,
+        Connector.JSON_PROPERTY_TARIFF_IDS,
+        Connector.JSON_PROPERTY_TERMS_AND_CONDITIONS,
+        Connector.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class Connector {
   public static final String JSON_PROPERTY_URL = "url";
   private String url;

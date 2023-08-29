@@ -1,12 +1,12 @@
 package com.extrawest.ocpi.cpo.client.invoker.auth;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.util.MultiValueMap;
-
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+import org.springframework.http.HttpHeaders;
+import org.springframework.util.MultiValueMap;
+
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class HttpBasicAuth implements Authentication {
     private String username;
     private String password;

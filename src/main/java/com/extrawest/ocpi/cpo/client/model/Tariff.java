@@ -29,17 +29,17 @@ import java.util.Objects;
   Tariff.JSON_PROPERTY_ID,
   Tariff.JSON_PROPERTY_CURRENCY,
   Tariff.JSON_PROPERTY_TYPE,
-  Tariff.JSON_PROPERTY_TARIFF_ALT_TEXT,
-  Tariff.JSON_PROPERTY_TARIFF_ALT_URL,
-  Tariff.JSON_PROPERTY_MIN_PRICE,
-  Tariff.JSON_PROPERTY_MAX_PRICE,
-  Tariff.JSON_PROPERTY_ELEMENTS,
-  Tariff.JSON_PROPERTY_START_DATE_TIME,
-  Tariff.JSON_PROPERTY_END_DATE_TIME,
-  Tariff.JSON_PROPERTY_ENERGY_MIX,
-  Tariff.JSON_PROPERTY_LAST_UPDATED
+        Tariff.JSON_PROPERTY_TARIFF_ALT_TEXT,
+        Tariff.JSON_PROPERTY_TARIFF_ALT_URL,
+        Tariff.JSON_PROPERTY_MIN_PRICE,
+        Tariff.JSON_PROPERTY_MAX_PRICE,
+        Tariff.JSON_PROPERTY_ELEMENTS,
+        Tariff.JSON_PROPERTY_START_DATE_TIME,
+        Tariff.JSON_PROPERTY_END_DATE_TIME,
+        Tariff.JSON_PROPERTY_ENERGY_MIX,
+        Tariff.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class Tariff {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "country_code";
   private String countryCode;

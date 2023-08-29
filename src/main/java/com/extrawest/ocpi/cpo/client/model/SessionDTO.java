@@ -24,26 +24,26 @@ import java.util.Objects;
  * SessionDTO
  */
 @JsonPropertyOrder({
-  SessionDTO.JSON_PROPERTY_COUNTRY_CODE,
-  SessionDTO.JSON_PROPERTY_PARTY_ID,
-  SessionDTO.JSON_PROPERTY_ID,
-  SessionDTO.JSON_PROPERTY_START_DATE_TIME,
-  SessionDTO.JSON_PROPERTY_END_DATE_TIME,
-  SessionDTO.JSON_PROPERTY_KWH,
-  SessionDTO.JSON_PROPERTY_CDR_TOKEN,
-  SessionDTO.JSON_PROPERTY_AUTH_METHOD,
-  SessionDTO.JSON_PROPERTY_AUTHORIZATION_REFERENCE,
-  SessionDTO.JSON_PROPERTY_LOCATION_ID,
-  SessionDTO.JSON_PROPERTY_EVSE_UID,
-  SessionDTO.JSON_PROPERTY_CONNECTOR_ID,
-  SessionDTO.JSON_PROPERTY_METER_ID,
-  SessionDTO.JSON_PROPERTY_CURRENCY,
-  SessionDTO.JSON_PROPERTY_CHARGING_PERIODS,
-  SessionDTO.JSON_PROPERTY_TOTAL_COST,
-  SessionDTO.JSON_PROPERTY_STATUS,
-  SessionDTO.JSON_PROPERTY_LAST_UPDATED
+        SessionDTO.JSON_PROPERTY_COUNTRY_CODE,
+        SessionDTO.JSON_PROPERTY_PARTY_ID,
+        SessionDTO.JSON_PROPERTY_ID,
+        SessionDTO.JSON_PROPERTY_START_DATE_TIME,
+        SessionDTO.JSON_PROPERTY_END_DATE_TIME,
+        SessionDTO.JSON_PROPERTY_KWH,
+        SessionDTO.JSON_PROPERTY_CDR_TOKEN,
+        SessionDTO.JSON_PROPERTY_AUTH_METHOD,
+        SessionDTO.JSON_PROPERTY_AUTHORIZATION_REFERENCE,
+        SessionDTO.JSON_PROPERTY_LOCATION_ID,
+        SessionDTO.JSON_PROPERTY_EVSE_UID,
+        SessionDTO.JSON_PROPERTY_CONNECTOR_ID,
+        SessionDTO.JSON_PROPERTY_METER_ID,
+        SessionDTO.JSON_PROPERTY_CURRENCY,
+        SessionDTO.JSON_PROPERTY_CHARGING_PERIODS,
+        SessionDTO.JSON_PROPERTY_TOTAL_COST,
+        SessionDTO.JSON_PROPERTY_STATUS,
+        SessionDTO.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class SessionDTO {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "country_code";
   private String countryCode;

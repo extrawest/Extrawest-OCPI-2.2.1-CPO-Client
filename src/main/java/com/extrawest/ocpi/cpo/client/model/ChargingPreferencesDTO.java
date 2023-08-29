@@ -22,12 +22,12 @@ import java.util.Objects;
  * ChargingPreferencesDTO
  */
 @JsonPropertyOrder({
-  ChargingPreferencesDTO.JSON_PROPERTY_PROFILE_TYPE,
-  ChargingPreferencesDTO.JSON_PROPERTY_DEPARTURE_TIME,
-  ChargingPreferencesDTO.JSON_PROPERTY_ENERGY_NEED,
-  ChargingPreferencesDTO.JSON_PROPERTY_DISCHARGE_ALLOWED
+        ChargingPreferencesDTO.JSON_PROPERTY_PROFILE_TYPE,
+        ChargingPreferencesDTO.JSON_PROPERTY_DEPARTURE_TIME,
+        ChargingPreferencesDTO.JSON_PROPERTY_ENERGY_NEED,
+        ChargingPreferencesDTO.JSON_PROPERTY_DISCHARGE_ALLOWED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class ChargingPreferencesDTO {
   /**
    * Gets or Sets profileType

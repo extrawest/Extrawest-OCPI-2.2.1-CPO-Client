@@ -41,17 +41,17 @@ import java.util.Objects;
   LocationDTO.JSON_PROPERTY_IMAGES,
   LocationDTO.JSON_PROPERTY_COUNTRY_CODE,
   LocationDTO.JSON_PROPERTY_PARTY_ID,
-  LocationDTO.JSON_PROPERTY_PUBLISH_ALLOWED_TO,
-  LocationDTO.JSON_PROPERTY_POSTAL_CODE,
-  LocationDTO.JSON_PROPERTY_RELATED_LOCATIONS,
-  LocationDTO.JSON_PROPERTY_PARKING_TYPE,
-  LocationDTO.JSON_PROPERTY_TIME_ZONE,
-  LocationDTO.JSON_PROPERTY_OPENING_TIMES,
-  LocationDTO.JSON_PROPERTY_CHARGING_WHEN_CLOSED,
-  LocationDTO.JSON_PROPERTY_ENERGY_MIX,
-  LocationDTO.JSON_PROPERTY_LAST_UPDATED
+        LocationDTO.JSON_PROPERTY_PUBLISH_ALLOWED_TO,
+        LocationDTO.JSON_PROPERTY_POSTAL_CODE,
+        LocationDTO.JSON_PROPERTY_RELATED_LOCATIONS,
+        LocationDTO.JSON_PROPERTY_PARKING_TYPE,
+        LocationDTO.JSON_PROPERTY_TIME_ZONE,
+        LocationDTO.JSON_PROPERTY_OPENING_TIMES,
+        LocationDTO.JSON_PROPERTY_CHARGING_WHEN_CLOSED,
+        LocationDTO.JSON_PROPERTY_ENERGY_MIX,
+        LocationDTO.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class LocationDTO {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

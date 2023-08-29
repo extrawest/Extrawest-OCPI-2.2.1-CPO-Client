@@ -21,10 +21,10 @@ import java.util.Objects;
  * VersionResponseDTO
  */
 @JsonPropertyOrder({
-  VersionResponseDTO.JSON_PROPERTY_VERSION,
-  VersionResponseDTO.JSON_PROPERTY_URL
+        VersionResponseDTO.JSON_PROPERTY_VERSION,
+        VersionResponseDTO.JSON_PROPERTY_URL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
 public class VersionResponseDTO {
   /**
    * Gets or Sets version
