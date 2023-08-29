@@ -1,17 +1,17 @@
-# ClientInfoControllerApi
+# CpoLocationApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getHubClientInfo**](ClientInfoControllerApi.md#getHubClientInfo) | **GET** /api/2.2.1/hubClientInfo/{country_code}/{party_id} |  |
-| [**putHubClientInfo**](ClientInfoControllerApi.md#putHubClientInfo) | **PUT** /api/2.2.1/hubClientInfo/{country_code}/{party_id} |  |
+| [**getLocationEvseController**](CpoLocationApi.md#getLocationEvseController) | **GET** /cpo/api/2.2.1/locations |  |
+| [**getLocations**](CpoLocationApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations/getLocations |  |
 
 
 
-## getHubClientInfo
+## getLocationEvseController
 
-> ClientInfoDTO getHubClientInfo(countryCode, partyId)
+> Object getLocationEvseController(locationId, evseUid, connectorId)
 
 
 
@@ -23,21 +23,22 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.ClientInfoControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoLocationApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        ClientInfoControllerApi apiInstance = new ClientInfoControllerApi(defaultClient);
-        String countryCode = "countryCode_example"; // String | 
-        String partyId = "partyId_example"; // String | 
+        CpoLocationApi apiInstance = new CpoLocationApi(defaultClient);
+        String locationId = "locationId_example"; // String | 
+        String evseUid = "evseUid_example"; // String | 
+        String connectorId = "connectorId_example"; // String | 
         try {
-            ClientInfoDTO result = apiInstance.getHubClientInfo(countryCode, partyId);
+            Object result = apiInstance.getLocationEvseController(locationId, evseUid, connectorId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ClientInfoControllerApi#getHubClientInfo");
+            System.err.println("Exception when calling CpoLocationApi#getLocationEvseController");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -52,12 +53,13 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **countryCode** | **String**|  | |
-| **partyId** | **String**|  | |
+| **locationId** | **String**|  | |
+| **evseUid** | **String**|  | [optional] |
+| **connectorId** | **String**|  | [optional] |
 
 ### Return type
 
-[**ClientInfoDTO**](ClientInfoDTO.md)
+**Object**
 
 ### Authorization
 
@@ -75,9 +77,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## putHubClientInfo
+## getLocations
 
-> putHubClientInfo(countryCode, partyId)
+> List&lt;LocationDTO&gt; getLocations(dateFrom, dateTo, offset, limit)
 
 
 
@@ -89,20 +91,23 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.ClientInfoControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoLocationApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        ClientInfoControllerApi apiInstance = new ClientInfoControllerApi(defaultClient);
-        String countryCode = "countryCode_example"; // String | 
-        String partyId = "partyId_example"; // String | 
+        CpoLocationApi apiInstance = new CpoLocationApi(defaultClient);
+        OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
+        OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
+        Integer offset = 0; // Integer | 
+        Integer limit = 56; // Integer | 
         try {
-            apiInstance.putHubClientInfo(countryCode, partyId);
+            List<LocationDTO> result = apiInstance.getLocations(dateFrom, dateTo, offset, limit);
+            System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ClientInfoControllerApi#putHubClientInfo");
+            System.err.println("Exception when calling CpoLocationApi#getLocations");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -117,12 +122,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **countryCode** | **String**|  | |
-| **partyId** | **String**|  | |
+| **dateFrom** | **OffsetDateTime**|  | [optional] |
+| **dateTo** | **OffsetDateTime**|  | [optional] |
+| **offset** | **Integer**|  | [optional] [default to 0] |
+| **limit** | **Integer**|  | [optional] |
 
 ### Return type
 
-null (empty response body)
+[**List&lt;LocationDTO&gt;**](LocationDTO.md)
 
 ### Authorization
 
@@ -131,7 +138,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: */*
 
 
 ### HTTP response details

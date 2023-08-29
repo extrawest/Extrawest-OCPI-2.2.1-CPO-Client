@@ -13,15 +13,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
-public class ClientInfoControllerApi {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+public class ClientInfoApi {
     private ApiClient apiClient;
 
-    public ClientInfoControllerApi() {
+    public ClientInfoApi() {
         this(new ApiClient());
     }
 
-    public ClientInfoControllerApi(ApiClient apiClient) {
+    public ClientInfoApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 

@@ -23,10 +23,10 @@ import java.util.Objects;
  * EnergyContract
  */
 @JsonPropertyOrder({
-  EnergyContract.JSON_PROPERTY_SUPPLIER_NAME,
-  EnergyContract.JSON_PROPERTY_CONTRACT_ID
+        EnergyContract.JSON_PROPERTY_SUPPLIER_NAME,
+        EnergyContract.JSON_PROPERTY_CONTRACT_ID
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class EnergyContract {
   public static final String JSON_PROPERTY_SUPPLIER_NAME = "supplier_name";
   private String supplierName;

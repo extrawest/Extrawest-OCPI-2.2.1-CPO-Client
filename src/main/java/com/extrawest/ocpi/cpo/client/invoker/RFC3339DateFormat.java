@@ -15,10 +15,10 @@ package com.extrawest.ocpi.cpo.client.invoker;
 import com.fasterxml.jackson.databind.util.StdDateFormat;
 
 import java.text.DateFormat;
-import java.text.DecimalFormat;
 import java.text.FieldPosition;
 import java.text.ParsePosition;
 import java.util.Date;
+import java.text.DecimalFormat;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 

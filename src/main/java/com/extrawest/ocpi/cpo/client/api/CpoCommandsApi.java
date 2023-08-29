@@ -14,15 +14,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
-public class CpoCommandsControllerApi {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+public class CpoCommandsApi {
     private ApiClient apiClient;
 
-    public CpoCommandsControllerApi() {
+    public CpoCommandsApi() {
         this(new ApiClient());
     }
 
-    public CpoCommandsControllerApi(ApiClient apiClient) {
+    public CpoCommandsApi(ApiClient apiClient) {
         this.apiClient = apiClient;
     }
 

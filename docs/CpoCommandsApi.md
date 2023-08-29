@@ -1,16 +1,16 @@
-# CpoCdrControllerApi
+# CpoCommandsApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getCdr**](CpoCdrControllerApi.md#getCdr) | **GET** /cpo/api/2.2.1/cdr |  |
+| [**postCommand**](CpoCommandsApi.md#postCommand) | **POST** /cpo/api/2.2.1/commands/{command} |  |
 
 
 
-## getCdr
+## postCommand
 
-> List&lt;CdrDTO&gt; getCdr(dateFrom, dateTo, offset, limit)
+> CommandResponseDTO postCommand(command, abstractCommand)
 
 
 
@@ -22,23 +22,21 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoCdrControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoCommandsApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoCdrControllerApi apiInstance = new CpoCdrControllerApi(defaultClient);
-        OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
-        OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
-        Integer offset = 56; // Integer | 
-        Integer limit = 56; // Integer | 
+        CpoCommandsApi apiInstance = new CpoCommandsApi(defaultClient);
+        String command = "CANCEL_RESERVATION"; // String | 
+        AbstractCommand abstractCommand = new AbstractCommand(); // AbstractCommand | 
         try {
-            List<CdrDTO> result = apiInstance.getCdr(dateFrom, dateTo, offset, limit);
+            CommandResponseDTO result = apiInstance.postCommand(command, abstractCommand);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoCdrControllerApi#getCdr");
+            System.err.println("Exception when calling CpoCommandsApi#postCommand");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -53,14 +51,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dateFrom** | **OffsetDateTime**|  | |
-| **dateTo** | **OffsetDateTime**|  | |
-| **offset** | **Integer**|  | |
-| **limit** | **Integer**|  | |
+| **command** | **String**|  | [enum: CANCEL_RESERVATION, RESERVE_NOW, START_SESSION, STOP_SESSION, UNLOCK_CONNECTOR] |
+| **abstractCommand** | [**AbstractCommand**](AbstractCommand.md)|  | |
 
 ### Return type
 
-[**List&lt;CdrDTO&gt;**](CdrDTO.md)
+[**CommandResponseDTO**](CommandResponseDTO.md)
 
 ### Authorization
 
@@ -68,7 +64,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: */*
 
 

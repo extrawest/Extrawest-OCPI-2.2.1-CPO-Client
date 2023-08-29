@@ -1,17 +1,17 @@
-# CpoSessionsControllerApi
+# ClientInfoApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getSessions**](CpoSessionsControllerApi.md#getSessions) | **GET** /cpo/api/2.2.1/sessions |  |
-| [**putChargingPreferences**](CpoSessionsControllerApi.md#putChargingPreferences) | **PUT** /cpo/api/2.2.1/sessions |  |
+| [**getHubClientInfo**](ClientInfoApi.md#getHubClientInfo) | **GET** /api/2.2.1/hubClientInfo/{country_code}/{party_id} |  |
+| [**putHubClientInfo**](ClientInfoApi.md#putHubClientInfo) | **PUT** /api/2.2.1/hubClientInfo/{country_code}/{party_id} |  |
 
 
 
-## getSessions
+## getHubClientInfo
 
-> List&lt;SessionDTO&gt; getSessions(dateFrom, dateTo, offset, limit)
+> ClientInfoDTO getHubClientInfo(countryCode, partyId)
 
 
 
@@ -23,23 +23,21 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoSessionsControllerApi;
+import com.extrawest.ocpi.cpo.client.api.ClientInfoApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoSessionsControllerApi apiInstance = new CpoSessionsControllerApi(defaultClient);
-        OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
-        OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
-        Integer offset = 0; // Integer | 
-        Integer limit = 56; // Integer | 
+        ClientInfoApi apiInstance = new ClientInfoApi(defaultClient);
+        String countryCode = "countryCode_example"; // String | 
+        String partyId = "partyId_example"; // String | 
         try {
-            List<SessionDTO> result = apiInstance.getSessions(dateFrom, dateTo, offset, limit);
+            ClientInfoDTO result = apiInstance.getHubClientInfo(countryCode, partyId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoSessionsControllerApi#getSessions");
+            System.err.println("Exception when calling ClientInfoApi#getHubClientInfo");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -54,14 +52,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dateFrom** | **OffsetDateTime**|  | |
-| **dateTo** | **OffsetDateTime**|  | [optional] |
-| **offset** | **Integer**|  | [optional] [default to 0] |
-| **limit** | **Integer**|  | [optional] |
+| **countryCode** | **String**|  | |
+| **partyId** | **String**|  | |
 
 ### Return type
 
-[**List&lt;SessionDTO&gt;**](SessionDTO.md)
+[**ClientInfoDTO**](ClientInfoDTO.md)
 
 ### Authorization
 
@@ -79,9 +75,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## putChargingPreferences
+## putHubClientInfo
 
-> ChargingPreferencesDTO putChargingPreferences(sessionId, chargingPreferencesDTO)
+> putHubClientInfo(countryCode, partyId)
 
 
 
@@ -93,21 +89,20 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoSessionsControllerApi;
+import com.extrawest.ocpi.cpo.client.api.ClientInfoApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoSessionsControllerApi apiInstance = new CpoSessionsControllerApi(defaultClient);
-        String sessionId = "sessionId_example"; // String | 
-        ChargingPreferencesDTO chargingPreferencesDTO = new ChargingPreferencesDTO(); // ChargingPreferencesDTO | 
+        ClientInfoApi apiInstance = new ClientInfoApi(defaultClient);
+        String countryCode = "countryCode_example"; // String | 
+        String partyId = "partyId_example"; // String | 
         try {
-            ChargingPreferencesDTO result = apiInstance.putChargingPreferences(sessionId, chargingPreferencesDTO);
-            System.out.println(result);
+            apiInstance.putHubClientInfo(countryCode, partyId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoSessionsControllerApi#putChargingPreferences");
+            System.err.println("Exception when calling ClientInfoApi#putHubClientInfo");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -122,12 +117,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sessionId** | **String**|  | |
-| **chargingPreferencesDTO** | [**ChargingPreferencesDTO**](ChargingPreferencesDTO.md)|  | |
+| **countryCode** | **String**|  | |
+| **partyId** | **String**|  | |
 
 ### Return type
 
-[**ChargingPreferencesDTO**](ChargingPreferencesDTO.md)
+null (empty response body)
 
 ### Authorization
 
@@ -135,8 +130,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ### HTTP response details

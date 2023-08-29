@@ -1,17 +1,17 @@
-# CpoLocationControllerApi
+# CpoSessionsApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getLocationEvseController**](CpoLocationControllerApi.md#getLocationEvseController) | **GET** /cpo/api/2.2.1/locations |  |
-| [**getLocations**](CpoLocationControllerApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations/getLocations |  |
+| [**getSessions**](CpoSessionsApi.md#getSessions) | **GET** /cpo/api/2.2.1/sessions |  |
+| [**putChargingPreferences**](CpoSessionsApi.md#putChargingPreferences) | **PUT** /cpo/api/2.2.1/sessions |  |
 
 
 
-## getLocationEvseController
+## getSessions
 
-> Object getLocationEvseController(locationId, evseUid, connectorId)
+> List&lt;SessionDTO&gt; getSessions(dateFrom, dateTo, offset, limit)
 
 
 
@@ -23,22 +23,23 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoLocationControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoSessionsApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoLocationControllerApi apiInstance = new CpoLocationControllerApi(defaultClient);
-        String locationId = "locationId_example"; // String | 
-        String evseUid = "evseUid_example"; // String | 
-        String connectorId = "connectorId_example"; // String | 
+        CpoSessionsApi apiInstance = new CpoSessionsApi(defaultClient);
+        OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
+        OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
+        Integer offset = 0; // Integer | 
+        Integer limit = 56; // Integer | 
         try {
-            Object result = apiInstance.getLocationEvseController(locationId, evseUid, connectorId);
+            List<SessionDTO> result = apiInstance.getSessions(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoLocationControllerApi#getLocationEvseController");
+            System.err.println("Exception when calling CpoSessionsApi#getSessions");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -53,13 +54,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **locationId** | **String**|  | |
-| **evseUid** | **String**|  | [optional] |
-| **connectorId** | **String**|  | [optional] |
+| **dateFrom** | **OffsetDateTime**|  | |
+| **dateTo** | **OffsetDateTime**|  | [optional] |
+| **offset** | **Integer**|  | [optional] [default to 0] |
+| **limit** | **Integer**|  | [optional] |
 
 ### Return type
 
-**Object**
+[**List&lt;SessionDTO&gt;**](SessionDTO.md)
 
 ### Authorization
 
@@ -77,9 +79,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## getLocations
+## putChargingPreferences
 
-> List&lt;LocationDTO&gt; getLocations(dateFrom, dateTo, offset, limit)
+> ChargingPreferencesDTO putChargingPreferences(sessionId, chargingPreferencesDTO)
 
 
 
@@ -91,23 +93,21 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoLocationControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoSessionsApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoLocationControllerApi apiInstance = new CpoLocationControllerApi(defaultClient);
-        OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
-        OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
-        Integer offset = 0; // Integer | 
-        Integer limit = 56; // Integer | 
+        CpoSessionsApi apiInstance = new CpoSessionsApi(defaultClient);
+        String sessionId = "sessionId_example"; // String | 
+        ChargingPreferencesDTO chargingPreferencesDTO = new ChargingPreferencesDTO(); // ChargingPreferencesDTO | 
         try {
-            List<LocationDTO> result = apiInstance.getLocations(dateFrom, dateTo, offset, limit);
+            ChargingPreferencesDTO result = apiInstance.putChargingPreferences(sessionId, chargingPreferencesDTO);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoLocationControllerApi#getLocations");
+            System.err.println("Exception when calling CpoSessionsApi#putChargingPreferences");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -122,14 +122,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dateFrom** | **OffsetDateTime**|  | [optional] |
-| **dateTo** | **OffsetDateTime**|  | [optional] |
-| **offset** | **Integer**|  | [optional] [default to 0] |
-| **limit** | **Integer**|  | [optional] |
+| **sessionId** | **String**|  | |
+| **chargingPreferencesDTO** | [**ChargingPreferencesDTO**](ChargingPreferencesDTO.md)|  | |
 
 ### Return type
 
-[**List&lt;LocationDTO&gt;**](LocationDTO.md)
+[**ChargingPreferencesDTO**](ChargingPreferencesDTO.md)
 
 ### Authorization
 
@@ -137,7 +135,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: */*
 
 

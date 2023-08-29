@@ -1,16 +1,16 @@
-# CpoTariffControllerApi
+# CpoCdrApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getTariffs**](CpoTariffControllerApi.md#getTariffs) | **GET** /cpo/api/2.2.1/tariffs |  |
+| [**getCdr**](CpoCdrApi.md#getCdr) | **GET** /cpo/api/2.2.1/cdr |  |
 
 
 
-## getTariffs
+## getCdr
 
-> List&lt;TariffDTO&gt; getTariffs(dateFrom, dateTo, offset, limit)
+> List&lt;CdrDTO&gt; getCdr(dateFrom, dateTo, offset, limit)
 
 
 
@@ -22,23 +22,23 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoTariffControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoCdrApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoTariffControllerApi apiInstance = new CpoTariffControllerApi(defaultClient);
+        CpoCdrApi apiInstance = new CpoCdrApi(defaultClient);
         OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
         OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
-        Integer offset = 0; // Integer | 
+        Integer offset = 56; // Integer | 
         Integer limit = 56; // Integer | 
         try {
-            List<TariffDTO> result = apiInstance.getTariffs(dateFrom, dateTo, offset, limit);
+            List<CdrDTO> result = apiInstance.getCdr(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoTariffControllerApi#getTariffs");
+            System.err.println("Exception when calling CpoCdrApi#getCdr");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -53,14 +53,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dateFrom** | **OffsetDateTime**|  | [optional] |
-| **dateTo** | **OffsetDateTime**|  | [optional] |
-| **offset** | **Integer**|  | [optional] [default to 0] |
-| **limit** | **Integer**|  | [optional] |
+| **dateFrom** | **OffsetDateTime**|  | |
+| **dateTo** | **OffsetDateTime**|  | |
+| **offset** | **Integer**|  | |
+| **limit** | **Integer**|  | |
 
 ### Return type
 
-[**List&lt;TariffDTO&gt;**](TariffDTO.md)
+[**List&lt;CdrDTO&gt;**](CdrDTO.md)
 
 ### Authorization
 

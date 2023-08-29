@@ -25,13 +25,13 @@ import java.util.Objects;
  * SignedData
  */
 @JsonPropertyOrder({
-  SignedData.JSON_PROPERTY_ENCODING_METHOD,
-  SignedData.JSON_PROPERTY_ENCODING_METHOD_VERSION,
-  SignedData.JSON_PROPERTY_PUBLIC_KEY,
-  SignedData.JSON_PROPERTY_SIGNED_VALUES,
-  SignedData.JSON_PROPERTY_URL
+        SignedData.JSON_PROPERTY_ENCODING_METHOD,
+        SignedData.JSON_PROPERTY_ENCODING_METHOD_VERSION,
+        SignedData.JSON_PROPERTY_PUBLIC_KEY,
+        SignedData.JSON_PROPERTY_SIGNED_VALUES,
+        SignedData.JSON_PROPERTY_URL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-18T12:07:41.590741+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class SignedData {
   public static final String JSON_PROPERTY_ENCODING_METHOD = "encoding_method";
   private String encodingMethod;

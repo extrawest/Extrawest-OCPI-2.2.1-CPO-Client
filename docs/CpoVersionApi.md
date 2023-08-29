@@ -1,11 +1,11 @@
-# CpoVersionControllerApi
+# CpoVersionApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getVersion**](CpoVersionControllerApi.md#getVersion) | **GET** /cpo/api/2.2.1/versions |  |
-| [**getVersionDetails**](CpoVersionControllerApi.md#getVersionDetails) | **GET** /cpo/api/2.2.1/versions/details/{version} |  |
+| [**getVersion**](CpoVersionApi.md#getVersion) | **GET** /cpo/api/2.2.1/versions |  |
+| [**getVersionDetails**](CpoVersionApi.md#getVersionDetails) | **GET** /cpo/api/2.2.1/versions/details/{version} |  |
 
 
 
@@ -23,19 +23,19 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoVersionControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoVersionApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoVersionControllerApi apiInstance = new CpoVersionControllerApi(defaultClient);
+        CpoVersionApi apiInstance = new CpoVersionApi(defaultClient);
         try {
             List<VersionResponseDTO> result = apiInstance.getVersion();
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoVersionControllerApi#getVersion");
+            System.err.println("Exception when calling CpoVersionApi#getVersion");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -83,20 +83,20 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoVersionControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoVersionApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoVersionControllerApi apiInstance = new CpoVersionControllerApi(defaultClient);
+        CpoVersionApi apiInstance = new CpoVersionApi(defaultClient);
         String version = "2.0"; // String | 
         try {
             VersionDetailsResponseDTO result = apiInstance.getVersionDetails(version);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoVersionControllerApi#getVersionDetails");
+            System.err.println("Exception when calling CpoVersionApi#getVersionDetails");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

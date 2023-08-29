@@ -1,18 +1,18 @@
-# CpoTokensControllerApi
+# CpoChargingProfilesApi
 
 All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getToken**](CpoTokensControllerApi.md#getToken) | **GET** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |  |
-| [**patchToken**](CpoTokensControllerApi.md#patchToken) | **PATCH** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |  |
-| [**putToken**](CpoTokensControllerApi.md#putToken) | **PUT** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |  |
+| [**deleteChargingProfile**](CpoChargingProfilesApi.md#deleteChargingProfile) | **DELETE** /cpo/api/2.2.1/chargingProfiles/{session_id}/{response_url} |  |
+| [**getChargingProfile**](CpoChargingProfilesApi.md#getChargingProfile) | **GET** /cpo/api/2.2.1/chargingProfiles/{session_id}/{duration}/{response_url} |  |
+| [**putChargingProfile**](CpoChargingProfilesApi.md#putChargingProfile) | **PUT** /cpo/api/2.2.1/chargingProfiles/{session_id} |  |
 
 
 
-## getToken
+## deleteChargingProfile
 
-> TokenDTO getToken(countryCode, partyId, tokenUid, type)
+> ChargingProfileResponseDTO deleteChargingProfile(sessionId, responseUrl)
 
 
 
@@ -24,23 +24,21 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoTokensControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoChargingProfilesApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoTokensControllerApi apiInstance = new CpoTokensControllerApi(defaultClient);
-        String countryCode = "countryCode_example"; // String | 
-        String partyId = "partyId_example"; // String | 
-        String tokenUid = "tokenUid_example"; // String | 
-        String type = "AD_HOC_USER"; // String | 
+        CpoChargingProfilesApi apiInstance = new CpoChargingProfilesApi(defaultClient);
+        String sessionId = "sessionId_example"; // String | 
+        String responseUrl = "responseUrl_example"; // String | 
         try {
-            TokenDTO result = apiInstance.getToken(countryCode, partyId, tokenUid, type);
+            ChargingProfileResponseDTO result = apiInstance.deleteChargingProfile(sessionId, responseUrl);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoTokensControllerApi#getToken");
+            System.err.println("Exception when calling CpoChargingProfilesApi#deleteChargingProfile");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -55,14 +53,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **countryCode** | **String**|  | |
-| **partyId** | **String**|  | |
-| **tokenUid** | **String**|  | |
-| **type** | **String**|  | [enum: AD_HOC_USER, APP_USER, OTHER, RFID] |
+| **sessionId** | **String**|  | |
+| **responseUrl** | **String**|  | |
 
 ### Return type
 
-[**TokenDTO**](TokenDTO.md)
+[**ChargingProfileResponseDTO**](ChargingProfileResponseDTO.md)
 
 ### Authorization
 
@@ -80,9 +76,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## patchToken
+## getChargingProfile
 
-> patchToken(countryCode, partyId, tokenUid, type, tokenDTO)
+> ChargingProfileResponseDTO getChargingProfile(sessionId, duration, responseUrl)
 
 
 
@@ -94,23 +90,22 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoTokensControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoChargingProfilesApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoTokensControllerApi apiInstance = new CpoTokensControllerApi(defaultClient);
-        String countryCode = "countryCode_example"; // String | 
-        String partyId = "partyId_example"; // String | 
-        String tokenUid = "tokenUid_example"; // String | 
-        String type = "AD_HOC_USER"; // String | 
-        TokenDTO tokenDTO = new TokenDTO(); // TokenDTO | 
+        CpoChargingProfilesApi apiInstance = new CpoChargingProfilesApi(defaultClient);
+        String sessionId = "sessionId_example"; // String | 
+        Integer duration = 56; // Integer | 
+        String responseUrl = "responseUrl_example"; // String | 
         try {
-            apiInstance.patchToken(countryCode, partyId, tokenUid, type, tokenDTO);
+            ChargingProfileResponseDTO result = apiInstance.getChargingProfile(sessionId, duration, responseUrl);
+            System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoTokensControllerApi#patchToken");
+            System.err.println("Exception when calling CpoChargingProfilesApi#getChargingProfile");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -125,15 +120,13 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **countryCode** | **String**|  | |
-| **partyId** | **String**|  | |
-| **tokenUid** | **String**|  | |
-| **type** | **String**|  | [enum: AD_HOC_USER, APP_USER, OTHER, RFID] |
-| **tokenDTO** | [**TokenDTO**](TokenDTO.md)|  | |
+| **sessionId** | **String**|  | |
+| **duration** | **Integer**|  | |
+| **responseUrl** | **String**|  | |
 
 ### Return type
 
-null (empty response body)
+[**ChargingProfileResponseDTO**](ChargingProfileResponseDTO.md)
 
 ### Authorization
 
@@ -141,8 +134,8 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: */*
 
 
 ### HTTP response details
@@ -151,9 +144,9 @@ No authorization required
 | **200** | OK |  -  |
 
 
-## putToken
+## putChargingProfile
 
-> putToken(countryCode, partyId, tokenUid, type, tokenDTO)
+> ChargingProfileResponseDTO putChargingProfile(sessionId, setChargingProfileRequestDTO)
 
 
 
@@ -165,23 +158,21 @@ import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
 import com.extrawest.ocpi.cpo.client.invoker.ApiException;
 import com.extrawest.ocpi.cpo.client.invoker.Configuration;
 import com.extrawest.ocpi.cpo.client.invoker.models.*;
-import com.extrawest.ocpi.cpo.client.api.CpoTokensControllerApi;
+import com.extrawest.ocpi.cpo.client.api.CpoChargingProfilesApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost:8080");
 
-        CpoTokensControllerApi apiInstance = new CpoTokensControllerApi(defaultClient);
-        String countryCode = "countryCode_example"; // String | 
-        String partyId = "partyId_example"; // String | 
-        String tokenUid = "tokenUid_example"; // String | 
-        String type = "AD_HOC_USER"; // String | 
-        TokenDTO tokenDTO = new TokenDTO(); // TokenDTO | 
+        CpoChargingProfilesApi apiInstance = new CpoChargingProfilesApi(defaultClient);
+        String sessionId = "sessionId_example"; // String | 
+        SetChargingProfileRequestDTO setChargingProfileRequestDTO = new SetChargingProfileRequestDTO(); // SetChargingProfileRequestDTO | 
         try {
-            apiInstance.putToken(countryCode, partyId, tokenUid, type, tokenDTO);
+            ChargingProfileResponseDTO result = apiInstance.putChargingProfile(sessionId, setChargingProfileRequestDTO);
+            System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoTokensControllerApi#putToken");
+            System.err.println("Exception when calling CpoChargingProfilesApi#putChargingProfile");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -196,15 +187,12 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **countryCode** | **String**|  | |
-| **partyId** | **String**|  | |
-| **tokenUid** | **String**|  | |
-| **type** | **String**|  | [enum: AD_HOC_USER, APP_USER, OTHER, RFID] |
-| **tokenDTO** | [**TokenDTO**](TokenDTO.md)|  | |
+| **sessionId** | **String**|  | |
+| **setChargingProfileRequestDTO** | [**SetChargingProfileRequestDTO**](SetChargingProfileRequestDTO.md)|  | |
 
 ### Return type
 
-null (empty response body)
+[**ChargingProfileResponseDTO**](ChargingProfileResponseDTO.md)
 
 ### Authorization
 
@@ -213,7 +201,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: */*
 
 
 ### HTTP response details
