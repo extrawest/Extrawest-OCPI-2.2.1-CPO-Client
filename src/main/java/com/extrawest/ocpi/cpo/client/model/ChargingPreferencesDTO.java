@@ -27,7 +27,7 @@ import java.util.Objects;
         ChargingPreferencesDTO.JSON_PROPERTY_ENERGY_NEED,
         ChargingPreferencesDTO.JSON_PROPERTY_DISCHARGE_ALLOWED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class ChargingPreferencesDTO {
   /**
    * Gets or Sets profileType

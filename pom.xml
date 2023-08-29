@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.extrawest</groupId>
-	<artifactId>extrawest-ocpi-2.2.1-cpo-client</artifactId>
-	<version>2023.8.29-SNAPSHOT</version>
+	<artifactId>Extrawest-OCPI-2.2.1-CPO-Client</artifactId>
+	<version>2023.8.27-SNAPSHOT</version>
 
 	<name>Extrawest-OCPI-2.2.1-CPO-Client</name>
 	<description>Extrawest Client for OCPI 2.2.1 CPO Operations</description>

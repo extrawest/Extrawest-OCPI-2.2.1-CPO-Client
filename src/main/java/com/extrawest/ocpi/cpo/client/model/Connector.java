@@ -36,7 +36,7 @@ import java.util.Objects;
         Connector.JSON_PROPERTY_TERMS_AND_CONDITIONS,
         Connector.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class Connector {
   public static final String JSON_PROPERTY_URL = "url";
   private String url;

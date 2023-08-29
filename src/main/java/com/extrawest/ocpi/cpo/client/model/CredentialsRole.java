@@ -26,7 +26,7 @@ import java.util.Objects;
         CredentialsRole.JSON_PROPERTY_PARTY_ID,
         CredentialsRole.JSON_PROPERTY_COUNTRY_CODE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class CredentialsRole {
   /**
    * Gets or Sets role

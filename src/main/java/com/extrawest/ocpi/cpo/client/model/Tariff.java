@@ -24,11 +24,11 @@ import java.util.Objects;
  * Tariff
  */
 @JsonPropertyOrder({
-  Tariff.JSON_PROPERTY_COUNTRY_CODE,
-  Tariff.JSON_PROPERTY_PARTY_ID,
-  Tariff.JSON_PROPERTY_ID,
-  Tariff.JSON_PROPERTY_CURRENCY,
-  Tariff.JSON_PROPERTY_TYPE,
+        Tariff.JSON_PROPERTY_COUNTRY_CODE,
+        Tariff.JSON_PROPERTY_PARTY_ID,
+        Tariff.JSON_PROPERTY_ID,
+        Tariff.JSON_PROPERTY_CURRENCY,
+        Tariff.JSON_PROPERTY_TYPE,
         Tariff.JSON_PROPERTY_TARIFF_ALT_TEXT,
         Tariff.JSON_PROPERTY_TARIFF_ALT_URL,
         Tariff.JSON_PROPERTY_MIN_PRICE,
@@ -39,7 +39,7 @@ import java.util.Objects;
         Tariff.JSON_PROPERTY_ENERGY_MIX,
         Tariff.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class Tariff {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "country_code";
   private String countryCode;

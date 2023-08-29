@@ -24,10 +24,10 @@ import java.util.Objects;
  * EVSE
  */
 @JsonPropertyOrder({
-  EVSE.JSON_PROPERTY_UID,
-  EVSE.JSON_PROPERTY_EVSE_ID,
-  EVSE.JSON_PROPERTY_STATUS,
-  EVSE.JSON_PROPERTY_STATUS_SCHEDULE,
+        EVSE.JSON_PROPERTY_UID,
+        EVSE.JSON_PROPERTY_EVSE_ID,
+        EVSE.JSON_PROPERTY_STATUS,
+        EVSE.JSON_PROPERTY_STATUS_SCHEDULE,
         EVSE.JSON_PROPERTY_CAPABILITIES,
         EVSE.JSON_PROPERTY_CONNECTORS,
         EVSE.JSON_PROPERTY_FLOOR_LEVEL,
@@ -38,7 +38,7 @@ import java.util.Objects;
         EVSE.JSON_PROPERTY_IMAGES,
         EVSE.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class EVSE {
   public static final String JSON_PROPERTY_UID = "uid";
   private String uid;

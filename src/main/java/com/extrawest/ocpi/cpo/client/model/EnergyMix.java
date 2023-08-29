@@ -31,7 +31,7 @@ import java.util.Objects;
         EnergyMix.JSON_PROPERTY_SUPPLIER_NAME,
         EnergyMix.JSON_PROPERTY_ENERGY_PRODUCT_NAME
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class EnergyMix {
   public static final String JSON_PROPERTY_IS_GREEN_ENERGY = "is_green_energy";
   private Boolean isGreenEnergy;

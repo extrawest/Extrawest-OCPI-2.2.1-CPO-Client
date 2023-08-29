@@ -26,7 +26,7 @@ import java.util.Objects;
         SetChargingProfileRequestDTO.JSON_PROPERTY_CHARGING_PROFILE,
         SetChargingProfileRequestDTO.JSON_PROPERTY_RESPONSE_URL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class SetChargingProfileRequestDTO {
   public static final String JSON_PROPERTY_CHARGING_PROFILE = "charging_profile";
   private ChargingProfile chargingProfile;

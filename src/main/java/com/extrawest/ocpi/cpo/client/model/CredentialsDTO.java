@@ -29,7 +29,7 @@ import java.util.Objects;
         CredentialsDTO.JSON_PROPERTY_URL,
         CredentialsDTO.JSON_PROPERTY_ROLES
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T16:33:36.372088+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
 public class CredentialsDTO {
   public static final String JSON_PROPERTY_TOKEN = "token";
   private String token;
