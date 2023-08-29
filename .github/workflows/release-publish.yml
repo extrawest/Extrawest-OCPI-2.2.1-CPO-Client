@@ -27,16 +27,5 @@ jobs:
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mvn -Prelease deploy jreleaser:deploy -DaltDeploymentRepository=local::file:./target/staging-deploy
 
-  # Automatically create a GitHub Release, with release details specified (the relevant commits)
-  release:
-    needs: publish
-    name: Github Release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: marvinpinto/action-automatic-releases@latest
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: false
-
 
 
