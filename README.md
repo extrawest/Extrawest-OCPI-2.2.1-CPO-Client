@@ -20,9 +20,9 @@
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Use in Spring Boot App](#using-extrawest-ocpi-221-cpo-client-in-spring-boot-application)
-- [Documentation for API Endpoints](#documentation-for-api-endpoints)
-- [Documentation for Models](#documentation-for-models)
-- [Documentation for Authorization](#documentation-for-authentication-and-authorization)
+- [API Endpoints](#api-endpoints)
+- [Models](#models)
+- [Authentication and Authorization](#authentication-and-authorization)
 - [Recommendation](#recommendation)
 - [License](#license)
 - [About Extrawest.com](#about-extrawestcom)
@@ -184,7 +184,7 @@ Spring Boot application, where we have tested Extrawest-OCPI-2.2.1-CPO-Client, h
 ```
 
 
-## Documentation for API Endpoints
+## API Endpoints
 
 All URIs are relative to *http://localhost:8080*
 
@@ -214,7 +214,7 @@ Class | Method | HTTP request | Description
 *HubClientInfoApi* | [**getClientInfoList**](docs/HubClientInfoApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} |
 
 
-## Documentation for Models
+## Models
 
 - [AbstractCommand](docs/AbstractCommand.md)
 - [AdditionalGeoLocation](docs/AdditionalGeoLocation.md)
@@ -263,7 +263,7 @@ Class | Method | HTTP request | Description
 - [VersionResponseDTO](docs/VersionResponseDTO.md)
 
 
-## Documentation for Authentication and Authorization
+## Authentication and Authorization
 All endpoints do not require authorization or authentication.
 
 ## Recommendation
