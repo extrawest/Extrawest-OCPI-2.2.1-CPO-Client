@@ -7,17 +7,16 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**url** | **String** |  |  [optional] |
-|**id** | **String** |  |  [optional] |
-|**standard** | [**StandardEnum**](#StandardEnum) |  |  [optional] |
-|**format** | [**FormatEnum**](#FormatEnum) |  |  [optional] |
-|**powerType** | [**PowerTypeEnum**](#PowerTypeEnum) |  |  [optional] |
-|**maxVoltage** | **Integer** |  |  [optional] |
-|**maxAmperage** | **Integer** |  |  [optional] |
+|**id** | **String** |  |  |
+|**standard** | [**StandardEnum**](#StandardEnum) |  |  |
+|**format** | [**FormatEnum**](#FormatEnum) |  |  |
+|**powerType** | [**PowerTypeEnum**](#PowerTypeEnum) |  |  |
+|**maxVoltage** | **Integer** |  |  |
+|**maxAmperage** | **Integer** |  |  |
 |**maxElectricPower** | **Integer** |  |  [optional] |
 |**tariffIds** | **List&lt;String&gt;** |  |  [optional] |
 |**termsAndConditions** | **String** |  |  [optional] |
-|**lastUpdated** | **OffsetDateTime** |  |  [optional] |
+|**lastUpdated** | **OffsetDateTime** |  |  |
 
 
 

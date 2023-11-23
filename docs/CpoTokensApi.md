@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## getToken
 
-> TokenDTO getToken(countryCode, partyId, tokenUid, type)
+> ResponseFormatTokenDto getToken(countryCode, partyId, tokenUid, type)
 
 
 
@@ -37,7 +37,7 @@ public class Example {
         String tokenUid = "tokenUid_example"; // String | 
         String type = "AD_HOC_USER"; // String | 
         try {
-            TokenDTO result = apiInstance.getToken(countryCode, partyId, tokenUid, type);
+            ResponseFormatTokenDto result = apiInstance.getToken(countryCode, partyId, tokenUid, type);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoTokensApi#getToken");
@@ -62,7 +62,7 @@ public class Example {
 
 ### Return type
 
-[**TokenDTO**](TokenDTO.md)
+[**ResponseFormatTokenDto**](ResponseFormatTokenDto.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ No authorization required
 
 ## patchToken
 
-> patchToken(countryCode, partyId, tokenUid, type, tokenDTO)
+> ResponseFormatTokenDto patchToken(countryCode, partyId, tokenUid, type, tokenDto)
 
 
 
@@ -106,9 +106,10 @@ public class Example {
         String partyId = "partyId_example"; // String | 
         String tokenUid = "tokenUid_example"; // String | 
         String type = "AD_HOC_USER"; // String | 
-        TokenDTO tokenDTO = new TokenDTO(); // TokenDTO | 
+        TokenDto tokenDto = new TokenDto(); // TokenDto | 
         try {
-            apiInstance.patchToken(countryCode, partyId, tokenUid, type, tokenDTO);
+            ResponseFormatTokenDto result = apiInstance.patchToken(countryCode, partyId, tokenUid, type, tokenDto);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoTokensApi#patchToken");
             System.err.println("Status code: " + e.getCode());
@@ -129,11 +130,11 @@ public class Example {
 | **partyId** | **String**|  | |
 | **tokenUid** | **String**|  | |
 | **type** | **String**|  | [enum: AD_HOC_USER, APP_USER, OTHER, RFID] |
-| **tokenDTO** | [**TokenDTO**](TokenDTO.md)|  | |
+| **tokenDto** | [**TokenDto**](TokenDto.md)|  | |
 
 ### Return type
 
-null (empty response body)
+[**ResponseFormatTokenDto**](ResponseFormatTokenDto.md)
 
 ### Authorization
 
@@ -142,7 +143,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: */*
 
 
 ### HTTP response details
@@ -153,7 +154,7 @@ No authorization required
 
 ## putToken
 
-> putToken(countryCode, partyId, tokenUid, type, tokenDTO)
+> ResponseFormatTokenDto putToken(countryCode, partyId, tokenUid, type, tokenDto)
 
 
 
@@ -177,9 +178,10 @@ public class Example {
         String partyId = "partyId_example"; // String | 
         String tokenUid = "tokenUid_example"; // String | 
         String type = "AD_HOC_USER"; // String | 
-        TokenDTO tokenDTO = new TokenDTO(); // TokenDTO | 
+        TokenDto tokenDto = new TokenDto(); // TokenDto | 
         try {
-            apiInstance.putToken(countryCode, partyId, tokenUid, type, tokenDTO);
+            ResponseFormatTokenDto result = apiInstance.putToken(countryCode, partyId, tokenUid, type, tokenDto);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoTokensApi#putToken");
             System.err.println("Status code: " + e.getCode());
@@ -200,11 +202,11 @@ public class Example {
 | **partyId** | **String**|  | |
 | **tokenUid** | **String**|  | |
 | **type** | **String**|  | [enum: AD_HOC_USER, APP_USER, OTHER, RFID] |
-| **tokenDTO** | [**TokenDTO**](TokenDTO.md)|  | |
+| **tokenDto** | [**TokenDto**](TokenDto.md)|  | |
 
 ### Return type
 
-null (empty response body)
+[**ResponseFormatTokenDto**](ResponseFormatTokenDto.md)
 
 ### Authorization
 
@@ -213,7 +215,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: */*
 
 
 ### HTTP response details

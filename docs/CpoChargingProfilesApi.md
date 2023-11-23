@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## deleteChargingProfile
 
-> ChargingProfileResponseDTO deleteChargingProfile(sessionId, responseUrl)
+> ResponseFormatChargingProfileResponse deleteChargingProfile(sessionId, responseUrl)
 
 
 
@@ -35,7 +35,7 @@ public class Example {
         String sessionId = "sessionId_example"; // String | 
         String responseUrl = "responseUrl_example"; // String | 
         try {
-            ChargingProfileResponseDTO result = apiInstance.deleteChargingProfile(sessionId, responseUrl);
+            ResponseFormatChargingProfileResponse result = apiInstance.deleteChargingProfile(sessionId, responseUrl);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoChargingProfilesApi#deleteChargingProfile");
@@ -58,7 +58,7 @@ public class Example {
 
 ### Return type
 
-[**ChargingProfileResponseDTO**](ChargingProfileResponseDTO.md)
+[**ResponseFormatChargingProfileResponse**](ResponseFormatChargingProfileResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ No authorization required
 
 ## getChargingProfile
 
-> ChargingProfileResponseDTO getChargingProfile(sessionId, duration, responseUrl)
+> ResponseFormatChargingProfileResponse getChargingProfile(sessionId, duration, responseUrl)
 
 
 
@@ -102,7 +102,7 @@ public class Example {
         Integer duration = 56; // Integer | 
         String responseUrl = "responseUrl_example"; // String | 
         try {
-            ChargingProfileResponseDTO result = apiInstance.getChargingProfile(sessionId, duration, responseUrl);
+            ResponseFormatChargingProfileResponse result = apiInstance.getChargingProfile(sessionId, duration, responseUrl);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoChargingProfilesApi#getChargingProfile");
@@ -126,7 +126,7 @@ public class Example {
 
 ### Return type
 
-[**ChargingProfileResponseDTO**](ChargingProfileResponseDTO.md)
+[**ResponseFormatChargingProfileResponse**](ResponseFormatChargingProfileResponse.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ No authorization required
 
 ## putChargingProfile
 
-> ChargingProfileResponseDTO putChargingProfile(sessionId, setChargingProfileRequestDTO)
+> ResponseFormatObject putChargingProfile(sessionId, setChargingProfile)
 
 
 
@@ -167,9 +167,9 @@ public class Example {
 
         CpoChargingProfilesApi apiInstance = new CpoChargingProfilesApi(defaultClient);
         String sessionId = "sessionId_example"; // String | 
-        SetChargingProfileRequestDTO setChargingProfileRequestDTO = new SetChargingProfileRequestDTO(); // SetChargingProfileRequestDTO | 
+        SetChargingProfile setChargingProfile = new SetChargingProfile(); // SetChargingProfile | 
         try {
-            ChargingProfileResponseDTO result = apiInstance.putChargingProfile(sessionId, setChargingProfileRequestDTO);
+            ResponseFormatObject result = apiInstance.putChargingProfile(sessionId, setChargingProfile);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoChargingProfilesApi#putChargingProfile");
@@ -188,11 +188,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **String**|  | |
-| **setChargingProfileRequestDTO** | [**SetChargingProfileRequestDTO**](SetChargingProfileRequestDTO.md)|  | |
+| **setChargingProfile** | [**SetChargingProfile**](SetChargingProfile.md)|  | |
 
 ### Return type
 
-[**ChargingProfileResponseDTO**](ChargingProfileResponseDTO.md)
+[**ResponseFormatObject**](ResponseFormatObject.md)
 
 ### Authorization
 

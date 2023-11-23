@@ -36,665 +36,639 @@ import java.util.Objects;
         CdrLocation.JSON_PROPERTY_CONNECTOR_FORMAT,
         CdrLocation.JSON_PROPERTY_CONNECTOR_POWER_TYPE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class CdrLocation {
-  public static final String JSON_PROPERTY_ID = "id";
-  private String id;
+    public static final String JSON_PROPERTY_ID = "id";
+    public static final String JSON_PROPERTY_NAME = "name";
+    public static final String JSON_PROPERTY_ADDRESS = "address";
+    public static final String JSON_PROPERTY_CITY = "city";
+    public static final String JSON_PROPERTY_POSTAL_CODE = "postal_code";
+    public static final String JSON_PROPERTY_STATE = "state";
+    public static final String JSON_PROPERTY_COUNTRY = "country";
+    public static final String JSON_PROPERTY_COORDINATES = "coordinates";
+    public static final String JSON_PROPERTY_EVSE_UID = "evse_uid";
+    public static final String JSON_PROPERTY_EVSE_ID = "evse_id";
+    public static final String JSON_PROPERTY_CONNECTOR_ID = "connector_id";
+    public static final String JSON_PROPERTY_CONNECTOR_STANDARD = "connector_standard";
+    public static final String JSON_PROPERTY_CONNECTOR_FORMAT = "connector_format";
+    public static final String JSON_PROPERTY_CONNECTOR_POWER_TYPE = "connector_power_type";
+    private String id;
+    private String name;
+    private String address;
+    private String city;
+    private String postalCode;
+    private String state;
+    private String country;
+    private GeoLocation coordinates;
+    private String evseUid;
+    private String evseId;
+    private String connectorId;
+    private ConnectorStandardEnum connectorStandard;
+    private ConnectorFormatEnum connectorFormat;
+    private ConnectorPowerTypeEnum connectorPowerType;
 
-  public static final String JSON_PROPERTY_NAME = "name";
-  private String name;
-
-  public static final String JSON_PROPERTY_ADDRESS = "address";
-  private String address;
-
-  public static final String JSON_PROPERTY_CITY = "city";
-  private String city;
-
-  public static final String JSON_PROPERTY_POSTAL_CODE = "postal_code";
-  private String postalCode;
-
-  public static final String JSON_PROPERTY_STATE = "state";
-  private String state;
-
-  public static final String JSON_PROPERTY_COUNTRY = "country";
-  private String country;
-
-  public static final String JSON_PROPERTY_COORDINATES = "coordinates";
-  private GeoLocation coordinates;
-
-  public static final String JSON_PROPERTY_EVSE_UID = "evse_uid";
-  private String evseUid;
-
-  public static final String JSON_PROPERTY_EVSE_ID = "evse_id";
-  private String evseId;
-
-  public static final String JSON_PROPERTY_CONNECTOR_ID = "connector_id";
-  private String connectorId;
-
-  /**
-   * Gets or Sets connectorStandard
-   */
-  public enum ConnectorStandardEnum {
-    CHADEMO("CHADEMO"),
-    
-    CHAOJI("CHAOJI"),
-    
-    DOMESTIC_A("DOMESTIC_A"),
-    
-    DOMESTIC_B("DOMESTIC_B"),
-    
-    DOMESTIC_C("DOMESTIC_C"),
-    
-    DOMESTIC_D("DOMESTIC_D"),
-    
-    DOMESTIC_E("DOMESTIC_E"),
-    
-    DOMESTIC_F("DOMESTIC_F"),
-    
-    DOMESTIC_G("DOMESTIC_G"),
-    
-    DOMESTIC_H("DOMESTIC_H"),
-    
-    DOMESTIC_I("DOMESTIC_I"),
-    
-    DOMESTIC_J("DOMESTIC_J"),
-    
-    DOMESTIC_K("DOMESTIC_K"),
-    
-    DOMESTIC_L("DOMESTIC_L"),
-    
-    DOMESTIC_M("DOMESTIC_M"),
-    
-    DOMESTIC_N("DOMESTIC_N"),
-    
-    DOMESTIC_O("DOMESTIC_O"),
-    
-    GBT_AC("GBT_AC"),
-    
-    GBT_DC("GBT_DC"),
-    
-    IEC_60309_2_SINGLE_16("IEC_60309_2_single_16"),
-    
-    IEC_60309_2_THREE_16("IEC_60309_2_three_16"),
-    
-    IEC_60309_2_THREE_32("IEC_60309_2_three_32"),
-    
-    IEC_60309_2_THREE_64("IEC_60309_2_three_64"),
-    
-    IEC_62196_T1("IEC_62196_T1"),
-    
-    IEC_62196_T1_COMBO("IEC_62196_T1_COMBO"),
-    
-    IEC_62196_T2("IEC_62196_T2"),
-    
-    IEC_62196_T2_COMBO("IEC_62196_T2_COMBO"),
-    
-    IEC_62196_T3A("IEC_62196_T3A"),
-    
-    IEC_62196_T3C("IEC_62196_T3C"),
-    
-    NEMA_5_20("NEMA_5_20"),
-    
-    NEMA_6_30("NEMA_6_30"),
-    
-    NEMA_6_50("NEMA_6_50"),
-    
-    NEMA_10_30("NEMA_10_30"),
-    
-    NEMA_10_50("NEMA_10_50"),
-    
-    NEMA_14_30("NEMA_14_30"),
-    
-    NEMA_14_50("NEMA_14_50"),
-    
-    PANTOGRAPH_BOTTOM_UP("PANTOGRAPH_BOTTOM_UP"),
-    
-    PANTOGRAPH_TOP_DOWN("PANTOGRAPH_TOP_DOWN"),
-    
-    TESLA_R("TESLA_R"),
-    
-    TESLA_S("TESLA_S");
-
-    private String value;
-
-    ConnectorStandardEnum(String value) {
-      this.value = value;
+    public CdrLocation() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public CdrLocation id(String id) {
+
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return id
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getId() {
+        return id;
+    }
+
+    @JsonProperty(JSON_PROPERTY_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public CdrLocation name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_NAME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getName() {
+        return name;
+    }
+
+    @JsonProperty(JSON_PROPERTY_NAME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public CdrLocation address(String address) {
+
+        this.address = address;
+        return this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return address
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_ADDRESS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getAddress() {
+        return address;
+    }
+
+    @JsonProperty(JSON_PROPERTY_ADDRESS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public CdrLocation city(String city) {
+
+        this.city = city;
+        return this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return city
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_CITY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getCity() {
+        return city;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CITY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public CdrLocation postalCode(String postalCode) {
+
+        this.postalCode = postalCode;
+        return this;
+    }
+
+    /**
+     * Get postalCode
+     *
+     * @return postalCode
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public CdrLocation state(String state) {
+
+        this.state = state;
+        return this;
+    }
+
+    /**
+     * Get state
+     *
+     * @return state
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_STATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getState() {
+        return state;
+    }
+
+    @JsonProperty(JSON_PROPERTY_STATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public CdrLocation country(String country) {
+
+        this.country = country;
+        return this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return country
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_COUNTRY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getCountry() {
+        return country;
+    }
+
+    @JsonProperty(JSON_PROPERTY_COUNTRY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public CdrLocation coordinates(GeoLocation coordinates) {
+
+        this.coordinates = coordinates;
+        return this;
+    }
+
+    /**
+     * Get coordinates
+     *
+     * @return coordinates
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_COORDINATES)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public GeoLocation getCoordinates() {
+        return coordinates;
+    }
+
+    @JsonProperty(JSON_PROPERTY_COORDINATES)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setCoordinates(GeoLocation coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public CdrLocation evseUid(String evseUid) {
+
+        this.evseUid = evseUid;
+        return this;
+    }
+
+    /**
+     * Get evseUid
+     *
+     * @return evseUid
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_EVSE_UID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getEvseUid() {
+        return evseUid;
+    }
+
+    @JsonProperty(JSON_PROPERTY_EVSE_UID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setEvseUid(String evseUid) {
+        this.evseUid = evseUid;
+    }
+
+    public CdrLocation evseId(String evseId) {
+
+        this.evseId = evseId;
+        return this;
+    }
+
+    /**
+     * Get evseId
+     *
+     * @return evseId
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_EVSE_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getEvseId() {
+        return evseId;
+    }
+
+    @JsonProperty(JSON_PROPERTY_EVSE_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setEvseId(String evseId) {
+        this.evseId = evseId;
+    }
+
+    public CdrLocation connectorId(String connectorId) {
+
+        this.connectorId = connectorId;
+        return this;
+    }
+
+    /**
+     * Get connectorId
+     *
+     * @return connectorId
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getConnectorId() {
+        return connectorId;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setConnectorId(String connectorId) {
+        this.connectorId = connectorId;
+    }
+
+    public CdrLocation connectorStandard(ConnectorStandardEnum connectorStandard) {
+
+        this.connectorStandard = connectorStandard;
+        return this;
+    }
+
+    /**
+     * Get connectorStandard
+     *
+     * @return connectorStandard
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_STANDARD)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public ConnectorStandardEnum getConnectorStandard() {
+        return connectorStandard;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_STANDARD)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setConnectorStandard(ConnectorStandardEnum connectorStandard) {
+        this.connectorStandard = connectorStandard;
+    }
+
+    public CdrLocation connectorFormat(ConnectorFormatEnum connectorFormat) {
+
+        this.connectorFormat = connectorFormat;
+        return this;
+    }
+
+    /**
+     * Get connectorFormat
+     *
+     * @return connectorFormat
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_FORMAT)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public ConnectorFormatEnum getConnectorFormat() {
+        return connectorFormat;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_FORMAT)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setConnectorFormat(ConnectorFormatEnum connectorFormat) {
+        this.connectorFormat = connectorFormat;
+    }
+
+    public CdrLocation connectorPowerType(ConnectorPowerTypeEnum connectorPowerType) {
+
+        this.connectorPowerType = connectorPowerType;
+        return this;
+    }
+
+    /**
+     * Get connectorPowerType
+     *
+     * @return connectorPowerType
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_POWER_TYPE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public ConnectorPowerTypeEnum getConnectorPowerType() {
+        return connectorPowerType;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CONNECTOR_POWER_TYPE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setConnectorPowerType(ConnectorPowerTypeEnum connectorPowerType) {
+        this.connectorPowerType = connectorPowerType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CdrLocation cdrLocation = (CdrLocation) o;
+        return Objects.equals(this.id, cdrLocation.id) &&
+                Objects.equals(this.name, cdrLocation.name) &&
+                Objects.equals(this.address, cdrLocation.address) &&
+                Objects.equals(this.city, cdrLocation.city) &&
+                Objects.equals(this.postalCode, cdrLocation.postalCode) &&
+                Objects.equals(this.state, cdrLocation.state) &&
+                Objects.equals(this.country, cdrLocation.country) &&
+                Objects.equals(this.coordinates, cdrLocation.coordinates) &&
+                Objects.equals(this.evseUid, cdrLocation.evseUid) &&
+                Objects.equals(this.evseId, cdrLocation.evseId) &&
+                Objects.equals(this.connectorId, cdrLocation.connectorId) &&
+                Objects.equals(this.connectorStandard, cdrLocation.connectorStandard) &&
+                Objects.equals(this.connectorFormat, cdrLocation.connectorFormat) &&
+                Objects.equals(this.connectorPowerType, cdrLocation.connectorPowerType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, address, city, postalCode, state, country, coordinates, evseUid, evseId, connectorId, connectorStandard, connectorFormat, connectorPowerType);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class CdrLocation {\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    address: ").append(toIndentedString(address)).append("\n");
+        sb.append("    city: ").append(toIndentedString(city)).append("\n");
+        sb.append("    postalCode: ").append(toIndentedString(postalCode)).append("\n");
+        sb.append("    state: ").append(toIndentedString(state)).append("\n");
+        sb.append("    country: ").append(toIndentedString(country)).append("\n");
+        sb.append("    coordinates: ").append(toIndentedString(coordinates)).append("\n");
+        sb.append("    evseUid: ").append(toIndentedString(evseUid)).append("\n");
+        sb.append("    evseId: ").append(toIndentedString(evseId)).append("\n");
+        sb.append("    connectorId: ").append(toIndentedString(connectorId)).append("\n");
+        sb.append("    connectorStandard: ").append(toIndentedString(connectorStandard)).append("\n");
+        sb.append("    connectorFormat: ").append(toIndentedString(connectorFormat)).append("\n");
+        sb.append("    connectorPowerType: ").append(toIndentedString(connectorPowerType)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static ConnectorStandardEnum fromValue(String value) {
-      for (ConnectorStandardEnum b : ConnectorStandardEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-  }
-
-  public static final String JSON_PROPERTY_CONNECTOR_STANDARD = "connector_standard";
-  private ConnectorStandardEnum connectorStandard;
-
-  /**
-   * Gets or Sets connectorFormat
-   */
-  public enum ConnectorFormatEnum {
-    SOCKET("SOCKET"),
-    
-    CABLE("CABLE");
-
-    private String value;
-
-    ConnectorFormatEnum(String value) {
-      this.value = value;
+        return o.toString().replace("\n", "\n    ");
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
+    /**
+     * Gets or Sets connectorStandard
+     */
+    public enum ConnectorStandardEnum {
+        CHADEMO("CHADEMO"),
 
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
+        CHAOJI("CHAOJI"),
 
-    @JsonCreator
-    public static ConnectorFormatEnum fromValue(String value) {
-      for (ConnectorFormatEnum b : ConnectorFormatEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        DOMESTIC_A("DOMESTIC_A"),
+
+        DOMESTIC_B("DOMESTIC_B"),
+
+        DOMESTIC_C("DOMESTIC_C"),
+
+        DOMESTIC_D("DOMESTIC_D"),
+
+        DOMESTIC_E("DOMESTIC_E"),
+
+        DOMESTIC_F("DOMESTIC_F"),
+
+        DOMESTIC_G("DOMESTIC_G"),
+
+        DOMESTIC_H("DOMESTIC_H"),
+
+        DOMESTIC_I("DOMESTIC_I"),
+
+        DOMESTIC_J("DOMESTIC_J"),
+
+        DOMESTIC_K("DOMESTIC_K"),
+
+        DOMESTIC_L("DOMESTIC_L"),
+
+        DOMESTIC_M("DOMESTIC_M"),
+
+        DOMESTIC_N("DOMESTIC_N"),
+
+        DOMESTIC_O("DOMESTIC_O"),
+
+        GBT_AC("GBT_AC"),
+
+        GBT_DC("GBT_DC"),
+
+        IEC_60309_2_SINGLE_16("IEC_60309_2_single_16"),
+
+        IEC_60309_2_THREE_16("IEC_60309_2_three_16"),
+
+        IEC_60309_2_THREE_32("IEC_60309_2_three_32"),
+
+        IEC_60309_2_THREE_64("IEC_60309_2_three_64"),
+
+        IEC_62196_T1("IEC_62196_T1"),
+
+        IEC_62196_T1_COMBO("IEC_62196_T1_COMBO"),
+
+        IEC_62196_T2("IEC_62196_T2"),
+
+        IEC_62196_T2_COMBO("IEC_62196_T2_COMBO"),
+
+        IEC_62196_T3A("IEC_62196_T3A"),
+
+        IEC_62196_T3C("IEC_62196_T3C"),
+
+        NEMA_5_20("NEMA_5_20"),
+
+        NEMA_6_30("NEMA_6_30"),
+
+        NEMA_6_50("NEMA_6_50"),
+
+        NEMA_10_30("NEMA_10_30"),
+
+        NEMA_10_50("NEMA_10_50"),
+
+        NEMA_14_30("NEMA_14_30"),
+
+        NEMA_14_50("NEMA_14_50"),
+
+        PANTOGRAPH_BOTTOM_UP("PANTOGRAPH_BOTTOM_UP"),
+
+        PANTOGRAPH_TOP_DOWN("PANTOGRAPH_TOP_DOWN"),
+
+        TESLA_R("TESLA_R"),
+
+        TESLA_S("TESLA_S");
+
+        private String value;
+
+        ConnectorStandardEnum(String value) {
+            this.value = value;
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-  }
 
-  public static final String JSON_PROPERTY_CONNECTOR_FORMAT = "connector_format";
-  private ConnectorFormatEnum connectorFormat;
-
-  /**
-   * Gets or Sets connectorPowerType
-   */
-  public enum ConnectorPowerTypeEnum {
-    AC_1_PHASE("AC_1_PHASE"),
-    
-    AC_2_PHASE("AC_2_PHASE"),
-    
-    AC_2_PHASE_SPLIT("AC_2_PHASE_SPLIT"),
-    
-    AC_3_PHASE("AC_3_PHASE"),
-    
-    DC("DC");
-
-    private String value;
-
-    ConnectorPowerTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ConnectorPowerTypeEnum fromValue(String value) {
-      for (ConnectorPowerTypeEnum b : ConnectorPowerTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        @JsonCreator
+        public static ConnectorStandardEnum fromValue(String value) {
+            for (ConnectorStandardEnum b : ConnectorStandardEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-  }
 
-  public static final String JSON_PROPERTY_CONNECTOR_POWER_TYPE = "connector_power_type";
-  private ConnectorPowerTypeEnum connectorPowerType;
-
-  public CdrLocation() {
-  }
-
-  public CdrLocation id(String id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getId() {
-    return id;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-  public CdrLocation name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getName() {
-    return name;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  public CdrLocation address(String address) {
-    
-    this.address = address;
-    return this;
-  }
-
-   /**
-   * Get address
-   * @return address
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ADDRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getAddress() {
-    return address;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADDRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAddress(String address) {
-    this.address = address;
-  }
-
-
-  public CdrLocation city(String city) {
-    
-    this.city = city;
-    return this;
-  }
-
-   /**
-   * Get city
-   * @return city
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CITY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getCity() {
-    return city;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CITY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCity(String city) {
-    this.city = city;
-  }
-
-
-  public CdrLocation postalCode(String postalCode) {
-    
-    this.postalCode = postalCode;
-    return this;
-  }
-
-   /**
-   * Get postalCode
-   * @return postalCode
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPostalCode() {
-    return postalCode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPostalCode(String postalCode) {
-    this.postalCode = postalCode;
-  }
-
-
-  public CdrLocation state(String state) {
-    
-    this.state = state;
-    return this;
-  }
-
-   /**
-   * Get state
-   * @return state
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getState() {
-    return state;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setState(String state) {
-    this.state = state;
-  }
-
-
-  public CdrLocation country(String country) {
-    
-    this.country = country;
-    return this;
-  }
-
-   /**
-   * Get country
-   * @return country
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COUNTRY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getCountry() {
-    return country;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COUNTRY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCountry(String country) {
-    this.country = country;
-  }
-
-
-  public CdrLocation coordinates(GeoLocation coordinates) {
-    
-    this.coordinates = coordinates;
-    return this;
-  }
-
-   /**
-   * Get coordinates
-   * @return coordinates
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public GeoLocation getCoordinates() {
-    return coordinates;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCoordinates(GeoLocation coordinates) {
-    this.coordinates = coordinates;
-  }
-
-
-  public CdrLocation evseUid(String evseUid) {
-    
-    this.evseUid = evseUid;
-    return this;
-  }
-
-   /**
-   * Get evseUid
-   * @return evseUid
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EVSE_UID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getEvseUid() {
-    return evseUid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_EVSE_UID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEvseUid(String evseUid) {
-    this.evseUid = evseUid;
-  }
-
-
-  public CdrLocation evseId(String evseId) {
-    
-    this.evseId = evseId;
-    return this;
-  }
-
-   /**
-   * Get evseId
-   * @return evseId
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EVSE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getEvseId() {
-    return evseId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_EVSE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEvseId(String evseId) {
-    this.evseId = evseId;
-  }
-
-
-  public CdrLocation connectorId(String connectorId) {
-    
-    this.connectorId = connectorId;
-    return this;
-  }
-
-   /**
-   * Get connectorId
-   * @return connectorId
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getConnectorId() {
-    return connectorId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConnectorId(String connectorId) {
-    this.connectorId = connectorId;
-  }
-
-
-  public CdrLocation connectorStandard(ConnectorStandardEnum connectorStandard) {
-    
-    this.connectorStandard = connectorStandard;
-    return this;
-  }
-
-   /**
-   * Get connectorStandard
-   * @return connectorStandard
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_STANDARD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public ConnectorStandardEnum getConnectorStandard() {
-    return connectorStandard;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_STANDARD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConnectorStandard(ConnectorStandardEnum connectorStandard) {
-    this.connectorStandard = connectorStandard;
-  }
-
-
-  public CdrLocation connectorFormat(ConnectorFormatEnum connectorFormat) {
-    
-    this.connectorFormat = connectorFormat;
-    return this;
-  }
-
-   /**
-   * Get connectorFormat
-   * @return connectorFormat
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_FORMAT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public ConnectorFormatEnum getConnectorFormat() {
-    return connectorFormat;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_FORMAT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConnectorFormat(ConnectorFormatEnum connectorFormat) {
-    this.connectorFormat = connectorFormat;
-  }
-
-
-  public CdrLocation connectorPowerType(ConnectorPowerTypeEnum connectorPowerType) {
-    
-    this.connectorPowerType = connectorPowerType;
-    return this;
-  }
-
-   /**
-   * Get connectorPowerType
-   * @return connectorPowerType
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_POWER_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public ConnectorPowerTypeEnum getConnectorPowerType() {
-    return connectorPowerType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CONNECTOR_POWER_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConnectorPowerType(ConnectorPowerTypeEnum connectorPowerType) {
-    this.connectorPowerType = connectorPowerType;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    /**
+     * Gets or Sets connectorFormat
+     */
+    public enum ConnectorFormatEnum {
+        SOCKET("SOCKET"),
+
+        CABLE("CABLE");
+
+        private String value;
+
+        ConnectorFormatEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static ConnectorFormatEnum fromValue(String value) {
+            for (ConnectorFormatEnum b : ConnectorFormatEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Gets or Sets connectorPowerType
+     */
+    public enum ConnectorPowerTypeEnum {
+        AC_1_PHASE("AC_1_PHASE"),
+
+        AC_2_PHASE("AC_2_PHASE"),
+
+        AC_2_PHASE_SPLIT("AC_2_PHASE_SPLIT"),
+
+        AC_3_PHASE("AC_3_PHASE"),
+
+        DC("DC");
+
+        private String value;
+
+        ConnectorPowerTypeEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static ConnectorPowerTypeEnum fromValue(String value) {
+            for (ConnectorPowerTypeEnum b : ConnectorPowerTypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    CdrLocation cdrLocation = (CdrLocation) o;
-    return Objects.equals(this.id, cdrLocation.id) &&
-        Objects.equals(this.name, cdrLocation.name) &&
-        Objects.equals(this.address, cdrLocation.address) &&
-        Objects.equals(this.city, cdrLocation.city) &&
-        Objects.equals(this.postalCode, cdrLocation.postalCode) &&
-        Objects.equals(this.state, cdrLocation.state) &&
-        Objects.equals(this.country, cdrLocation.country) &&
-        Objects.equals(this.coordinates, cdrLocation.coordinates) &&
-        Objects.equals(this.evseUid, cdrLocation.evseUid) &&
-        Objects.equals(this.evseId, cdrLocation.evseId) &&
-        Objects.equals(this.connectorId, cdrLocation.connectorId) &&
-        Objects.equals(this.connectorStandard, cdrLocation.connectorStandard) &&
-        Objects.equals(this.connectorFormat, cdrLocation.connectorFormat) &&
-        Objects.equals(this.connectorPowerType, cdrLocation.connectorPowerType);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, name, address, city, postalCode, state, country, coordinates, evseUid, evseId, connectorId, connectorStandard, connectorFormat, connectorPowerType);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CdrLocation {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    address: ").append(toIndentedString(address)).append("\n");
-    sb.append("    city: ").append(toIndentedString(city)).append("\n");
-    sb.append("    postalCode: ").append(toIndentedString(postalCode)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    country: ").append(toIndentedString(country)).append("\n");
-    sb.append("    coordinates: ").append(toIndentedString(coordinates)).append("\n");
-    sb.append("    evseUid: ").append(toIndentedString(evseUid)).append("\n");
-    sb.append("    evseId: ").append(toIndentedString(evseId)).append("\n");
-    sb.append("    connectorId: ").append(toIndentedString(connectorId)).append("\n");
-    sb.append("    connectorStandard: ").append(toIndentedString(connectorStandard)).append("\n");
-    sb.append("    connectorFormat: ").append(toIndentedString(connectorFormat)).append("\n");
-    sb.append("    connectorPowerType: ").append(toIndentedString(connectorPowerType)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**source** | [**SourceEnum**](#SourceEnum) |  |  [optional] |
-|**percentage** | **Float** |  |  [optional] |
+|**source** | [**SourceEnum**](#SourceEnum) |  |  |
+|**percentage** | **Float** |  |  |
 
 
 

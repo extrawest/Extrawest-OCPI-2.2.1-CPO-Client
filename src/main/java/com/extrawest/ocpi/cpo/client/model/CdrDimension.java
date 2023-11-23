@@ -24,163 +24,160 @@ import java.util.Objects;
         CdrDimension.JSON_PROPERTY_TYPE,
         CdrDimension.JSON_PROPERTY_VOLUME
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class CdrDimension {
-  /**
-   * Gets or Sets type
-   */
-  public enum TypeEnum {
-    CURRENT("CURRENT"),
-    
-    ENERGY("ENERGY"),
-    
-    ENERGY_EXPORT("ENERGY_EXPORT"),
-    
-    ENERGY_IMPORT("ENERGY_IMPORT"),
-    
-    MAX_CURRENT("MAX_CURRENT"),
-    
-    MIN_CURRENT("MIN_CURRENT"),
-    
-    MAX_POWER("MAX_POWER"),
-    
-    MIN_POWER("MIN_POWER"),
-    
-    PARKING_TIME("PARKING_TIME"),
-    
-    POWER("POWER"),
-    
-    RESERVATION_TIME("RESERVATION_TIME"),
-    
-    STATE_OF_CHARGE("STATE_OF_CHARGE"),
-    
-    TIME("TIME");
-
-    private String value;
-
-    TypeEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_TYPE = "type";
+    public static final String JSON_PROPERTY_VOLUME = "volume";
+    private TypeEnum type;
+    private Float volume;
+    public CdrDimension() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public CdrDimension type(TypeEnum type) {
+
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return type
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_TYPE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public TypeEnum getType() {
+        return type;
+    }
+
+    @JsonProperty(JSON_PROPERTY_TYPE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setType(TypeEnum type) {
+        this.type = type;
+    }
+
+    public CdrDimension volume(Float volume) {
+
+        this.volume = volume;
+        return this;
+    }
+
+    /**
+     * Get volume
+     *
+     * @return volume
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_VOLUME)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public Float getVolume() {
+        return volume;
+    }
+
+    @JsonProperty(JSON_PROPERTY_VOLUME)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setVolume(Float volume) {
+        this.volume = volume;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CdrDimension cdrDimension = (CdrDimension) o;
+        return Objects.equals(this.type, cdrDimension.type) &&
+                Objects.equals(this.volume, cdrDimension.volume);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, volume);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class CdrDimension {\n");
+        sb.append("    type: ").append(toIndentedString(type)).append("\n");
+        sb.append("    volume: ").append(toIndentedString(volume)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static TypeEnum fromValue(String value) {
-      for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  public static final String JSON_PROPERTY_TYPE = "type";
-  private TypeEnum type;
+    /**
+     * Gets or Sets type
+     */
+    public enum TypeEnum {
+        CURRENT("CURRENT"),
 
-  public static final String JSON_PROPERTY_VOLUME = "volume";
-  private Float volume;
+        ENERGY("ENERGY"),
 
-  public CdrDimension() {
-  }
+        ENERGY_EXPORT("ENERGY_EXPORT"),
 
-  public CdrDimension type(TypeEnum type) {
-    
-    this.type = type;
-    return this;
-  }
+        ENERGY_IMPORT("ENERGY_IMPORT"),
 
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        MAX_CURRENT("MAX_CURRENT"),
 
-  public TypeEnum getType() {
-    return type;
-  }
+        MIN_CURRENT("MIN_CURRENT"),
 
+        MAX_POWER("MAX_POWER"),
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
+        MIN_POWER("MIN_POWER"),
 
+        PARKING_TIME("PARKING_TIME"),
 
-  public CdrDimension volume(Float volume) {
-    
-    this.volume = volume;
-    return this;
-  }
+        POWER("POWER"),
 
-   /**
-   * Get volume
-   * @return volume
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VOLUME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        RESERVATION_TIME("RESERVATION_TIME"),
 
-  public Float getVolume() {
-    return volume;
-  }
+        STATE_OF_CHARGE("STATE_OF_CHARGE"),
 
+        TIME("TIME");
 
-  @JsonProperty(JSON_PROPERTY_VOLUME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVolume(Float volume) {
-    this.volume = volume;
-  }
+        private String value;
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        TypeEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static TypeEnum fromValue(String value) {
+            for (TypeEnum b : TypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    CdrDimension cdrDimension = (CdrDimension) o;
-    return Objects.equals(this.type, cdrDimension.type) &&
-        Objects.equals(this.volume, cdrDimension.volume);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(type, volume);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CdrDimension {\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    volume: ").append(toIndentedString(volume)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

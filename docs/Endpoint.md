@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**identifier** | [**IdentifierEnum**](#IdentifierEnum) |  |  [optional] |
-|**role** | [**RoleEnum**](#RoleEnum) |  |  [optional] |
-|**url** | **String** |  |  [optional] |
+|**identifier** | [**IdentifierEnum**](#IdentifierEnum) |  |  |
+|**role** | [**RoleEnum**](#RoleEnum) |  |  |
+|**url** | **String** |  |  |
 
 
 

@@ -25,75 +25,76 @@ import java.util.Objects;
 @JsonPropertyOrder({
         AbstractCommand.JSON_PROPERTY_RESPONSE_URL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class AbstractCommand {
-  public static final String JSON_PROPERTY_RESPONSE_URL = "response_url";
-  private String responseUrl;
+    public static final String JSON_PROPERTY_RESPONSE_URL = "response_url";
+    private String responseUrl;
 
-  public AbstractCommand() {
-  }
-
-  public AbstractCommand responseUrl(String responseUrl) {
-    
-    this.responseUrl = responseUrl;
-    return this;
-  }
-
-   /**
-   * Get responseUrl
-   * @return responseUrl
-  **/
-  @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_RESPONSE_URL)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
-
-  public String getResponseUrl() {
-    return responseUrl;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_RESPONSE_URL)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setResponseUrl(String responseUrl) {
-    this.responseUrl = responseUrl;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public AbstractCommand() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public AbstractCommand responseUrl(String responseUrl) {
+
+        this.responseUrl = responseUrl;
+        return this;
     }
-    AbstractCommand abstractCommand = (AbstractCommand) o;
-    return Objects.equals(this.responseUrl, abstractCommand.responseUrl);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(responseUrl);
-  }
+    /**
+     * Get responseUrl
+     *
+     * @return responseUrl
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_RESPONSE_URL)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class AbstractCommand {\n");
-    sb.append("    responseUrl: ").append(toIndentedString(responseUrl)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public String getResponseUrl() {
+        return responseUrl;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @JsonProperty(JSON_PROPERTY_RESPONSE_URL)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setResponseUrl(String responseUrl) {
+        this.responseUrl = responseUrl;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        AbstractCommand abstractCommand = (AbstractCommand) o;
+        return Objects.equals(this.responseUrl, abstractCommand.responseUrl);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(responseUrl);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class AbstractCommand {\n");
+        sb.append("    responseUrl: ").append(toIndentedString(responseUrl)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

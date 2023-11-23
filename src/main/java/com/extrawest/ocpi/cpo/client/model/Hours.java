@@ -30,192 +30,193 @@ import java.util.Objects;
         Hours.JSON_PROPERTY_EXCEPTIONAL_OPENINGS,
         Hours.JSON_PROPERTY_EXCEPTIONAL_CLOSINGS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class Hours {
-  public static final String JSON_PROPERTY_TWENTYFOURSEVEN = "twentyfourseven";
-  private Boolean twentyfourseven;
+    public static final String JSON_PROPERTY_TWENTYFOURSEVEN = "twentyfourseven";
+    public static final String JSON_PROPERTY_REGULAR_HOURS = "regular_hours";
+    public static final String JSON_PROPERTY_EXCEPTIONAL_OPENINGS = "exceptional_openings";
+    public static final String JSON_PROPERTY_EXCEPTIONAL_CLOSINGS = "exceptional_closings";
+    private Boolean twentyfourseven;
+    private List<RegularHours> regularHours;
+    private List<ExceptionalPeriod> exceptionalOpenings;
+    private List<ExceptionalPeriod> exceptionalClosings;
 
-  public static final String JSON_PROPERTY_REGULAR_HOURS = "regular_hours";
-  private List<RegularHours> regularHours;
-
-  public static final String JSON_PROPERTY_EXCEPTIONAL_OPENINGS = "exceptional_openings";
-  private List<ExceptionalPeriod> exceptionalOpenings;
-
-  public static final String JSON_PROPERTY_EXCEPTIONAL_CLOSINGS = "exceptional_closings";
-  private List<ExceptionalPeriod> exceptionalClosings;
-
-  public Hours() {
-  }
-
-  public Hours twentyfourseven(Boolean twentyfourseven) {
-    
-    this.twentyfourseven = twentyfourseven;
-    return this;
-  }
-
-   /**
-   * Get twentyfourseven
-   * @return twentyfourseven
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TWENTYFOURSEVEN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getTwentyfourseven() {
-    return twentyfourseven;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TWENTYFOURSEVEN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTwentyfourseven(Boolean twentyfourseven) {
-    this.twentyfourseven = twentyfourseven;
-  }
-
-
-  public Hours regularHours(List<RegularHours> regularHours) {
-    
-    this.regularHours = regularHours;
-    return this;
-  }
-
-  public Hours addRegularHoursItem(RegularHours regularHoursItem) {
-    if (this.regularHours == null) {
-      this.regularHours = new ArrayList<>();
+    public Hours() {
     }
-    this.regularHours.add(regularHoursItem);
-    return this;
-  }
 
-   /**
-   * Get regularHours
-   * @return regularHours
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REGULAR_HOURS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public Hours twentyfourseven(Boolean twentyfourseven) {
 
-  public List<RegularHours> getRegularHours() {
-    return regularHours;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REGULAR_HOURS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRegularHours(List<RegularHours> regularHours) {
-    this.regularHours = regularHours;
-  }
-
-
-  public Hours exceptionalOpenings(List<ExceptionalPeriod> exceptionalOpenings) {
-    
-    this.exceptionalOpenings = exceptionalOpenings;
-    return this;
-  }
-
-  public Hours addExceptionalOpeningsItem(ExceptionalPeriod exceptionalOpeningsItem) {
-    if (this.exceptionalOpenings == null) {
-      this.exceptionalOpenings = new ArrayList<>();
+        this.twentyfourseven = twentyfourseven;
+        return this;
     }
-    this.exceptionalOpenings.add(exceptionalOpeningsItem);
-    return this;
-  }
 
-   /**
-   * Get exceptionalOpenings
-   * @return exceptionalOpenings
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_OPENINGS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    /**
+     * Get twentyfourseven
+     *
+     * @return twentyfourseven
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_TWENTYFOURSEVEN)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<ExceptionalPeriod> getExceptionalOpenings() {
-    return exceptionalOpenings;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_OPENINGS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExceptionalOpenings(List<ExceptionalPeriod> exceptionalOpenings) {
-    this.exceptionalOpenings = exceptionalOpenings;
-  }
-
-
-  public Hours exceptionalClosings(List<ExceptionalPeriod> exceptionalClosings) {
-    
-    this.exceptionalClosings = exceptionalClosings;
-    return this;
-  }
-
-  public Hours addExceptionalClosingsItem(ExceptionalPeriod exceptionalClosingsItem) {
-    if (this.exceptionalClosings == null) {
-      this.exceptionalClosings = new ArrayList<>();
+    public Boolean getTwentyfourseven() {
+        return twentyfourseven;
     }
-    this.exceptionalClosings.add(exceptionalClosingsItem);
-    return this;
-  }
-
-   /**
-   * Get exceptionalClosings
-   * @return exceptionalClosings
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_CLOSINGS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<ExceptionalPeriod> getExceptionalClosings() {
-    return exceptionalClosings;
-  }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_CLOSINGS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExceptionalClosings(List<ExceptionalPeriod> exceptionalClosings) {
-    this.exceptionalClosings = exceptionalClosings;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    @JsonProperty(JSON_PROPERTY_TWENTYFOURSEVEN)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setTwentyfourseven(Boolean twentyfourseven) {
+        this.twentyfourseven = twentyfourseven;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+
+    public Hours regularHours(List<RegularHours> regularHours) {
+
+        this.regularHours = regularHours;
+        return this;
     }
-    Hours hours = (Hours) o;
-    return Objects.equals(this.twentyfourseven, hours.twentyfourseven) &&
-        Objects.equals(this.regularHours, hours.regularHours) &&
-        Objects.equals(this.exceptionalOpenings, hours.exceptionalOpenings) &&
-        Objects.equals(this.exceptionalClosings, hours.exceptionalClosings);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(twentyfourseven, regularHours, exceptionalOpenings, exceptionalClosings);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Hours {\n");
-    sb.append("    twentyfourseven: ").append(toIndentedString(twentyfourseven)).append("\n");
-    sb.append("    regularHours: ").append(toIndentedString(regularHours)).append("\n");
-    sb.append("    exceptionalOpenings: ").append(toIndentedString(exceptionalOpenings)).append("\n");
-    sb.append("    exceptionalClosings: ").append(toIndentedString(exceptionalClosings)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public Hours addRegularHoursItem(RegularHours regularHoursItem) {
+        if (this.regularHours == null) {
+            this.regularHours = new ArrayList<>();
+        }
+        this.regularHours.add(regularHoursItem);
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    /**
+     * Get regularHours
+     *
+     * @return regularHours
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_REGULAR_HOURS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<RegularHours> getRegularHours() {
+        return regularHours;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_REGULAR_HOURS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setRegularHours(List<RegularHours> regularHours) {
+        this.regularHours = regularHours;
+    }
+
+
+    public Hours exceptionalOpenings(List<ExceptionalPeriod> exceptionalOpenings) {
+
+        this.exceptionalOpenings = exceptionalOpenings;
+        return this;
+    }
+
+    public Hours addExceptionalOpeningsItem(ExceptionalPeriod exceptionalOpeningsItem) {
+        if (this.exceptionalOpenings == null) {
+            this.exceptionalOpenings = new ArrayList<>();
+        }
+        this.exceptionalOpenings.add(exceptionalOpeningsItem);
+        return this;
+    }
+
+    /**
+     * Get exceptionalOpenings
+     *
+     * @return exceptionalOpenings
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_OPENINGS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<ExceptionalPeriod> getExceptionalOpenings() {
+        return exceptionalOpenings;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_OPENINGS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setExceptionalOpenings(List<ExceptionalPeriod> exceptionalOpenings) {
+        this.exceptionalOpenings = exceptionalOpenings;
+    }
+
+
+    public Hours exceptionalClosings(List<ExceptionalPeriod> exceptionalClosings) {
+
+        this.exceptionalClosings = exceptionalClosings;
+        return this;
+    }
+
+    public Hours addExceptionalClosingsItem(ExceptionalPeriod exceptionalClosingsItem) {
+        if (this.exceptionalClosings == null) {
+            this.exceptionalClosings = new ArrayList<>();
+        }
+        this.exceptionalClosings.add(exceptionalClosingsItem);
+        return this;
+    }
+
+    /**
+     * Get exceptionalClosings
+     *
+     * @return exceptionalClosings
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_CLOSINGS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<ExceptionalPeriod> getExceptionalClosings() {
+        return exceptionalClosings;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_EXCEPTIONAL_CLOSINGS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setExceptionalClosings(List<ExceptionalPeriod> exceptionalClosings) {
+        this.exceptionalClosings = exceptionalClosings;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Hours hours = (Hours) o;
+        return Objects.equals(this.twentyfourseven, hours.twentyfourseven) &&
+                Objects.equals(this.regularHours, hours.regularHours) &&
+                Objects.equals(this.exceptionalOpenings, hours.exceptionalOpenings) &&
+                Objects.equals(this.exceptionalClosings, hours.exceptionalClosings);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(twentyfourseven, regularHours, exceptionalOpenings, exceptionalClosings);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class Hours {\n");
+        sb.append("    twentyfourseven: ").append(toIndentedString(twentyfourseven)).append("\n");
+        sb.append("    regularHours: ").append(toIndentedString(regularHours)).append("\n");
+        sb.append("    exceptionalOpenings: ").append(toIndentedString(exceptionalOpenings)).append("\n");
+        sb.append("    exceptionalClosings: ").append(toIndentedString(exceptionalClosings)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

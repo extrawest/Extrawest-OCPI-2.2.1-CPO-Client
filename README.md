@@ -152,7 +152,7 @@ public class CpoTariffServiceImpl implements  CpoTariffService {
     private CpoTariffControllerApi cpoTariffControllerApi;
 
     @Override
-    public List<TariffDTO> getTariffs() {
+    public List<TariffDto> getTariffs() {
         try {
             return cpoTariffControllerApi.getTariffs(OffsetDateTime.now().minusDays(10), OffsetDateTime.now().minusDays(1), 1, 10);
         } catch (RestClientException e) {
@@ -201,37 +201,39 @@ Class | Method | HTTP request | Description
 *CpoCredentialsApi* | [**getCredentials**](docs/CpoCredentialsApi.md#getCredentials) | **GET** /cpo/api/2.2.1/credentials |
 *CpoCredentialsApi* | [**postCredentials**](docs/CpoCredentialsApi.md#postCredentials) | **POST** /cpo/api/2.2.1/credentials |
 *CpoCredentialsApi* | [**putCredentials**](docs/CpoCredentialsApi.md#putCredentials) | **PUT** /cpo/api/2.2.1/credentials |
-*CpoLocationApi* | [**getLocationEvseController**](docs/CpoLocationApi.md#getLocationEvseController) | **GET** /cpo/api/2.2.1/locations |
-*CpoLocationApi* | [**getLocations**](docs/CpoLocationApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations/getLocations |
+*CpoLocationApi* | [**getConnector**](docs/CpoLocationApi.md#getConnector) | **GET** /cpo/api/2.2.1/locations/{location_id}/{evse_uid}/{connector_id} |
+*CpoLocationApi* | [**getEvse**](docs/CpoLocationApi.md#getEvse) | **GET** /cpo/api/2.2.1/locations/{location_id}/{evse_uid} |
+*CpoLocationApi* | [**getLocation**](docs/CpoLocationApi.md#getLocation) | **GET** /cpo/api/2.2.1/locations/{location_id} |
+*CpoLocationApi* | [**getLocations**](docs/CpoLocationApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations |
 *CpoSessionsApi* | [**getSessions**](docs/CpoSessionsApi.md#getSessions) | **GET** /cpo/api/2.2.1/sessions |
 *CpoSessionsApi* | [**putChargingPreferences**](docs/CpoSessionsApi.md#putChargingPreferences) | **PUT** /cpo/api/2.2.1/sessions |
 *CpoTariffApi* | [**getTariffs**](docs/CpoTariffApi.md#getTariffs) | **GET** /cpo/api/2.2.1/tariffs |
 *CpoTokensApi* | [**getToken**](docs/CpoTokensApi.md#getToken) | **GET** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |
 *CpoTokensApi* | [**patchToken**](docs/CpoTokensApi.md#patchToken) | **PATCH** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |
 *CpoTokensApi* | [**putToken**](docs/CpoTokensApi.md#putToken) | **PUT** /cpo/api/2.2.1/tokens/{country_code}/{party_id}/{token_uid}/{type} |
-*CpoVersionApi* | [**getVersion**](docs/CpoVersionApi.md#getVersion) | **GET** /cpo/api/2.2.1/versions |
-*CpoVersionApi* | [**getVersionDetails**](docs/CpoVersionApi.md#getVersionDetails) | **GET** /cpo/api/2.2.1/versions/details/{version} |
-*HubClientInfoApi* | [**getClientInfoList**](docs/HubClientInfoApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} |
+*CpoVersionApi* | [**getVersionDetails**](docs/CpoVersionApi.md#getVersionDetails) | **GET** /cpo/api/versions/details |
+*CpoVersionApi* | [**getVersions**](docs/CpoVersionApi.md#getVersions) | **GET** /cpo/api/versions |
+*HubClientInfoApi* | [**getClientInfoList**](docs/HubClientInfoApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo |
 
 
-## Models
+## Documentation for Models
 
 - [AbstractCommand](docs/AbstractCommand.md)
 - [AdditionalGeoLocation](docs/AdditionalGeoLocation.md)
 - [BusinessDetails](docs/BusinessDetails.md)
-- [CdrDTO](docs/CdrDTO.md)
+- [CDRDto](docs/CDRDto.md)
 - [CdrDimension](docs/CdrDimension.md)
 - [CdrLocation](docs/CdrLocation.md)
 - [CdrToken](docs/CdrToken.md)
 - [ChargingPeriod](docs/ChargingPeriod.md)
-- [ChargingPreferencesDTO](docs/ChargingPreferencesDTO.md)
+- [ChargingPreferences](docs/ChargingPreferences.md)
 - [ChargingProfile](docs/ChargingProfile.md)
 - [ChargingProfilePeriod](docs/ChargingProfilePeriod.md)
-- [ChargingProfileResponseDTO](docs/ChargingProfileResponseDTO.md)
-- [ClientInfoDTO](docs/ClientInfoDTO.md)
-- [CommandResponseDTO](docs/CommandResponseDTO.md)
+- [ChargingProfileResponse](docs/ChargingProfileResponse.md)
+- [ClientInfoDto](docs/ClientInfoDto.md)
+- [CommandResponse](docs/CommandResponse.md)
 - [Connector](docs/Connector.md)
-- [CredentialsDTO](docs/CredentialsDTO.md)
+- [CredentialsDto](docs/CredentialsDto.md)
 - [CredentialsRole](docs/CredentialsRole.md)
 - [DisplayText](docs/DisplayText.md)
 - [EVSE](docs/EVSE.md)
@@ -244,23 +246,36 @@ Class | Method | HTTP request | Description
 - [GeoLocation](docs/GeoLocation.md)
 - [Hours](docs/Hours.md)
 - [Image](docs/Image.md)
-- [LocationDTO](docs/LocationDTO.md)
+- [Location](docs/Location.md)
 - [Price](docs/Price.md)
 - [PriceComponent](docs/PriceComponent.md)
 - [PublishTokenType](docs/PublishTokenType.md)
 - [RegularHours](docs/RegularHours.md)
-- [SessionDTO](docs/SessionDTO.md)
-- [SetChargingProfileRequestDTO](docs/SetChargingProfileRequestDTO.md)
+- [ResponseFormatChargingPreferences](docs/ResponseFormatChargingPreferences.md)
+- [ResponseFormatChargingProfileResponse](docs/ResponseFormatChargingProfileResponse.md)
+- [ResponseFormatCommandResponse](docs/ResponseFormatCommandResponse.md)
+- [ResponseFormatCredentialsDto](docs/ResponseFormatCredentialsDto.md)
+- [ResponseFormatListCDRDto](docs/ResponseFormatListCDRDto.md)
+- [ResponseFormatListClientInfoDto](docs/ResponseFormatListClientInfoDto.md)
+- [ResponseFormatListLocation](docs/ResponseFormatListLocation.md)
+- [ResponseFormatListSessionDto](docs/ResponseFormatListSessionDto.md)
+- [ResponseFormatListTariffDto](docs/ResponseFormatListTariffDto.md)
+- [ResponseFormatListVersionDto](docs/ResponseFormatListVersionDto.md)
+- [ResponseFormatLocationData](docs/ResponseFormatLocationData.md)
+- [ResponseFormatObject](docs/ResponseFormatObject.md)
+- [ResponseFormatTokenDto](docs/ResponseFormatTokenDto.md)
+- [ResponseFormatVersionDetailsDto](docs/ResponseFormatVersionDetailsDto.md)
+- [SessionDto](docs/SessionDto.md)
+- [SetChargingProfile](docs/SetChargingProfile.md)
 - [SignedData](docs/SignedData.md)
 - [SignedValue](docs/SignedValue.md)
 - [StatusSchedule](docs/StatusSchedule.md)
-- [Tariff](docs/Tariff.md)
-- [TariffDTO](docs/TariffDTO.md)
+- [TariffDto](docs/TariffDto.md)
 - [TariffElement](docs/TariffElement.md)
 - [TariffRestrictions](docs/TariffRestrictions.md)
-- [TokenDTO](docs/TokenDTO.md)
-- [VersionDetailsResponseDTO](docs/VersionDetailsResponseDTO.md)
-- [VersionResponseDTO](docs/VersionResponseDTO.md)
+- [TokenDto](docs/TokenDto.md)
+- [VersionDetailsDto](docs/VersionDetailsDto.md)
+- [VersionDto](docs/VersionDto.md)
 
 
 ## Authentication and Authorization

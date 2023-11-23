@@ -27,137 +27,140 @@ import java.util.Objects;
         RegularHours.JSON_PROPERTY_PERIOD_BEGIN,
         RegularHours.JSON_PROPERTY_PERIOD_END
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class RegularHours {
-  public static final String JSON_PROPERTY_WEEKDAY = "weekday";
-  private Integer weekday;
+    public static final String JSON_PROPERTY_WEEKDAY = "weekday";
+    public static final String JSON_PROPERTY_PERIOD_BEGIN = "period_begin";
+    public static final String JSON_PROPERTY_PERIOD_END = "period_end";
+    private Integer weekday;
+    private String periodBegin;
+    private String periodEnd;
 
-  public static final String JSON_PROPERTY_PERIOD_BEGIN = "period_begin";
-  private String periodBegin;
-
-  public static final String JSON_PROPERTY_PERIOD_END = "period_end";
-  private String periodEnd;
-
-  public RegularHours() {
-  }
-
-  public RegularHours weekday(Integer weekday) {
-    
-    this.weekday = weekday;
-    return this;
-  }
-
-   /**
-   * Get weekday
-   * @return weekday
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WEEKDAY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getWeekday() {
-    return weekday;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_WEEKDAY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWeekday(Integer weekday) {
-    this.weekday = weekday;
-  }
-
-
-  public RegularHours periodBegin(String periodBegin) {
-    
-    this.periodBegin = periodBegin;
-    return this;
-  }
-
-   /**
-   * Get periodBegin
-   * @return periodBegin
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPeriodBegin() {
-    return periodBegin;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPeriodBegin(String periodBegin) {
-    this.periodBegin = periodBegin;
-  }
-
-
-  public RegularHours periodEnd(String periodEnd) {
-    
-    this.periodEnd = periodEnd;
-    return this;
-  }
-
-   /**
-   * Get periodEnd
-   * @return periodEnd
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERIOD_END)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPeriodEnd() {
-    return periodEnd;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PERIOD_END)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPeriodEnd(String periodEnd) {
-    this.periodEnd = periodEnd;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public RegularHours() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public RegularHours weekday(Integer weekday) {
+
+        this.weekday = weekday;
+        return this;
     }
-    RegularHours regularHours = (RegularHours) o;
-    return Objects.equals(this.weekday, regularHours.weekday) &&
-        Objects.equals(this.periodBegin, regularHours.periodBegin) &&
-        Objects.equals(this.periodEnd, regularHours.periodEnd);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(weekday, periodBegin, periodEnd);
-  }
+    /**
+     * Get weekday
+     * minimum: 1
+     * maximum: 7
+     *
+     * @return weekday
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_WEEKDAY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class RegularHours {\n");
-    sb.append("    weekday: ").append(toIndentedString(weekday)).append("\n");
-    sb.append("    periodBegin: ").append(toIndentedString(periodBegin)).append("\n");
-    sb.append("    periodEnd: ").append(toIndentedString(periodEnd)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public Integer getWeekday() {
+        return weekday;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @JsonProperty(JSON_PROPERTY_WEEKDAY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setWeekday(Integer weekday) {
+        this.weekday = weekday;
+    }
+
+
+    public RegularHours periodBegin(String periodBegin) {
+
+        this.periodBegin = periodBegin;
+        return this;
+    }
+
+    /**
+     * Get periodBegin
+     *
+     * @return periodBegin
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getPeriodBegin() {
+        return periodBegin;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setPeriodBegin(String periodBegin) {
+        this.periodBegin = periodBegin;
+    }
+
+
+    public RegularHours periodEnd(String periodEnd) {
+
+        this.periodEnd = periodEnd;
+        return this;
+    }
+
+    /**
+     * Get periodEnd
+     *
+     * @return periodEnd
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_PERIOD_END)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getPeriodEnd() {
+        return periodEnd;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_PERIOD_END)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setPeriodEnd(String periodEnd) {
+        this.periodEnd = periodEnd;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        RegularHours regularHours = (RegularHours) o;
+        return Objects.equals(this.weekday, regularHours.weekday) &&
+                Objects.equals(this.periodBegin, regularHours.periodBegin) &&
+                Objects.equals(this.periodEnd, regularHours.periodEnd);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(weekday, periodBegin, periodEnd);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class RegularHours {\n");
+        sb.append("    weekday: ").append(toIndentedString(weekday)).append("\n");
+        sb.append("    periodBegin: ").append(toIndentedString(periodBegin)).append("\n");
+        sb.append("    periodEnd: ").append(toIndentedString(periodEnd)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**startDateTime** | **OffsetDateTime** |  |  [optional] |
-|**dimensions** | [**List&lt;CdrDimension&gt;**](CdrDimension.md) |  |  [optional] |
+|**startDateTime** | **OffsetDateTime** |  |  |
+|**dimensions** | [**List&lt;CdrDimension&gt;**](CdrDimension.md) |  |  |
 |**tariffId** | **String** |  |  [optional] |
 
 

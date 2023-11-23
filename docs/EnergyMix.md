@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**isGreenEnergy** | **Boolean** |  |  [optional] |
 |**energySources** | [**List&lt;EnergySource&gt;**](EnergySource.md) |  |  [optional] |
 |**environImpact** | [**List&lt;EnvironmentalImpact&gt;**](EnvironmentalImpact.md) |  |  [optional] |
 |**supplierName** | **String** |  |  [optional] |
 |**energyProductName** | **String** |  |  [optional] |
+|**isGreenEnergy** | **Boolean** |  |  |
 
 
 

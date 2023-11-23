@@ -4,14 +4,16 @@ All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getLocationEvseController**](CpoLocationApi.md#getLocationEvseController) | **GET** /cpo/api/2.2.1/locations |  |
-| [**getLocations**](CpoLocationApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations/getLocations |  |
+| [**getConnector**](CpoLocationApi.md#getConnector) | **GET** /cpo/api/2.2.1/locations/{location_id}/{evse_uid}/{connector_id} |  |
+| [**getEvse**](CpoLocationApi.md#getEvse) | **GET** /cpo/api/2.2.1/locations/{location_id}/{evse_uid} |  |
+| [**getLocation**](CpoLocationApi.md#getLocation) | **GET** /cpo/api/2.2.1/locations/{location_id} |  |
+| [**getLocations**](CpoLocationApi.md#getLocations) | **GET** /cpo/api/2.2.1/locations |  |
 
 
 
-## getLocationEvseController
+## getConnector
 
-> Object getLocationEvseController(locationId, evseUid, connectorId)
+> ResponseFormatLocationData getConnector(locationId, evseUid, connectorId)
 
 
 
@@ -35,10 +37,10 @@ public class Example {
         String evseUid = "evseUid_example"; // String | 
         String connectorId = "connectorId_example"; // String | 
         try {
-            Object result = apiInstance.getLocationEvseController(locationId, evseUid, connectorId);
+            ResponseFormatLocationData result = apiInstance.getConnector(locationId, evseUid, connectorId);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CpoLocationApi#getLocationEvseController");
+            System.err.println("Exception when calling CpoLocationApi#getConnector");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -54,12 +56,142 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **locationId** | **String**|  | |
-| **evseUid** | **String**|  | [optional] |
-| **connectorId** | **String**|  | [optional] |
+| **evseUid** | **String**|  | |
+| **connectorId** | **String**|  | |
 
 ### Return type
 
-**Object**
+[**ResponseFormatLocationData**](ResponseFormatLocationData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## getEvse
+
+> ResponseFormatLocationData getEvse(locationId, evseUid)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
+import com.extrawest.ocpi.cpo.client.invoker.ApiException;
+import com.extrawest.ocpi.cpo.client.invoker.Configuration;
+import com.extrawest.ocpi.cpo.client.invoker.models.*;
+import com.extrawest.ocpi.cpo.client.api.CpoLocationApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://localhost:8080");
+
+        CpoLocationApi apiInstance = new CpoLocationApi(defaultClient);
+        String locationId = "locationId_example"; // String | 
+        String evseUid = "evseUid_example"; // String | 
+        try {
+            ResponseFormatLocationData result = apiInstance.getEvse(locationId, evseUid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling CpoLocationApi#getEvse");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **locationId** | **String**|  | |
+| **evseUid** | **String**|  | |
+
+### Return type
+
+[**ResponseFormatLocationData**](ResponseFormatLocationData.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## getLocation
+
+> ResponseFormatLocationData getLocation(locationId)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.extrawest.ocpi.cpo.client.invoker.ApiClient;
+import com.extrawest.ocpi.cpo.client.invoker.ApiException;
+import com.extrawest.ocpi.cpo.client.invoker.Configuration;
+import com.extrawest.ocpi.cpo.client.invoker.models.*;
+import com.extrawest.ocpi.cpo.client.api.CpoLocationApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("http://localhost:8080");
+
+        CpoLocationApi apiInstance = new CpoLocationApi(defaultClient);
+        String locationId = "locationId_example"; // String | 
+        try {
+            ResponseFormatLocationData result = apiInstance.getLocation(locationId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling CpoLocationApi#getLocation");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **locationId** | **String**|  | |
+
+### Return type
+
+[**ResponseFormatLocationData**](ResponseFormatLocationData.md)
 
 ### Authorization
 
@@ -79,7 +211,7 @@ No authorization required
 
 ## getLocations
 
-> List&lt;LocationDTO&gt; getLocations(dateFrom, dateTo, offset, limit)
+> ResponseFormatListLocation getLocations(dateFrom, dateTo, offset, limit)
 
 
 
@@ -104,7 +236,7 @@ public class Example {
         Integer offset = 0; // Integer | 
         Integer limit = 56; // Integer | 
         try {
-            List<LocationDTO> result = apiInstance.getLocations(dateFrom, dateTo, offset, limit);
+            ResponseFormatListLocation result = apiInstance.getLocations(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoLocationApi#getLocations");
@@ -129,7 +261,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;LocationDTO&gt;**](LocationDTO.md)
+[**ResponseFormatListLocation**](ResponseFormatListLocation.md)
 
 ### Authorization
 

@@ -38,566 +38,540 @@ import java.util.Objects;
         TariffRestrictions.JSON_PROPERTY_MAX_DURATION,
         TariffRestrictions.JSON_PROPERTY_DAY_OF_WEEK
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class TariffRestrictions {
-  /**
-   * Gets or Sets reservation
-   */
-  public enum ReservationEnum {
-    RESERVATION("RESERVATION"),
-    
-    RESERVATION_EXPIRES("RESERVATION_EXPIRES");
+    public static final String JSON_PROPERTY_RESERVATION = "reservation";
+    public static final String JSON_PROPERTY_START_TIME = "start_time";
+    public static final String JSON_PROPERTY_END_TIME = "end_time";
+    public static final String JSON_PROPERTY_START_DATE = "start_date";
+    public static final String JSON_PROPERTY_END_DATE = "end_date";
+    public static final String JSON_PROPERTY_MIN_KWH = "min_kwh";
+    public static final String JSON_PROPERTY_MAX_KWH = "max_kwh";
+    public static final String JSON_PROPERTY_MIN_CURRENT = "min_current";
+    public static final String JSON_PROPERTY_MAX_CURRENT = "max_current";
+    public static final String JSON_PROPERTY_MIN_POWER = "min_power";
+    public static final String JSON_PROPERTY_MAX_POWER = "max_power";
+    public static final String JSON_PROPERTY_MIN_DURATION = "min_duration";
+    public static final String JSON_PROPERTY_MAX_DURATION = "max_duration";
+    public static final String JSON_PROPERTY_DAY_OF_WEEK = "day_of_week";
+    private ReservationEnum reservation;
+    private String startTime;
+    private String endTime;
+    private String startDate;
+    private String endDate;
+    private Float minKwh;
+    private Float maxKwh;
+    private Float minCurrent;
+    private Float maxCurrent;
+    private Float minPower;
+    private Float maxPower;
+    private Integer minDuration;
+    private Integer maxDuration;
+    private List<DayOfWeekEnum> dayOfWeek;
 
-    private String value;
-
-    ReservationEnum(String value) {
-      this.value = value;
+    public TariffRestrictions() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public TariffRestrictions reservation(ReservationEnum reservation) {
+
+        this.reservation = reservation;
+        return this;
+    }
+
+    /**
+     * Get reservation
+     *
+     * @return reservation
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_RESERVATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public ReservationEnum getReservation() {
+        return reservation;
+    }
+
+    @JsonProperty(JSON_PROPERTY_RESERVATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setReservation(ReservationEnum reservation) {
+        this.reservation = reservation;
+    }
+
+    public TariffRestrictions startTime(String startTime) {
+
+        this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * Get startTime
+     *
+     * @return startTime
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_START_TIME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    @JsonProperty(JSON_PROPERTY_START_TIME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public TariffRestrictions endTime(String endTime) {
+
+        this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * Get endTime
+     *
+     * @return endTime
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_END_TIME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    @JsonProperty(JSON_PROPERTY_END_TIME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public TariffRestrictions startDate(String startDate) {
+
+        this.startDate = startDate;
+        return this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return startDate
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_START_DATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    @JsonProperty(JSON_PROPERTY_START_DATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public TariffRestrictions endDate(String endDate) {
+
+        this.endDate = endDate;
+        return this;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return endDate
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_END_DATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    @JsonProperty(JSON_PROPERTY_END_DATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public TariffRestrictions minKwh(Float minKwh) {
+
+        this.minKwh = minKwh;
+        return this;
+    }
+
+    /**
+     * Get minKwh
+     *
+     * @return minKwh
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MIN_KWH)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Float getMinKwh() {
+        return minKwh;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MIN_KWH)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMinKwh(Float minKwh) {
+        this.minKwh = minKwh;
+    }
+
+    public TariffRestrictions maxKwh(Float maxKwh) {
+
+        this.maxKwh = maxKwh;
+        return this;
+    }
+
+    /**
+     * Get maxKwh
+     *
+     * @return maxKwh
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MAX_KWH)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Float getMaxKwh() {
+        return maxKwh;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MAX_KWH)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMaxKwh(Float maxKwh) {
+        this.maxKwh = maxKwh;
+    }
+
+    public TariffRestrictions minCurrent(Float minCurrent) {
+
+        this.minCurrent = minCurrent;
+        return this;
+    }
+
+    /**
+     * Get minCurrent
+     *
+     * @return minCurrent
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MIN_CURRENT)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Float getMinCurrent() {
+        return minCurrent;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MIN_CURRENT)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMinCurrent(Float minCurrent) {
+        this.minCurrent = minCurrent;
+    }
+
+    public TariffRestrictions maxCurrent(Float maxCurrent) {
+
+        this.maxCurrent = maxCurrent;
+        return this;
+    }
+
+    /**
+     * Get maxCurrent
+     *
+     * @return maxCurrent
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MAX_CURRENT)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Float getMaxCurrent() {
+        return maxCurrent;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MAX_CURRENT)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMaxCurrent(Float maxCurrent) {
+        this.maxCurrent = maxCurrent;
+    }
+
+    public TariffRestrictions minPower(Float minPower) {
+
+        this.minPower = minPower;
+        return this;
+    }
+
+    /**
+     * Get minPower
+     *
+     * @return minPower
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MIN_POWER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Float getMinPower() {
+        return minPower;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MIN_POWER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMinPower(Float minPower) {
+        this.minPower = minPower;
+    }
+
+    public TariffRestrictions maxPower(Float maxPower) {
+
+        this.maxPower = maxPower;
+        return this;
+    }
+
+    /**
+     * Get maxPower
+     *
+     * @return maxPower
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MAX_POWER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Float getMaxPower() {
+        return maxPower;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MAX_POWER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMaxPower(Float maxPower) {
+        this.maxPower = maxPower;
+    }
+
+    public TariffRestrictions minDuration(Integer minDuration) {
+
+        this.minDuration = minDuration;
+        return this;
+    }
+
+    /**
+     * Get minDuration
+     *
+     * @return minDuration
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MIN_DURATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Integer getMinDuration() {
+        return minDuration;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MIN_DURATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMinDuration(Integer minDuration) {
+        this.minDuration = minDuration;
+    }
+
+    public TariffRestrictions maxDuration(Integer maxDuration) {
+
+        this.maxDuration = maxDuration;
+        return this;
+    }
+
+    /**
+     * Get maxDuration
+     *
+     * @return maxDuration
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MAX_DURATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Integer getMaxDuration() {
+        return maxDuration;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MAX_DURATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMaxDuration(Integer maxDuration) {
+        this.maxDuration = maxDuration;
+    }
+
+    public TariffRestrictions dayOfWeek(List<DayOfWeekEnum> dayOfWeek) {
+
+        this.dayOfWeek = dayOfWeek;
+        return this;
+    }
+
+    public TariffRestrictions addDayOfWeekItem(DayOfWeekEnum dayOfWeekItem) {
+        if (this.dayOfWeek == null) {
+            this.dayOfWeek = new ArrayList<>();
+        }
+        this.dayOfWeek.add(dayOfWeekItem);
+        return this;
+    }
+
+    /**
+     * Get dayOfWeek
+     *
+     * @return dayOfWeek
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<DayOfWeekEnum> getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setDayOfWeek(List<DayOfWeekEnum> dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TariffRestrictions tariffRestrictions = (TariffRestrictions) o;
+        return Objects.equals(this.reservation, tariffRestrictions.reservation) &&
+                Objects.equals(this.startTime, tariffRestrictions.startTime) &&
+                Objects.equals(this.endTime, tariffRestrictions.endTime) &&
+                Objects.equals(this.startDate, tariffRestrictions.startDate) &&
+                Objects.equals(this.endDate, tariffRestrictions.endDate) &&
+                Objects.equals(this.minKwh, tariffRestrictions.minKwh) &&
+                Objects.equals(this.maxKwh, tariffRestrictions.maxKwh) &&
+                Objects.equals(this.minCurrent, tariffRestrictions.minCurrent) &&
+                Objects.equals(this.maxCurrent, tariffRestrictions.maxCurrent) &&
+                Objects.equals(this.minPower, tariffRestrictions.minPower) &&
+                Objects.equals(this.maxPower, tariffRestrictions.maxPower) &&
+                Objects.equals(this.minDuration, tariffRestrictions.minDuration) &&
+                Objects.equals(this.maxDuration, tariffRestrictions.maxDuration) &&
+                Objects.equals(this.dayOfWeek, tariffRestrictions.dayOfWeek);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(reservation, startTime, endTime, startDate, endDate, minKwh, maxKwh, minCurrent, maxCurrent, minPower, maxPower, minDuration, maxDuration, dayOfWeek);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class TariffRestrictions {\n");
+        sb.append("    reservation: ").append(toIndentedString(reservation)).append("\n");
+        sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
+        sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
+        sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+        sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
+        sb.append("    minKwh: ").append(toIndentedString(minKwh)).append("\n");
+        sb.append("    maxKwh: ").append(toIndentedString(maxKwh)).append("\n");
+        sb.append("    minCurrent: ").append(toIndentedString(minCurrent)).append("\n");
+        sb.append("    maxCurrent: ").append(toIndentedString(maxCurrent)).append("\n");
+        sb.append("    minPower: ").append(toIndentedString(minPower)).append("\n");
+        sb.append("    maxPower: ").append(toIndentedString(maxPower)).append("\n");
+        sb.append("    minDuration: ").append(toIndentedString(minDuration)).append("\n");
+        sb.append("    maxDuration: ").append(toIndentedString(maxDuration)).append("\n");
+        sb.append("    dayOfWeek: ").append(toIndentedString(dayOfWeek)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static ReservationEnum fromValue(String value) {
-      for (ReservationEnum b : ReservationEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-  }
-
-  public static final String JSON_PROPERTY_RESERVATION = "reservation";
-  private ReservationEnum reservation;
-
-  public static final String JSON_PROPERTY_START_TIME = "start_time";
-  private String startTime;
-
-  public static final String JSON_PROPERTY_END_TIME = "end_time";
-  private String endTime;
-
-  public static final String JSON_PROPERTY_START_DATE = "start_date";
-  private String startDate;
-
-  public static final String JSON_PROPERTY_END_DATE = "end_date";
-  private String endDate;
-
-  public static final String JSON_PROPERTY_MIN_KWH = "min_kwh";
-  private Float minKwh;
-
-  public static final String JSON_PROPERTY_MAX_KWH = "max_kwh";
-  private Float maxKwh;
-
-  public static final String JSON_PROPERTY_MIN_CURRENT = "min_current";
-  private Float minCurrent;
-
-  public static final String JSON_PROPERTY_MAX_CURRENT = "max_current";
-  private Float maxCurrent;
-
-  public static final String JSON_PROPERTY_MIN_POWER = "min_power";
-  private Float minPower;
-
-  public static final String JSON_PROPERTY_MAX_POWER = "max_power";
-  private Float maxPower;
-
-  public static final String JSON_PROPERTY_MIN_DURATION = "min_duration";
-  private Integer minDuration;
-
-  public static final String JSON_PROPERTY_MAX_DURATION = "max_duration";
-  private Integer maxDuration;
-
-  /**
-   * Gets or Sets dayOfWeek
-   */
-  public enum DayOfWeekEnum {
-    MONDAY("MONDAY"),
-    
-    TUESDAY("TUESDAY"),
-    
-    WEDNESDAY("WEDNESDAY"),
-    
-    THURSDAY("THURSDAY"),
-    
-    FRIDAY("FRIDAY"),
-    
-    SATURDAY("SATURDAY"),
-    
-    SUNDAY("SUNDAY");
-
-    private String value;
-
-    DayOfWeekEnum(String value) {
-      this.value = value;
+        return o.toString().replace("\n", "\n    ");
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
+    /**
+     * Gets or Sets reservation
+     */
+    public enum ReservationEnum {
+        RESERVATION("RESERVATION"),
 
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
+        RESERVATION_EXPIRES("RESERVATION_EXPIRES");
 
-    @JsonCreator
-    public static DayOfWeekEnum fromValue(String value) {
-      for (DayOfWeekEnum b : DayOfWeekEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        private String value;
+
+        ReservationEnum(String value) {
+            this.value = value;
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+
+        @JsonCreator
+        public static ReservationEnum fromValue(String value) {
+            for (ReservationEnum b : ReservationEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-  }
 
-  public static final String JSON_PROPERTY_DAY_OF_WEEK = "day_of_week";
-  private List<DayOfWeekEnum> dayOfWeek;
+    /**
+     * Gets or Sets dayOfWeek
+     */
+    public enum DayOfWeekEnum {
+        MONDAY("MONDAY"),
 
-  public TariffRestrictions() {
-  }
+        TUESDAY("TUESDAY"),
 
-  public TariffRestrictions reservation(ReservationEnum reservation) {
-    
-    this.reservation = reservation;
-    return this;
-  }
+        WEDNESDAY("WEDNESDAY"),
 
-   /**
-   * Get reservation
-   * @return reservation
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RESERVATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        THURSDAY("THURSDAY"),
 
-  public ReservationEnum getReservation() {
-    return reservation;
-  }
+        FRIDAY("FRIDAY"),
 
+        SATURDAY("SATURDAY"),
 
-  @JsonProperty(JSON_PROPERTY_RESERVATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReservation(ReservationEnum reservation) {
-    this.reservation = reservation;
-  }
+        SUNDAY("SUNDAY");
 
+        private String value;
 
-  public TariffRestrictions startTime(String startTime) {
-    
-    this.startTime = startTime;
-    return this;
-  }
+        DayOfWeekEnum(String value) {
+            this.value = value;
+        }
 
-   /**
-   * Get startTime
-   * @return startTime
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        @JsonCreator
+        public static DayOfWeekEnum fromValue(String value) {
+            for (DayOfWeekEnum b : DayOfWeekEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
-  public String getStartTime() {
-    return startTime;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-
-  @JsonProperty(JSON_PROPERTY_START_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartTime(String startTime) {
-    this.startTime = startTime;
-  }
-
-
-  public TariffRestrictions endTime(String endTime) {
-    
-    this.endTime = endTime;
-    return this;
-  }
-
-   /**
-   * Get endTime
-   * @return endTime
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getEndTime() {
-    return endTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_END_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndTime(String endTime) {
-    this.endTime = endTime;
-  }
-
-
-  public TariffRestrictions startDate(String startDate) {
-    
-    this.startDate = startDate;
-    return this;
-  }
-
-   /**
-   * Get startDate
-   * @return startDate
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getStartDate() {
-    return startDate;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_START_DATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
-    this.startDate = startDate;
-  }
-
-
-  public TariffRestrictions endDate(String endDate) {
-    
-    this.endDate = endDate;
-    return this;
-  }
-
-   /**
-   * Get endDate
-   * @return endDate
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getEndDate() {
-    return endDate;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_END_DATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
-    this.endDate = endDate;
-  }
-
-
-  public TariffRestrictions minKwh(Float minKwh) {
-    
-    this.minKwh = minKwh;
-    return this;
-  }
-
-   /**
-   * Get minKwh
-   * @return minKwh
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MIN_KWH)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getMinKwh() {
-    return minKwh;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MIN_KWH)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMinKwh(Float minKwh) {
-    this.minKwh = minKwh;
-  }
-
-
-  public TariffRestrictions maxKwh(Float maxKwh) {
-    
-    this.maxKwh = maxKwh;
-    return this;
-  }
-
-   /**
-   * Get maxKwh
-   * @return maxKwh
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAX_KWH)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getMaxKwh() {
-    return maxKwh;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MAX_KWH)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxKwh(Float maxKwh) {
-    this.maxKwh = maxKwh;
-  }
-
-
-  public TariffRestrictions minCurrent(Float minCurrent) {
-    
-    this.minCurrent = minCurrent;
-    return this;
-  }
-
-   /**
-   * Get minCurrent
-   * @return minCurrent
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MIN_CURRENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getMinCurrent() {
-    return minCurrent;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MIN_CURRENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMinCurrent(Float minCurrent) {
-    this.minCurrent = minCurrent;
-  }
-
-
-  public TariffRestrictions maxCurrent(Float maxCurrent) {
-    
-    this.maxCurrent = maxCurrent;
-    return this;
-  }
-
-   /**
-   * Get maxCurrent
-   * @return maxCurrent
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAX_CURRENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getMaxCurrent() {
-    return maxCurrent;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MAX_CURRENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxCurrent(Float maxCurrent) {
-    this.maxCurrent = maxCurrent;
-  }
-
-
-  public TariffRestrictions minPower(Float minPower) {
-    
-    this.minPower = minPower;
-    return this;
-  }
-
-   /**
-   * Get minPower
-   * @return minPower
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MIN_POWER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getMinPower() {
-    return minPower;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MIN_POWER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMinPower(Float minPower) {
-    this.minPower = minPower;
-  }
-
-
-  public TariffRestrictions maxPower(Float maxPower) {
-    
-    this.maxPower = maxPower;
-    return this;
-  }
-
-   /**
-   * Get maxPower
-   * @return maxPower
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAX_POWER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getMaxPower() {
-    return maxPower;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MAX_POWER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxPower(Float maxPower) {
-    this.maxPower = maxPower;
-  }
-
-
-  public TariffRestrictions minDuration(Integer minDuration) {
-    
-    this.minDuration = minDuration;
-    return this;
-  }
-
-   /**
-   * Get minDuration
-   * @return minDuration
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MIN_DURATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getMinDuration() {
-    return minDuration;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MIN_DURATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMinDuration(Integer minDuration) {
-    this.minDuration = minDuration;
-  }
-
-
-  public TariffRestrictions maxDuration(Integer maxDuration) {
-    
-    this.maxDuration = maxDuration;
-    return this;
-  }
-
-   /**
-   * Get maxDuration
-   * @return maxDuration
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAX_DURATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getMaxDuration() {
-    return maxDuration;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MAX_DURATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxDuration(Integer maxDuration) {
-    this.maxDuration = maxDuration;
-  }
-
-
-  public TariffRestrictions dayOfWeek(List<DayOfWeekEnum> dayOfWeek) {
-    
-    this.dayOfWeek = dayOfWeek;
-    return this;
-  }
-
-  public TariffRestrictions addDayOfWeekItem(DayOfWeekEnum dayOfWeekItem) {
-    if (this.dayOfWeek == null) {
-      this.dayOfWeek = new ArrayList<>();
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.dayOfWeek.add(dayOfWeekItem);
-    return this;
-  }
-
-   /**
-   * Get dayOfWeek
-   * @return dayOfWeek
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<DayOfWeekEnum> getDayOfWeek() {
-    return dayOfWeek;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDayOfWeek(List<DayOfWeekEnum> dayOfWeek) {
-    this.dayOfWeek = dayOfWeek;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    TariffRestrictions tariffRestrictions = (TariffRestrictions) o;
-    return Objects.equals(this.reservation, tariffRestrictions.reservation) &&
-        Objects.equals(this.startTime, tariffRestrictions.startTime) &&
-        Objects.equals(this.endTime, tariffRestrictions.endTime) &&
-        Objects.equals(this.startDate, tariffRestrictions.startDate) &&
-        Objects.equals(this.endDate, tariffRestrictions.endDate) &&
-        Objects.equals(this.minKwh, tariffRestrictions.minKwh) &&
-        Objects.equals(this.maxKwh, tariffRestrictions.maxKwh) &&
-        Objects.equals(this.minCurrent, tariffRestrictions.minCurrent) &&
-        Objects.equals(this.maxCurrent, tariffRestrictions.maxCurrent) &&
-        Objects.equals(this.minPower, tariffRestrictions.minPower) &&
-        Objects.equals(this.maxPower, tariffRestrictions.maxPower) &&
-        Objects.equals(this.minDuration, tariffRestrictions.minDuration) &&
-        Objects.equals(this.maxDuration, tariffRestrictions.maxDuration) &&
-        Objects.equals(this.dayOfWeek, tariffRestrictions.dayOfWeek);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(reservation, startTime, endTime, startDate, endDate, minKwh, maxKwh, minCurrent, maxCurrent, minPower, maxPower, minDuration, maxDuration, dayOfWeek);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class TariffRestrictions {\n");
-    sb.append("    reservation: ").append(toIndentedString(reservation)).append("\n");
-    sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
-    sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
-    sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
-    sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
-    sb.append("    minKwh: ").append(toIndentedString(minKwh)).append("\n");
-    sb.append("    maxKwh: ").append(toIndentedString(maxKwh)).append("\n");
-    sb.append("    minCurrent: ").append(toIndentedString(minCurrent)).append("\n");
-    sb.append("    maxCurrent: ").append(toIndentedString(maxCurrent)).append("\n");
-    sb.append("    minPower: ").append(toIndentedString(minPower)).append("\n");
-    sb.append("    maxPower: ").append(toIndentedString(maxPower)).append("\n");
-    sb.append("    minDuration: ").append(toIndentedString(minDuration)).append("\n");
-    sb.append("    maxDuration: ").append(toIndentedString(maxDuration)).append("\n");
-    sb.append("    dayOfWeek: ").append(toIndentedString(dayOfWeek)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

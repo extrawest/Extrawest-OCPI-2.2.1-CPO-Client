@@ -24,153 +24,152 @@ import java.util.Objects;
         EnergySource.JSON_PROPERTY_SOURCE,
         EnergySource.JSON_PROPERTY_PERCENTAGE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class EnergySource {
-  /**
-   * Gets or Sets source
-   */
-  public enum SourceEnum {
-    NUCLEAR("NUCLEAR"),
-    
-    GENERAL_FOSSIL("GENERAL_FOSSIL"),
-    
-    COAL("COAL"),
-    
-    GAS("GAS"),
-    
-    GENERAL_GREEN("GENERAL_GREEN"),
-    
-    SOLAR("SOLAR"),
-    
-    WIND("WIND"),
-    
-    WATER("WATER");
-
-    private String value;
-
-    SourceEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_SOURCE = "source";
+    public static final String JSON_PROPERTY_PERCENTAGE = "percentage";
+    private SourceEnum source;
+    private Float percentage;
+    public EnergySource() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public EnergySource source(SourceEnum source) {
+
+        this.source = source;
+        return this;
+    }
+
+    /**
+     * Get source
+     *
+     * @return source
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_SOURCE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public SourceEnum getSource() {
+        return source;
+    }
+
+    @JsonProperty(JSON_PROPERTY_SOURCE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setSource(SourceEnum source) {
+        this.source = source;
+    }
+
+    public EnergySource percentage(Float percentage) {
+
+        this.percentage = percentage;
+        return this;
+    }
+
+    /**
+     * Get percentage
+     * minimum: 0
+     * maximum: 100
+     *
+     * @return percentage
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_PERCENTAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public Float getPercentage() {
+        return percentage;
+    }
+
+    @JsonProperty(JSON_PROPERTY_PERCENTAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setPercentage(Float percentage) {
+        this.percentage = percentage;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        EnergySource energySource = (EnergySource) o;
+        return Objects.equals(this.source, energySource.source) &&
+                Objects.equals(this.percentage, energySource.percentage);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(source, percentage);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class EnergySource {\n");
+        sb.append("    source: ").append(toIndentedString(source)).append("\n");
+        sb.append("    percentage: ").append(toIndentedString(percentage)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static SourceEnum fromValue(String value) {
-      for (SourceEnum b : SourceEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  public static final String JSON_PROPERTY_SOURCE = "source";
-  private SourceEnum source;
+    /**
+     * Gets or Sets source
+     */
+    public enum SourceEnum {
+        NUCLEAR("NUCLEAR"),
 
-  public static final String JSON_PROPERTY_PERCENTAGE = "percentage";
-  private Float percentage;
+        GENERAL_FOSSIL("GENERAL_FOSSIL"),
 
-  public EnergySource() {
-  }
+        COAL("COAL"),
 
-  public EnergySource source(SourceEnum source) {
-    
-    this.source = source;
-    return this;
-  }
+        GAS("GAS"),
 
-   /**
-   * Get source
-   * @return source
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        GENERAL_GREEN("GENERAL_GREEN"),
 
-  public SourceEnum getSource() {
-    return source;
-  }
+        SOLAR("SOLAR"),
 
+        WIND("WIND"),
 
-  @JsonProperty(JSON_PROPERTY_SOURCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSource(SourceEnum source) {
-    this.source = source;
-  }
+        WATER("WATER");
 
+        private String value;
 
-  public EnergySource percentage(Float percentage) {
-    
-    this.percentage = percentage;
-    return this;
-  }
+        SourceEnum(String value) {
+            this.value = value;
+        }
 
-   /**
-   * Get percentage
-   * @return percentage
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERCENTAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        @JsonCreator
+        public static SourceEnum fromValue(String value) {
+            for (SourceEnum b : SourceEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
-  public Float getPercentage() {
-    return percentage;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-
-  @JsonProperty(JSON_PROPERTY_PERCENTAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPercentage(Float percentage) {
-    this.percentage = percentage;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    EnergySource energySource = (EnergySource) o;
-    return Objects.equals(this.source, energySource.source) &&
-        Objects.equals(this.percentage, energySource.percentage);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(source, percentage);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class EnergySource {\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
-    sb.append("    percentage: ").append(toIndentedString(percentage)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

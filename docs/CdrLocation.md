@@ -7,17 +7,17 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**id** | **String** |  |  [optional] |
+|**id** | **String** |  |  |
 |**name** | **String** |  |  [optional] |
-|**address** | **String** |  |  [optional] |
-|**city** | **String** |  |  [optional] |
+|**address** | **String** |  |  |
+|**city** | **String** |  |  |
 |**postalCode** | **String** |  |  [optional] |
 |**state** | **String** |  |  [optional] |
-|**country** | **String** |  |  [optional] |
-|**coordinates** | [**GeoLocation**](GeoLocation.md) |  |  [optional] |
-|**evseUid** | **String** |  |  [optional] |
-|**evseId** | **String** |  |  [optional] |
-|**connectorId** | **String** |  |  [optional] |
+|**country** | **String** |  |  |
+|**coordinates** | [**GeoLocation**](GeoLocation.md) |  |  |
+|**evseUid** | **String** |  |  |
+|**evseId** | **String** |  |  |
+|**connectorId** | **String** |  |  |
 |**connectorStandard** | [**ConnectorStandardEnum**](#ConnectorStandardEnum) |  |  [optional] |
 |**connectorFormat** | [**ConnectorFormatEnum**](#ConnectorFormatEnum) |  |  [optional] |
 |**connectorPowerType** | [**ConnectorPowerTypeEnum**](#ConnectorPowerTypeEnum) |  |  [optional] |

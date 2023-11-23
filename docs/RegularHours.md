@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**weekday** | **Integer** |  |  [optional] |
-|**periodBegin** | **String** |  |  [optional] |
-|**periodEnd** | **String** |  |  [optional] |
+|**weekday** | **Integer** |  |  |
+|**periodBegin** | **String** |  |  |
+|**periodEnd** | **String** |  |  |
 
 
 

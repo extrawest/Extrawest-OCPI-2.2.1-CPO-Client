@@ -1,4 +1,5 @@
 name: Publish package to the Maven Central Repository
+
 on:
   push:
     tags:
@@ -7,7 +8,6 @@ on:
     branches: [ main ]
 
 jobs:
-  # Publish to Nexus staging repository
   publish:
     runs-on: ubuntu-latest
     steps:
@@ -26,6 +26,3 @@ jobs:
           JRELEASER_GPG_PUBLIC_KEY: ${{ secrets.JRELEASER_GPG_PUBLIC_KEY }}
           JRELEASER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mvn -Prelease deploy jreleaser:deploy -DaltDeploymentRepository=local::file:./target/staging-deploy
-
-
-

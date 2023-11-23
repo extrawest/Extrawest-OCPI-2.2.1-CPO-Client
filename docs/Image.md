@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**url** | **String** |  |  [optional] |
+|**url** | **String** |  |  |
 |**thumbnail** | **String** |  |  [optional] |
-|**category** | [**CategoryEnum**](#CategoryEnum) |  |  [optional] |
-|**type** | **String** |  |  [optional] |
+|**category** | [**CategoryEnum**](#CategoryEnum) |  |  |
+|**type** | **String** |  |  |
 |**width** | **String** |  |  [optional] |
 |**height** | **String** |  |  [optional] |
 

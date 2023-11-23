@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
-|**price** | **Float** |  |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  |
+|**price** | **Float** |  |  |
 |**vat** | **Float** |  |  [optional] |
 |**stepSize** | **Integer** |  |  [optional] |
 

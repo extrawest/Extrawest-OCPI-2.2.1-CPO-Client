@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## getHubClientInfo
 
-> ClientInfoDTO getHubClientInfo(countryCode, partyId)
+> ClientInfoDto getHubClientInfo(countryCode, partyId)
 
 
 
@@ -34,7 +34,7 @@ public class Example {
         String countryCode = "countryCode_example"; // String | 
         String partyId = "partyId_example"; // String | 
         try {
-            ClientInfoDTO result = apiInstance.getHubClientInfo(countryCode, partyId);
+            ClientInfoDto result = apiInstance.getHubClientInfo(countryCode, partyId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ClientInfoApi#getHubClientInfo");
@@ -57,7 +57,7 @@ public class Example {
 
 ### Return type
 
-[**ClientInfoDTO**](ClientInfoDTO.md)
+[**ClientInfoDto**](ClientInfoDto.md)
 
 ### Authorization
 

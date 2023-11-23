@@ -24,7 +24,6 @@ import java.util.Objects;
  * Connector
  */
 @JsonPropertyOrder({
-        Connector.JSON_PROPERTY_URL,
         Connector.JSON_PROPERTY_ID,
         Connector.JSON_PROPERTY_STANDARD,
         Connector.JSON_PROPERTY_FORMAT,
@@ -36,580 +35,530 @@ import java.util.Objects;
         Connector.JSON_PROPERTY_TERMS_AND_CONDITIONS,
         Connector.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class Connector {
-  public static final String JSON_PROPERTY_URL = "url";
-  private String url;
-
-  public static final String JSON_PROPERTY_ID = "id";
-  private String id;
-
-  /**
-   * Gets or Sets standard
-   */
-  public enum StandardEnum {
-    CHADEMO("CHADEMO"),
-    
-    CHAOJI("CHAOJI"),
-    
-    DOMESTIC_A("DOMESTIC_A"),
-    
-    DOMESTIC_B("DOMESTIC_B"),
-    
-    DOMESTIC_C("DOMESTIC_C"),
-    
-    DOMESTIC_D("DOMESTIC_D"),
-    
-    DOMESTIC_E("DOMESTIC_E"),
-    
-    DOMESTIC_F("DOMESTIC_F"),
-    
-    DOMESTIC_G("DOMESTIC_G"),
-    
-    DOMESTIC_H("DOMESTIC_H"),
-    
-    DOMESTIC_I("DOMESTIC_I"),
-    
-    DOMESTIC_J("DOMESTIC_J"),
-    
-    DOMESTIC_K("DOMESTIC_K"),
-    
-    DOMESTIC_L("DOMESTIC_L"),
-    
-    DOMESTIC_M("DOMESTIC_M"),
-    
-    DOMESTIC_N("DOMESTIC_N"),
-    
-    DOMESTIC_O("DOMESTIC_O"),
-    
-    GBT_AC("GBT_AC"),
-    
-    GBT_DC("GBT_DC"),
-    
-    IEC_60309_2_SINGLE_16("IEC_60309_2_single_16"),
-    
-    IEC_60309_2_THREE_16("IEC_60309_2_three_16"),
-    
-    IEC_60309_2_THREE_32("IEC_60309_2_three_32"),
-    
-    IEC_60309_2_THREE_64("IEC_60309_2_three_64"),
-    
-    IEC_62196_T1("IEC_62196_T1"),
-    
-    IEC_62196_T1_COMBO("IEC_62196_T1_COMBO"),
-    
-    IEC_62196_T2("IEC_62196_T2"),
-    
-    IEC_62196_T2_COMBO("IEC_62196_T2_COMBO"),
-    
-    IEC_62196_T3A("IEC_62196_T3A"),
-    
-    IEC_62196_T3C("IEC_62196_T3C"),
-    
-    NEMA_5_20("NEMA_5_20"),
-    
-    NEMA_6_30("NEMA_6_30"),
-    
-    NEMA_6_50("NEMA_6_50"),
-    
-    NEMA_10_30("NEMA_10_30"),
-    
-    NEMA_10_50("NEMA_10_50"),
-    
-    NEMA_14_30("NEMA_14_30"),
-    
-    NEMA_14_50("NEMA_14_50"),
-    
-    PANTOGRAPH_BOTTOM_UP("PANTOGRAPH_BOTTOM_UP"),
-    
-    PANTOGRAPH_TOP_DOWN("PANTOGRAPH_TOP_DOWN"),
-    
-    TESLA_R("TESLA_R"),
-    
-    TESLA_S("TESLA_S");
-
-    private String value;
-
-    StandardEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_ID = "id";
+    public static final String JSON_PROPERTY_STANDARD = "standard";
+    public static final String JSON_PROPERTY_FORMAT = "format";
+    public static final String JSON_PROPERTY_POWER_TYPE = "power_type";
+    public static final String JSON_PROPERTY_MAX_VOLTAGE = "max_voltage";
+    public static final String JSON_PROPERTY_MAX_AMPERAGE = "max_amperage";
+    public static final String JSON_PROPERTY_MAX_ELECTRIC_POWER = "max_electric_power";
+    public static final String JSON_PROPERTY_TARIFF_IDS = "tariff_ids";
+    public static final String JSON_PROPERTY_TERMS_AND_CONDITIONS = "terms_and_conditions";
+    public static final String JSON_PROPERTY_LAST_UPDATED = "last_updated";
+    private String id;
+    private StandardEnum standard;
+    private FormatEnum format;
+    private PowerTypeEnum powerType;
+    private Integer maxVoltage;
+    private Integer maxAmperage;
+    private Integer maxElectricPower;
+    private List<String> tariffIds;
+    private String termsAndConditions;
+    private OffsetDateTime lastUpdated;
+    public Connector() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public Connector id(String id) {
+
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return id
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getId() {
+        return id;
+    }
+
+    @JsonProperty(JSON_PROPERTY_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Connector standard(StandardEnum standard) {
+
+        this.standard = standard;
+        return this;
+    }
+
+    /**
+     * Get standard
+     *
+     * @return standard
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_STANDARD)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public StandardEnum getStandard() {
+        return standard;
+    }
+
+    @JsonProperty(JSON_PROPERTY_STANDARD)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setStandard(StandardEnum standard) {
+        this.standard = standard;
+    }
+
+    public Connector format(FormatEnum format) {
+
+        this.format = format;
+        return this;
+    }
+
+    /**
+     * Get format
+     *
+     * @return format
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_FORMAT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public FormatEnum getFormat() {
+        return format;
+    }
+
+    @JsonProperty(JSON_PROPERTY_FORMAT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setFormat(FormatEnum format) {
+        this.format = format;
+    }
+
+    public Connector powerType(PowerTypeEnum powerType) {
+
+        this.powerType = powerType;
+        return this;
+    }
+
+    /**
+     * Get powerType
+     *
+     * @return powerType
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_POWER_TYPE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public PowerTypeEnum getPowerType() {
+        return powerType;
+    }
+
+    @JsonProperty(JSON_PROPERTY_POWER_TYPE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setPowerType(PowerTypeEnum powerType) {
+        this.powerType = powerType;
+    }
+
+    public Connector maxVoltage(Integer maxVoltage) {
+
+        this.maxVoltage = maxVoltage;
+        return this;
+    }
+
+    /**
+     * Get maxVoltage
+     *
+     * @return maxVoltage
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_MAX_VOLTAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public Integer getMaxVoltage() {
+        return maxVoltage;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MAX_VOLTAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setMaxVoltage(Integer maxVoltage) {
+        this.maxVoltage = maxVoltage;
+    }
+
+    public Connector maxAmperage(Integer maxAmperage) {
+
+        this.maxAmperage = maxAmperage;
+        return this;
+    }
+
+    /**
+     * Get maxAmperage
+     *
+     * @return maxAmperage
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_MAX_AMPERAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public Integer getMaxAmperage() {
+        return maxAmperage;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MAX_AMPERAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setMaxAmperage(Integer maxAmperage) {
+        this.maxAmperage = maxAmperage;
+    }
+
+    public Connector maxElectricPower(Integer maxElectricPower) {
+
+        this.maxElectricPower = maxElectricPower;
+        return this;
+    }
+
+    /**
+     * Get maxElectricPower
+     *
+     * @return maxElectricPower
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MAX_ELECTRIC_POWER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Integer getMaxElectricPower() {
+        return maxElectricPower;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MAX_ELECTRIC_POWER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMaxElectricPower(Integer maxElectricPower) {
+        this.maxElectricPower = maxElectricPower;
+    }
+
+    public Connector tariffIds(List<String> tariffIds) {
+
+        this.tariffIds = tariffIds;
+        return this;
+    }
+
+    public Connector addTariffIdsItem(String tariffIdsItem) {
+        if (this.tariffIds == null) {
+            this.tariffIds = new ArrayList<>();
+        }
+        this.tariffIds.add(tariffIdsItem);
+        return this;
+    }
+
+    /**
+     * Get tariffIds
+     *
+     * @return tariffIds
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_TARIFF_IDS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<String> getTariffIds() {
+        return tariffIds;
+    }
+
+    @JsonProperty(JSON_PROPERTY_TARIFF_IDS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setTariffIds(List<String> tariffIds) {
+        this.tariffIds = tariffIds;
+    }
+
+    public Connector termsAndConditions(String termsAndConditions) {
+
+        this.termsAndConditions = termsAndConditions;
+        return this;
+    }
+
+    /**
+     * Get termsAndConditions
+     *
+     * @return termsAndConditions
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_TERMS_AND_CONDITIONS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getTermsAndConditions() {
+        return termsAndConditions;
+    }
+
+    @JsonProperty(JSON_PROPERTY_TERMS_AND_CONDITIONS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setTermsAndConditions(String termsAndConditions) {
+        this.termsAndConditions = termsAndConditions;
+    }
+
+    public Connector lastUpdated(OffsetDateTime lastUpdated) {
+
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+
+    /**
+     * Get lastUpdated
+     *
+     * @return lastUpdated
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public OffsetDateTime getLastUpdated() {
+        return lastUpdated;
+    }
+
+    @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setLastUpdated(OffsetDateTime lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Connector connector = (Connector) o;
+        return Objects.equals(this.id, connector.id) &&
+                Objects.equals(this.standard, connector.standard) &&
+                Objects.equals(this.format, connector.format) &&
+                Objects.equals(this.powerType, connector.powerType) &&
+                Objects.equals(this.maxVoltage, connector.maxVoltage) &&
+                Objects.equals(this.maxAmperage, connector.maxAmperage) &&
+                Objects.equals(this.maxElectricPower, connector.maxElectricPower) &&
+                Objects.equals(this.tariffIds, connector.tariffIds) &&
+                Objects.equals(this.termsAndConditions, connector.termsAndConditions) &&
+                Objects.equals(this.lastUpdated, connector.lastUpdated);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, standard, format, powerType, maxVoltage, maxAmperage, maxElectricPower, tariffIds, termsAndConditions, lastUpdated);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class Connector {\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    standard: ").append(toIndentedString(standard)).append("\n");
+        sb.append("    format: ").append(toIndentedString(format)).append("\n");
+        sb.append("    powerType: ").append(toIndentedString(powerType)).append("\n");
+        sb.append("    maxVoltage: ").append(toIndentedString(maxVoltage)).append("\n");
+        sb.append("    maxAmperage: ").append(toIndentedString(maxAmperage)).append("\n");
+        sb.append("    maxElectricPower: ").append(toIndentedString(maxElectricPower)).append("\n");
+        sb.append("    tariffIds: ").append(toIndentedString(tariffIds)).append("\n");
+        sb.append("    termsAndConditions: ").append(toIndentedString(termsAndConditions)).append("\n");
+        sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static StandardEnum fromValue(String value) {
-      for (StandardEnum b : StandardEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-  }
-
-  public static final String JSON_PROPERTY_STANDARD = "standard";
-  private StandardEnum standard;
-
-  /**
-   * Gets or Sets format
-   */
-  public enum FormatEnum {
-    SOCKET("SOCKET"),
-    
-    CABLE("CABLE");
-
-    private String value;
-
-    FormatEnum(String value) {
-      this.value = value;
+        return o.toString().replace("\n", "\n    ");
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
+    /**
+     * Gets or Sets standard
+     */
+    public enum StandardEnum {
+        CHADEMO("CHADEMO"),
 
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
+        CHAOJI("CHAOJI"),
 
-    @JsonCreator
-    public static FormatEnum fromValue(String value) {
-      for (FormatEnum b : FormatEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        DOMESTIC_A("DOMESTIC_A"),
+
+        DOMESTIC_B("DOMESTIC_B"),
+
+        DOMESTIC_C("DOMESTIC_C"),
+
+        DOMESTIC_D("DOMESTIC_D"),
+
+        DOMESTIC_E("DOMESTIC_E"),
+
+        DOMESTIC_F("DOMESTIC_F"),
+
+        DOMESTIC_G("DOMESTIC_G"),
+
+        DOMESTIC_H("DOMESTIC_H"),
+
+        DOMESTIC_I("DOMESTIC_I"),
+
+        DOMESTIC_J("DOMESTIC_J"),
+
+        DOMESTIC_K("DOMESTIC_K"),
+
+        DOMESTIC_L("DOMESTIC_L"),
+
+        DOMESTIC_M("DOMESTIC_M"),
+
+        DOMESTIC_N("DOMESTIC_N"),
+
+        DOMESTIC_O("DOMESTIC_O"),
+
+        GBT_AC("GBT_AC"),
+
+        GBT_DC("GBT_DC"),
+
+        IEC_60309_2_SINGLE_16("IEC_60309_2_single_16"),
+
+        IEC_60309_2_THREE_16("IEC_60309_2_three_16"),
+
+        IEC_60309_2_THREE_32("IEC_60309_2_three_32"),
+
+        IEC_60309_2_THREE_64("IEC_60309_2_three_64"),
+
+        IEC_62196_T1("IEC_62196_T1"),
+
+        IEC_62196_T1_COMBO("IEC_62196_T1_COMBO"),
+
+        IEC_62196_T2("IEC_62196_T2"),
+
+        IEC_62196_T2_COMBO("IEC_62196_T2_COMBO"),
+
+        IEC_62196_T3A("IEC_62196_T3A"),
+
+        IEC_62196_T3C("IEC_62196_T3C"),
+
+        NEMA_5_20("NEMA_5_20"),
+
+        NEMA_6_30("NEMA_6_30"),
+
+        NEMA_6_50("NEMA_6_50"),
+
+        NEMA_10_30("NEMA_10_30"),
+
+        NEMA_10_50("NEMA_10_50"),
+
+        NEMA_14_30("NEMA_14_30"),
+
+        NEMA_14_50("NEMA_14_50"),
+
+        PANTOGRAPH_BOTTOM_UP("PANTOGRAPH_BOTTOM_UP"),
+
+        PANTOGRAPH_TOP_DOWN("PANTOGRAPH_TOP_DOWN"),
+
+        TESLA_R("TESLA_R"),
+
+        TESLA_S("TESLA_S");
+
+        private String value;
+
+        StandardEnum(String value) {
+            this.value = value;
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-  }
 
-  public static final String JSON_PROPERTY_FORMAT = "format";
-  private FormatEnum format;
-
-  /**
-   * Gets or Sets powerType
-   */
-  public enum PowerTypeEnum {
-    AC_1_PHASE("AC_1_PHASE"),
-    
-    AC_2_PHASE("AC_2_PHASE"),
-    
-    AC_2_PHASE_SPLIT("AC_2_PHASE_SPLIT"),
-    
-    AC_3_PHASE("AC_3_PHASE"),
-    
-    DC("DC");
-
-    private String value;
-
-    PowerTypeEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static PowerTypeEnum fromValue(String value) {
-      for (PowerTypeEnum b : PowerTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        @JsonCreator
+        public static StandardEnum fromValue(String value) {
+            for (StandardEnum b : StandardEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-  }
 
-  public static final String JSON_PROPERTY_POWER_TYPE = "power_type";
-  private PowerTypeEnum powerType;
+    /**
+     * Gets or Sets format
+     */
+    public enum FormatEnum {
+        SOCKET("SOCKET"),
 
-  public static final String JSON_PROPERTY_MAX_VOLTAGE = "max_voltage";
-  private Integer maxVoltage;
+        CABLE("CABLE");
 
-  public static final String JSON_PROPERTY_MAX_AMPERAGE = "max_amperage";
-  private Integer maxAmperage;
+        private String value;
 
-  public static final String JSON_PROPERTY_MAX_ELECTRIC_POWER = "max_electric_power";
-  private Integer maxElectricPower;
+        FormatEnum(String value) {
+            this.value = value;
+        }
 
-  public static final String JSON_PROPERTY_TARIFF_IDS = "tariff_ids";
-  private List<String> tariffIds;
+        @JsonCreator
+        public static FormatEnum fromValue(String value) {
+            for (FormatEnum b : FormatEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
-  public static final String JSON_PROPERTY_TERMS_AND_CONDITIONS = "terms_and_conditions";
-  private String termsAndConditions;
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public static final String JSON_PROPERTY_LAST_UPDATED = "last_updated";
-  private OffsetDateTime lastUpdated;
-
-  public Connector() {
-  }
-
-  public Connector url(String url) {
-    
-    this.url = url;
-    return this;
-  }
-
-   /**
-   * Get url
-   * @return url
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getUrl() {
-    return url;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrl(String url) {
-    this.url = url;
-  }
-
-
-  public Connector id(String id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getId() {
-    return id;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-  public Connector standard(StandardEnum standard) {
-    
-    this.standard = standard;
-    return this;
-  }
-
-   /**
-   * Get standard
-   * @return standard
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STANDARD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public StandardEnum getStandard() {
-    return standard;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STANDARD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStandard(StandardEnum standard) {
-    this.standard = standard;
-  }
-
-
-  public Connector format(FormatEnum format) {
-    
-    this.format = format;
-    return this;
-  }
-
-   /**
-   * Get format
-   * @return format
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FORMAT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public FormatEnum getFormat() {
-    return format;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_FORMAT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFormat(FormatEnum format) {
-    this.format = format;
-  }
-
-
-  public Connector powerType(PowerTypeEnum powerType) {
-    
-    this.powerType = powerType;
-    return this;
-  }
-
-   /**
-   * Get powerType
-   * @return powerType
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_POWER_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public PowerTypeEnum getPowerType() {
-    return powerType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_POWER_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPowerType(PowerTypeEnum powerType) {
-    this.powerType = powerType;
-  }
-
-
-  public Connector maxVoltage(Integer maxVoltage) {
-    
-    this.maxVoltage = maxVoltage;
-    return this;
-  }
-
-   /**
-   * Get maxVoltage
-   * @return maxVoltage
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAX_VOLTAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getMaxVoltage() {
-    return maxVoltage;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MAX_VOLTAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxVoltage(Integer maxVoltage) {
-    this.maxVoltage = maxVoltage;
-  }
-
-
-  public Connector maxAmperage(Integer maxAmperage) {
-    
-    this.maxAmperage = maxAmperage;
-    return this;
-  }
-
-   /**
-   * Get maxAmperage
-   * @return maxAmperage
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAX_AMPERAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getMaxAmperage() {
-    return maxAmperage;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MAX_AMPERAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxAmperage(Integer maxAmperage) {
-    this.maxAmperage = maxAmperage;
-  }
-
-
-  public Connector maxElectricPower(Integer maxElectricPower) {
-    
-    this.maxElectricPower = maxElectricPower;
-    return this;
-  }
-
-   /**
-   * Get maxElectricPower
-   * @return maxElectricPower
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAX_ELECTRIC_POWER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getMaxElectricPower() {
-    return maxElectricPower;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MAX_ELECTRIC_POWER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaxElectricPower(Integer maxElectricPower) {
-    this.maxElectricPower = maxElectricPower;
-  }
-
-
-  public Connector tariffIds(List<String> tariffIds) {
-    
-    this.tariffIds = tariffIds;
-    return this;
-  }
-
-  public Connector addTariffIdsItem(String tariffIdsItem) {
-    if (this.tariffIds == null) {
-      this.tariffIds = new ArrayList<>();
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.tariffIds.add(tariffIdsItem);
-    return this;
-  }
 
-   /**
-   * Get tariffIds
-   * @return tariffIds
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARIFF_IDS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    /**
+     * Gets or Sets powerType
+     */
+    public enum PowerTypeEnum {
+        AC_1_PHASE("AC_1_PHASE"),
 
-  public List<String> getTariffIds() {
-    return tariffIds;
-  }
+        AC_2_PHASE("AC_2_PHASE"),
 
+        AC_2_PHASE_SPLIT("AC_2_PHASE_SPLIT"),
 
-  @JsonProperty(JSON_PROPERTY_TARIFF_IDS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTariffIds(List<String> tariffIds) {
-    this.tariffIds = tariffIds;
-  }
+        AC_3_PHASE("AC_3_PHASE"),
 
+        DC("DC");
 
-  public Connector termsAndConditions(String termsAndConditions) {
-    
-    this.termsAndConditions = termsAndConditions;
-    return this;
-  }
+        private String value;
 
-   /**
-   * Get termsAndConditions
-   * @return termsAndConditions
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TERMS_AND_CONDITIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        PowerTypeEnum(String value) {
+            this.value = value;
+        }
 
-  public String getTermsAndConditions() {
-    return termsAndConditions;
-  }
+        @JsonCreator
+        public static PowerTypeEnum fromValue(String value) {
+            for (PowerTypeEnum b : PowerTypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  @JsonProperty(JSON_PROPERTY_TERMS_AND_CONDITIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTermsAndConditions(String termsAndConditions) {
-    this.termsAndConditions = termsAndConditions;
-  }
-
-
-  public Connector lastUpdated(OffsetDateTime lastUpdated) {
-    
-    this.lastUpdated = lastUpdated;
-    return this;
-  }
-
-   /**
-   * Get lastUpdated
-   * @return lastUpdated
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public OffsetDateTime getLastUpdated() {
-    return lastUpdated;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLastUpdated(OffsetDateTime lastUpdated) {
-    this.lastUpdated = lastUpdated;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    Connector connector = (Connector) o;
-    return Objects.equals(this.url, connector.url) &&
-        Objects.equals(this.id, connector.id) &&
-        Objects.equals(this.standard, connector.standard) &&
-        Objects.equals(this.format, connector.format) &&
-        Objects.equals(this.powerType, connector.powerType) &&
-        Objects.equals(this.maxVoltage, connector.maxVoltage) &&
-        Objects.equals(this.maxAmperage, connector.maxAmperage) &&
-        Objects.equals(this.maxElectricPower, connector.maxElectricPower) &&
-        Objects.equals(this.tariffIds, connector.tariffIds) &&
-        Objects.equals(this.termsAndConditions, connector.termsAndConditions) &&
-        Objects.equals(this.lastUpdated, connector.lastUpdated);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(url, id, standard, format, powerType, maxVoltage, maxAmperage, maxElectricPower, tariffIds, termsAndConditions, lastUpdated);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Connector {\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    standard: ").append(toIndentedString(standard)).append("\n");
-    sb.append("    format: ").append(toIndentedString(format)).append("\n");
-    sb.append("    powerType: ").append(toIndentedString(powerType)).append("\n");
-    sb.append("    maxVoltage: ").append(toIndentedString(maxVoltage)).append("\n");
-    sb.append("    maxAmperage: ").append(toIndentedString(maxAmperage)).append("\n");
-    sb.append("    maxElectricPower: ").append(toIndentedString(maxElectricPower)).append("\n");
-    sb.append("    tariffIds: ").append(toIndentedString(tariffIds)).append("\n");
-    sb.append("    termsAndConditions: ").append(toIndentedString(termsAndConditions)).append("\n");
-    sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**role** | [**RoleEnum**](#RoleEnum) |  |  [optional] |
-|**businessDetails** | [**BusinessDetails**](BusinessDetails.md) |  |  [optional] |
-|**partyId** | **String** |  |  [optional] |
-|**countryCode** | **String** |  |  [optional] |
+|**role** | [**RoleEnum**](#RoleEnum) |  |  |
+|**businessDetails** | [**BusinessDetails**](BusinessDetails.md) |  |  |
+|**partyId** | **String** |  |  |
+|**countryCode** | **String** |  |  |
 
 
 

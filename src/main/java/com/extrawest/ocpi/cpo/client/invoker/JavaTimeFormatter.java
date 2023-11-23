@@ -20,13 +20,14 @@ import java.time.format.DateTimeParseException;
  * Class that add parsing/formatting support for Java 8+ {@code OffsetDateTime} class.
  * It's generated for java clients when {@code AbstractJavaCodegen#dateLibrary} specified as {@code java8}.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class JavaTimeFormatter {
 
     private DateTimeFormatter offsetDateTimeFormatter = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
 
     /**
      * Get the date format used to parse/format {@code OffsetDateTime} parameters.
+     *
      * @return DateTimeFormatter
      */
     public DateTimeFormatter getOffsetDateTimeFormatter() {
@@ -35,6 +36,7 @@ public class JavaTimeFormatter {
 
     /**
      * Set the date format used to parse/format {@code OffsetDateTime} parameters.
+     *
      * @param offsetDateTimeFormatter {@code DateTimeFormatter}
      */
     public void setOffsetDateTimeFormatter(DateTimeFormatter offsetDateTimeFormatter) {
@@ -43,6 +45,7 @@ public class JavaTimeFormatter {
 
     /**
      * Parse the given string into {@code OffsetDateTime} object.
+     *
      * @param str String
      * @return {@code OffsetDateTime}
      */
@@ -53,8 +56,10 @@ public class JavaTimeFormatter {
             throw new RuntimeException(e);
         }
     }
+
     /**
      * Format the given {@code OffsetDateTime} object into string.
+     *
      * @param offsetDateTime {@code OffsetDateTime}
      * @return {@code OffsetDateTime} in string format
      */

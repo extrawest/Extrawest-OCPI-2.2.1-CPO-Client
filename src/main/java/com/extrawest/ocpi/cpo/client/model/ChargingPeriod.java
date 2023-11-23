@@ -30,145 +30,146 @@ import java.util.Objects;
         ChargingPeriod.JSON_PROPERTY_DIMENSIONS,
         ChargingPeriod.JSON_PROPERTY_TARIFF_ID
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class ChargingPeriod {
-  public static final String JSON_PROPERTY_START_DATE_TIME = "start_date_time";
-  private OffsetDateTime startDateTime;
+    public static final String JSON_PROPERTY_START_DATE_TIME = "start_date_time";
+    public static final String JSON_PROPERTY_DIMENSIONS = "dimensions";
+    public static final String JSON_PROPERTY_TARIFF_ID = "tariff_id";
+    private OffsetDateTime startDateTime;
+    private List<CdrDimension> dimensions = new ArrayList<>();
+    private String tariffId;
 
-  public static final String JSON_PROPERTY_DIMENSIONS = "dimensions";
-  private List<CdrDimension> dimensions;
-
-  public static final String JSON_PROPERTY_TARIFF_ID = "tariff_id";
-  private String tariffId;
-
-  public ChargingPeriod() {
-  }
-
-  public ChargingPeriod startDateTime(OffsetDateTime startDateTime) {
-    
-    this.startDateTime = startDateTime;
-    return this;
-  }
-
-   /**
-   * Get startDateTime
-   * @return startDateTime
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public OffsetDateTime getStartDateTime() {
-    return startDateTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDateTime(OffsetDateTime startDateTime) {
-    this.startDateTime = startDateTime;
-  }
-
-
-  public ChargingPeriod dimensions(List<CdrDimension> dimensions) {
-    
-    this.dimensions = dimensions;
-    return this;
-  }
-
-  public ChargingPeriod addDimensionsItem(CdrDimension dimensionsItem) {
-    if (this.dimensions == null) {
-      this.dimensions = new ArrayList<>();
+    public ChargingPeriod() {
     }
-    this.dimensions.add(dimensionsItem);
-    return this;
-  }
 
-   /**
-   * Get dimensions
-   * @return dimensions
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DIMENSIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public ChargingPeriod startDateTime(OffsetDateTime startDateTime) {
 
-  public List<CdrDimension> getDimensions() {
-    return dimensions;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DIMENSIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDimensions(List<CdrDimension> dimensions) {
-    this.dimensions = dimensions;
-  }
-
-
-  public ChargingPeriod tariffId(String tariffId) {
-    
-    this.tariffId = tariffId;
-    return this;
-  }
-
-   /**
-   * Get tariffId
-   * @return tariffId
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARIFF_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getTariffId() {
-    return tariffId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TARIFF_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTariffId(String tariffId) {
-    this.tariffId = tariffId;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.startDateTime = startDateTime;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get startDateTime
+     *
+     * @return startDateTime
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public OffsetDateTime getStartDateTime() {
+        return startDateTime;
     }
-    ChargingPeriod chargingPeriod = (ChargingPeriod) o;
-    return Objects.equals(this.startDateTime, chargingPeriod.startDateTime) &&
-        Objects.equals(this.dimensions, chargingPeriod.dimensions) &&
-        Objects.equals(this.tariffId, chargingPeriod.tariffId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(startDateTime, dimensions, tariffId);
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ChargingPeriod {\n");
-    sb.append("    startDateTime: ").append(toIndentedString(startDateTime)).append("\n");
-    sb.append("    dimensions: ").append(toIndentedString(dimensions)).append("\n");
-    sb.append("    tariffId: ").append(toIndentedString(tariffId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setStartDateTime(OffsetDateTime startDateTime) {
+        this.startDateTime = startDateTime;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    public ChargingPeriod dimensions(List<CdrDimension> dimensions) {
+
+        this.dimensions = dimensions;
+        return this;
+    }
+
+    public ChargingPeriod addDimensionsItem(CdrDimension dimensionsItem) {
+        if (this.dimensions == null) {
+            this.dimensions = new ArrayList<>();
+        }
+        this.dimensions.add(dimensionsItem);
+        return this;
+    }
+
+    /**
+     * Get dimensions
+     *
+     * @return dimensions
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_DIMENSIONS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public List<CdrDimension> getDimensions() {
+        return dimensions;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_DIMENSIONS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setDimensions(List<CdrDimension> dimensions) {
+        this.dimensions = dimensions;
+    }
+
+
+    public ChargingPeriod tariffId(String tariffId) {
+
+        this.tariffId = tariffId;
+        return this;
+    }
+
+    /**
+     * Get tariffId
+     *
+     * @return tariffId
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_TARIFF_ID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getTariffId() {
+        return tariffId;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_TARIFF_ID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setTariffId(String tariffId) {
+        this.tariffId = tariffId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ChargingPeriod chargingPeriod = (ChargingPeriod) o;
+        return Objects.equals(this.startDateTime, chargingPeriod.startDateTime) &&
+                Objects.equals(this.dimensions, chargingPeriod.dimensions) &&
+                Objects.equals(this.tariffId, chargingPeriod.tariffId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startDateTime, dimensions, tariffId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ChargingPeriod {\n");
+        sb.append("    startDateTime: ").append(toIndentedString(startDateTime)).append("\n");
+        sb.append("    dimensions: ").append(toIndentedString(dimensions)).append("\n");
+        sb.append("    tariffId: ").append(toIndentedString(tariffId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

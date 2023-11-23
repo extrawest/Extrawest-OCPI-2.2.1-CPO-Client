@@ -30,242 +30,233 @@ import java.util.Objects;
         ChargingProfile.JSON_PROPERTY_MIN_CHARGING_RATE,
         ChargingProfile.JSON_PROPERTY_CHARGING_PROFILE_PERIOD
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class ChargingProfile {
-  public static final String JSON_PROPERTY_START_DATE_TIME = "start_date_time";
-  private OffsetDateTime startDateTime;
-
-  public static final String JSON_PROPERTY_DURATION = "duration";
-  private Integer duration;
-
-  /**
-   * Gets or Sets chargingRateUnit
-   */
-  public enum ChargingRateUnitEnum {
-    W("W"),
-    
-    A("A");
-
-    private String value;
-
-    ChargingRateUnitEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_START_DATE_TIME = "start_date_time";
+    public static final String JSON_PROPERTY_DURATION = "duration";
+    public static final String JSON_PROPERTY_CHARGING_RATE_UNIT = "charging_rate_unit";
+    public static final String JSON_PROPERTY_MIN_CHARGING_RATE = "min_charging_rate";
+    public static final String JSON_PROPERTY_CHARGING_PROFILE_PERIOD = "charging_profile_period";
+    private OffsetDateTime startDateTime;
+    private Integer duration;
+    private ChargingRateUnitEnum chargingRateUnit;
+    private Float minChargingRate;
+    private List<ChargingProfilePeriod> chargingProfilePeriod;
+    public ChargingProfile() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public ChargingProfile startDateTime(OffsetDateTime startDateTime) {
+
+        this.startDateTime = startDateTime;
+        return this;
+    }
+
+    /**
+     * Get startDateTime
+     *
+     * @return startDateTime
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public OffsetDateTime getStartDateTime() {
+        return startDateTime;
+    }
+
+    @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setStartDateTime(OffsetDateTime startDateTime) {
+        this.startDateTime = startDateTime;
+    }
+
+    public ChargingProfile duration(Integer duration) {
+
+        this.duration = duration;
+        return this;
+    }
+
+    /**
+     * Get duration
+     *
+     * @return duration
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_DURATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Integer getDuration() {
+        return duration;
+    }
+
+    @JsonProperty(JSON_PROPERTY_DURATION)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
+
+    public ChargingProfile chargingRateUnit(ChargingRateUnitEnum chargingRateUnit) {
+
+        this.chargingRateUnit = chargingRateUnit;
+        return this;
+    }
+
+    /**
+     * Get chargingRateUnit
+     *
+     * @return chargingRateUnit
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_CHARGING_RATE_UNIT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public ChargingRateUnitEnum getChargingRateUnit() {
+        return chargingRateUnit;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CHARGING_RATE_UNIT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setChargingRateUnit(ChargingRateUnitEnum chargingRateUnit) {
+        this.chargingRateUnit = chargingRateUnit;
+    }
+
+    public ChargingProfile minChargingRate(Float minChargingRate) {
+
+        this.minChargingRate = minChargingRate;
+        return this;
+    }
+
+    /**
+     * Get minChargingRate
+     *
+     * @return minChargingRate
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_MIN_CHARGING_RATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public Float getMinChargingRate() {
+        return minChargingRate;
+    }
+
+    @JsonProperty(JSON_PROPERTY_MIN_CHARGING_RATE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setMinChargingRate(Float minChargingRate) {
+        this.minChargingRate = minChargingRate;
+    }
+
+    public ChargingProfile chargingProfilePeriod(List<ChargingProfilePeriod> chargingProfilePeriod) {
+
+        this.chargingProfilePeriod = chargingProfilePeriod;
+        return this;
+    }
+
+    public ChargingProfile addChargingProfilePeriodItem(ChargingProfilePeriod chargingProfilePeriodItem) {
+        if (this.chargingProfilePeriod == null) {
+            this.chargingProfilePeriod = new ArrayList<>();
+        }
+        this.chargingProfilePeriod.add(chargingProfilePeriodItem);
+        return this;
+    }
+
+    /**
+     * Get chargingProfilePeriod
+     *
+     * @return chargingProfilePeriod
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_CHARGING_PROFILE_PERIOD)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<ChargingProfilePeriod> getChargingProfilePeriod() {
+        return chargingProfilePeriod;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CHARGING_PROFILE_PERIOD)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setChargingProfilePeriod(List<ChargingProfilePeriod> chargingProfilePeriod) {
+        this.chargingProfilePeriod = chargingProfilePeriod;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ChargingProfile chargingProfile = (ChargingProfile) o;
+        return Objects.equals(this.startDateTime, chargingProfile.startDateTime) &&
+                Objects.equals(this.duration, chargingProfile.duration) &&
+                Objects.equals(this.chargingRateUnit, chargingProfile.chargingRateUnit) &&
+                Objects.equals(this.minChargingRate, chargingProfile.minChargingRate) &&
+                Objects.equals(this.chargingProfilePeriod, chargingProfile.chargingProfilePeriod);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startDateTime, duration, chargingRateUnit, minChargingRate, chargingProfilePeriod);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ChargingProfile {\n");
+        sb.append("    startDateTime: ").append(toIndentedString(startDateTime)).append("\n");
+        sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
+        sb.append("    chargingRateUnit: ").append(toIndentedString(chargingRateUnit)).append("\n");
+        sb.append("    minChargingRate: ").append(toIndentedString(minChargingRate)).append("\n");
+        sb.append("    chargingProfilePeriod: ").append(toIndentedString(chargingProfilePeriod)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static ChargingRateUnitEnum fromValue(String value) {
-      for (ChargingRateUnitEnum b : ChargingRateUnitEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  public static final String JSON_PROPERTY_CHARGING_RATE_UNIT = "charging_rate_unit";
-  private ChargingRateUnitEnum chargingRateUnit;
+    /**
+     * Gets or Sets chargingRateUnit
+     */
+    public enum ChargingRateUnitEnum {
+        W("W"),
 
-  public static final String JSON_PROPERTY_MIN_CHARGING_RATE = "min_charging_rate";
-  private Float minChargingRate;
+        A("A");
 
-  public static final String JSON_PROPERTY_CHARGING_PROFILE_PERIOD = "charging_profile_period";
-  private List<ChargingProfilePeriod> chargingProfilePeriod;
+        private String value;
 
-  public ChargingProfile() {
-  }
+        ChargingRateUnitEnum(String value) {
+            this.value = value;
+        }
 
-  public ChargingProfile startDateTime(OffsetDateTime startDateTime) {
-    
-    this.startDateTime = startDateTime;
-    return this;
-  }
+        @JsonCreator
+        public static ChargingRateUnitEnum fromValue(String value) {
+            for (ChargingRateUnitEnum b : ChargingRateUnitEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
-   /**
-   * Get startDateTime
-   * @return startDateTime
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public OffsetDateTime getStartDateTime() {
-    return startDateTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDateTime(OffsetDateTime startDateTime) {
-    this.startDateTime = startDateTime;
-  }
-
-
-  public ChargingProfile duration(Integer duration) {
-    
-    this.duration = duration;
-    return this;
-  }
-
-   /**
-   * Get duration
-   * @return duration
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DURATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getDuration() {
-    return duration;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DURATION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDuration(Integer duration) {
-    this.duration = duration;
-  }
-
-
-  public ChargingProfile chargingRateUnit(ChargingRateUnitEnum chargingRateUnit) {
-    
-    this.chargingRateUnit = chargingRateUnit;
-    return this;
-  }
-
-   /**
-   * Get chargingRateUnit
-   * @return chargingRateUnit
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CHARGING_RATE_UNIT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public ChargingRateUnitEnum getChargingRateUnit() {
-    return chargingRateUnit;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CHARGING_RATE_UNIT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setChargingRateUnit(ChargingRateUnitEnum chargingRateUnit) {
-    this.chargingRateUnit = chargingRateUnit;
-  }
-
-
-  public ChargingProfile minChargingRate(Float minChargingRate) {
-    
-    this.minChargingRate = minChargingRate;
-    return this;
-  }
-
-   /**
-   * Get minChargingRate
-   * @return minChargingRate
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MIN_CHARGING_RATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getMinChargingRate() {
-    return minChargingRate;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MIN_CHARGING_RATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMinChargingRate(Float minChargingRate) {
-    this.minChargingRate = minChargingRate;
-  }
-
-
-  public ChargingProfile chargingProfilePeriod(List<ChargingProfilePeriod> chargingProfilePeriod) {
-    
-    this.chargingProfilePeriod = chargingProfilePeriod;
-    return this;
-  }
-
-  public ChargingProfile addChargingProfilePeriodItem(ChargingProfilePeriod chargingProfilePeriodItem) {
-    if (this.chargingProfilePeriod == null) {
-      this.chargingProfilePeriod = new ArrayList<>();
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.chargingProfilePeriod.add(chargingProfilePeriodItem);
-    return this;
-  }
-
-   /**
-   * Get chargingProfilePeriod
-   * @return chargingProfilePeriod
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CHARGING_PROFILE_PERIOD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<ChargingProfilePeriod> getChargingProfilePeriod() {
-    return chargingProfilePeriod;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CHARGING_PROFILE_PERIOD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setChargingProfilePeriod(List<ChargingProfilePeriod> chargingProfilePeriod) {
-    this.chargingProfilePeriod = chargingProfilePeriod;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    ChargingProfile chargingProfile = (ChargingProfile) o;
-    return Objects.equals(this.startDateTime, chargingProfile.startDateTime) &&
-        Objects.equals(this.duration, chargingProfile.duration) &&
-        Objects.equals(this.chargingRateUnit, chargingProfile.chargingRateUnit) &&
-        Objects.equals(this.minChargingRate, chargingProfile.minChargingRate) &&
-        Objects.equals(this.chargingProfilePeriod, chargingProfile.chargingProfilePeriod);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(startDateTime, duration, chargingRateUnit, minChargingRate, chargingProfilePeriod);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ChargingProfile {\n");
-    sb.append("    startDateTime: ").append(toIndentedString(startDateTime)).append("\n");
-    sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
-    sb.append("    chargingRateUnit: ").append(toIndentedString(chargingRateUnit)).append("\n");
-    sb.append("    minChargingRate: ").append(toIndentedString(minChargingRate)).append("\n");
-    sb.append("    chargingProfilePeriod: ").append(toIndentedString(chargingProfilePeriod)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

@@ -26,106 +26,107 @@ import java.util.Objects;
         ChargingProfilePeriod.JSON_PROPERTY_START_PERIOD,
         ChargingProfilePeriod.JSON_PROPERTY_LIMIT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class ChargingProfilePeriod {
-  public static final String JSON_PROPERTY_START_PERIOD = "start_period";
-  private Integer startPeriod;
+    public static final String JSON_PROPERTY_START_PERIOD = "start_period";
+    public static final String JSON_PROPERTY_LIMIT = "limit";
+    private Integer startPeriod;
+    private Float limit;
 
-  public static final String JSON_PROPERTY_LIMIT = "limit";
-  private Float limit;
-
-  public ChargingProfilePeriod() {
-  }
-
-  public ChargingProfilePeriod startPeriod(Integer startPeriod) {
-    
-    this.startPeriod = startPeriod;
-    return this;
-  }
-
-   /**
-   * Get startPeriod
-   * @return startPeriod
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_PERIOD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getStartPeriod() {
-    return startPeriod;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_START_PERIOD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartPeriod(Integer startPeriod) {
-    this.startPeriod = startPeriod;
-  }
-
-
-  public ChargingProfilePeriod limit(Float limit) {
-    
-    this.limit = limit;
-    return this;
-  }
-
-   /**
-   * Get limit
-   * @return limit
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LIMIT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getLimit() {
-    return limit;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_LIMIT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLimit(Float limit) {
-    this.limit = limit;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public ChargingProfilePeriod() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public ChargingProfilePeriod startPeriod(Integer startPeriod) {
+
+        this.startPeriod = startPeriod;
+        return this;
     }
-    ChargingProfilePeriod chargingProfilePeriod = (ChargingProfilePeriod) o;
-    return Objects.equals(this.startPeriod, chargingProfilePeriod.startPeriod) &&
-        Objects.equals(this.limit, chargingProfilePeriod.limit);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(startPeriod, limit);
-  }
+    /**
+     * Get startPeriod
+     *
+     * @return startPeriod
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_START_PERIOD)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ChargingProfilePeriod {\n");
-    sb.append("    startPeriod: ").append(toIndentedString(startPeriod)).append("\n");
-    sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public Integer getStartPeriod() {
+        return startPeriod;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @JsonProperty(JSON_PROPERTY_START_PERIOD)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setStartPeriod(Integer startPeriod) {
+        this.startPeriod = startPeriod;
+    }
+
+
+    public ChargingProfilePeriod limit(Float limit) {
+
+        this.limit = limit;
+        return this;
+    }
+
+    /**
+     * Get limit
+     *
+     * @return limit
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_LIMIT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public Float getLimit() {
+        return limit;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_LIMIT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setLimit(Float limit) {
+        this.limit = limit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ChargingProfilePeriod chargingProfilePeriod = (ChargingProfilePeriod) o;
+        return Objects.equals(this.startPeriod, chargingProfilePeriod.startPeriod) &&
+                Objects.equals(this.limit, chargingProfilePeriod.limit);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startPeriod, limit);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ChargingProfilePeriod {\n");
+        sb.append("    startPeriod: ").append(toIndentedString(startPeriod)).append("\n");
+        sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

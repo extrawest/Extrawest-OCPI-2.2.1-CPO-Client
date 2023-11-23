@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**category** | [**CategoryEnum**](#CategoryEnum) |  |  [optional] |
-|**amount** | **Float** |  |  [optional] |
+|**category** | [**CategoryEnum**](#CategoryEnum) |  |  |
+|**amount** | **Float** |  |  |
 
 
 

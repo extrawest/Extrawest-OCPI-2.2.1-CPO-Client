@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost:8080*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getClientInfoList**](HubClientInfoApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo/{date_from}/{date_to}/{offset}/{limit} |  |
+| [**getClientInfoList**](HubClientInfoApi.md#getClientInfoList) | **GET** /hub/api/2.2.1/hubClientInfo |  |
 
 
 
 ## getClientInfoList
 
-> List&lt;ClientInfoDTO&gt; getClientInfoList(dateFrom, dateTo, offset, limit)
+> ResponseFormatListClientInfoDto getClientInfoList(dateFrom, dateTo, offset, limit)
 
 
 
@@ -32,10 +32,10 @@ public class Example {
         HubClientInfoApi apiInstance = new HubClientInfoApi(defaultClient);
         OffsetDateTime dateFrom = OffsetDateTime.now(); // OffsetDateTime | 
         OffsetDateTime dateTo = OffsetDateTime.now(); // OffsetDateTime | 
-        Integer offset = 56; // Integer | 
+        Integer offset = 0; // Integer | 
         Integer limit = 56; // Integer | 
         try {
-            List<ClientInfoDTO> result = apiInstance.getClientInfoList(dateFrom, dateTo, offset, limit);
+            ResponseFormatListClientInfoDto result = apiInstance.getClientInfoList(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling HubClientInfoApi#getClientInfoList");
@@ -53,14 +53,14 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dateFrom** | **OffsetDateTime**|  | |
-| **dateTo** | **OffsetDateTime**|  | |
-| **offset** | **Integer**|  | |
-| **limit** | **Integer**|  | |
+| **dateFrom** | **OffsetDateTime**|  | [optional] |
+| **dateTo** | **OffsetDateTime**|  | [optional] |
+| **offset** | **Integer**|  | [optional] [default to 0] |
+| **limit** | **Integer**|  | [optional] |
 
 ### Return type
 
-[**List&lt;ClientInfoDTO&gt;**](ClientInfoDTO.md)
+[**ResponseFormatListClientInfoDto**](ResponseFormatListClientInfoDto.md)
 
 ### Authorization
 

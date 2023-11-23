@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## getCdr
 
-> List&lt;CdrDTO&gt; getCdr(dateFrom, dateTo, offset, limit)
+> ResponseFormatListCDRDto getCdr(dateFrom, dateTo, offset, limit)
 
 
 
@@ -35,7 +35,7 @@ public class Example {
         Integer offset = 56; // Integer | 
         Integer limit = 56; // Integer | 
         try {
-            List<CdrDTO> result = apiInstance.getCdr(dateFrom, dateTo, offset, limit);
+            ResponseFormatListCDRDto result = apiInstance.getCdr(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoCdrApi#getCdr");
@@ -60,7 +60,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;CdrDTO&gt;**](CdrDTO.md)
+[**ResponseFormatListCDRDto**](ResponseFormatListCDRDto.md)
 
 ### Authorization
 

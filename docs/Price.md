@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**exclVat** | **Float** |  |  [optional] |
-|**inclVat** | **Float** |  |  [optional] |
+|**exclVat** | **Float** |  |  |
+|**inclVat** | **Float** |  |  |
 
 
 

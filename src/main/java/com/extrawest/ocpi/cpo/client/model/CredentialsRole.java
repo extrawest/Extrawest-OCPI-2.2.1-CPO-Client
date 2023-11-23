@@ -26,213 +26,206 @@ import java.util.Objects;
         CredentialsRole.JSON_PROPERTY_PARTY_ID,
         CredentialsRole.JSON_PROPERTY_COUNTRY_CODE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class CredentialsRole {
-  /**
-   * Gets or Sets role
-   */
-  public enum RoleEnum {
-    CPO("CPO"),
-    
-    EMSP("EMSP"),
-    
-    HUB("HUB"),
-    
-    NAP("NAP"),
-    
-    NSP("NSP"),
-    
-    OTHER("OTHER"),
-    
-    SCSP("SCSP");
-
-    private String value;
-
-    RoleEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_ROLE = "role";
+    public static final String JSON_PROPERTY_BUSINESS_DETAILS = "business_details";
+    public static final String JSON_PROPERTY_PARTY_ID = "party_id";
+    public static final String JSON_PROPERTY_COUNTRY_CODE = "country_code";
+    private RoleEnum role;
+    private BusinessDetails businessDetails;
+    private String partyId;
+    private String countryCode;
+    public CredentialsRole() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public CredentialsRole role(RoleEnum role) {
+
+        this.role = role;
+        return this;
+    }
+
+    /**
+     * Get role
+     *
+     * @return role
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_ROLE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public RoleEnum getRole() {
+        return role;
+    }
+
+    @JsonProperty(JSON_PROPERTY_ROLE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setRole(RoleEnum role) {
+        this.role = role;
+    }
+
+    public CredentialsRole businessDetails(BusinessDetails businessDetails) {
+
+        this.businessDetails = businessDetails;
+        return this;
+    }
+
+    /**
+     * Get businessDetails
+     *
+     * @return businessDetails
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_BUSINESS_DETAILS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public BusinessDetails getBusinessDetails() {
+        return businessDetails;
+    }
+
+    @JsonProperty(JSON_PROPERTY_BUSINESS_DETAILS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setBusinessDetails(BusinessDetails businessDetails) {
+        this.businessDetails = businessDetails;
+    }
+
+    public CredentialsRole partyId(String partyId) {
+
+        this.partyId = partyId;
+        return this;
+    }
+
+    /**
+     * Get partyId
+     *
+     * @return partyId
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_PARTY_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getPartyId() {
+        return partyId;
+    }
+
+    @JsonProperty(JSON_PROPERTY_PARTY_ID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setPartyId(String partyId) {
+        this.partyId = partyId;
+    }
+
+    public CredentialsRole countryCode(String countryCode) {
+
+        this.countryCode = countryCode;
+        return this;
+    }
+
+    /**
+     * Get countryCode
+     *
+     * @return countryCode
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CredentialsRole credentialsRole = (CredentialsRole) o;
+        return Objects.equals(this.role, credentialsRole.role) &&
+                Objects.equals(this.businessDetails, credentialsRole.businessDetails) &&
+                Objects.equals(this.partyId, credentialsRole.partyId) &&
+                Objects.equals(this.countryCode, credentialsRole.countryCode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(role, businessDetails, partyId, countryCode);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class CredentialsRole {\n");
+        sb.append("    role: ").append(toIndentedString(role)).append("\n");
+        sb.append("    businessDetails: ").append(toIndentedString(businessDetails)).append("\n");
+        sb.append("    partyId: ").append(toIndentedString(partyId)).append("\n");
+        sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static RoleEnum fromValue(String value) {
-      for (RoleEnum b : RoleEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  public static final String JSON_PROPERTY_ROLE = "role";
-  private RoleEnum role;
+    /**
+     * Gets or Sets role
+     */
+    public enum RoleEnum {
+        CPO("CPO"),
 
-  public static final String JSON_PROPERTY_BUSINESS_DETAILS = "business_details";
-  private BusinessDetails businessDetails;
+        EMSP("EMSP"),
 
-  public static final String JSON_PROPERTY_PARTY_ID = "party_id";
-  private String partyId;
+        HUB("HUB"),
 
-  public static final String JSON_PROPERTY_COUNTRY_CODE = "country_code";
-  private String countryCode;
+        NAP("NAP"),
 
-  public CredentialsRole() {
-  }
+        NSP("NSP"),
 
-  public CredentialsRole role(RoleEnum role) {
-    
-    this.role = role;
-    return this;
-  }
+        OTHER("OTHER"),
 
-   /**
-   * Get role
-   * @return role
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ROLE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        SCSP("SCSP");
 
-  public RoleEnum getRole() {
-    return role;
-  }
+        private String value;
 
+        RoleEnum(String value) {
+            this.value = value;
+        }
 
-  @JsonProperty(JSON_PROPERTY_ROLE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRole(RoleEnum role) {
-    this.role = role;
-  }
+        @JsonCreator
+        public static RoleEnum fromValue(String value) {
+            for (RoleEnum b : RoleEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-  public CredentialsRole businessDetails(BusinessDetails businessDetails) {
-    
-    this.businessDetails = businessDetails;
-    return this;
-  }
-
-   /**
-   * Get businessDetails
-   * @return businessDetails
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUSINESS_DETAILS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public BusinessDetails getBusinessDetails() {
-    return businessDetails;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BUSINESS_DETAILS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBusinessDetails(BusinessDetails businessDetails) {
-    this.businessDetails = businessDetails;
-  }
-
-
-  public CredentialsRole partyId(String partyId) {
-    
-    this.partyId = partyId;
-    return this;
-  }
-
-   /**
-   * Get partyId
-   * @return partyId
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARTY_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPartyId() {
-    return partyId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PARTY_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPartyId(String partyId) {
-    this.partyId = partyId;
-  }
-
-
-  public CredentialsRole countryCode(String countryCode) {
-    
-    this.countryCode = countryCode;
-    return this;
-  }
-
-   /**
-   * Get countryCode
-   * @return countryCode
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getCountryCode() {
-    return countryCode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCountryCode(String countryCode) {
-    this.countryCode = countryCode;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    CredentialsRole credentialsRole = (CredentialsRole) o;
-    return Objects.equals(this.role, credentialsRole.role) &&
-        Objects.equals(this.businessDetails, credentialsRole.businessDetails) &&
-        Objects.equals(this.partyId, credentialsRole.partyId) &&
-        Objects.equals(this.countryCode, credentialsRole.countryCode);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(role, businessDetails, partyId, countryCode);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class CredentialsRole {\n");
-    sb.append("    role: ").append(toIndentedString(role)).append("\n");
-    sb.append("    businessDetails: ").append(toIndentedString(businessDetails)).append("\n");
-    sb.append("    partyId: ").append(toIndentedString(partyId)).append("\n");
-    sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

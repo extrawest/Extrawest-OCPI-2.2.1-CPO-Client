@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**periodBegin** | **OffsetDateTime** |  |  [optional] |
-|**periodEnd** | **OffsetDateTime** |  |  [optional] |
+|**periodBegin** | **OffsetDateTime** |  |  |
+|**periodEnd** | **OffsetDateTime** |  |  |
 
 
 

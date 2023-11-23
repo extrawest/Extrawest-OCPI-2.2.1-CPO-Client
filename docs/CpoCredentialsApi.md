@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## deleteCredentials
 
-> deleteCredentials(credentialsDTO)
+> deleteCredentials(credentialsDto)
 
 
 
@@ -33,9 +33,9 @@ public class Example {
         defaultClient.setBasePath("http://localhost:8080");
 
         CpoCredentialsApi apiInstance = new CpoCredentialsApi(defaultClient);
-        CredentialsDTO credentialsDTO = new CredentialsDTO(); // CredentialsDTO | 
+        CredentialsDto credentialsDto = new CredentialsDto(); // CredentialsDto | 
         try {
-            apiInstance.deleteCredentials(credentialsDTO);
+            apiInstance.deleteCredentials(credentialsDto);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoCredentialsApi#deleteCredentials");
             System.err.println("Status code: " + e.getCode());
@@ -52,7 +52,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **credentialsDTO** | [**CredentialsDTO**](CredentialsDTO.md)|  | |
+| **credentialsDto** | [**CredentialsDto**](CredentialsDto.md)|  | |
 
 ### Return type
 
@@ -76,7 +76,7 @@ No authorization required
 
 ## getCredentials
 
-> CredentialsDTO getCredentials()
+> ResponseFormatCredentialsDto getCredentials()
 
 
 
@@ -97,7 +97,7 @@ public class Example {
 
         CpoCredentialsApi apiInstance = new CpoCredentialsApi(defaultClient);
         try {
-            CredentialsDTO result = apiInstance.getCredentials();
+            ResponseFormatCredentialsDto result = apiInstance.getCredentials();
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoCredentialsApi#getCredentials");
@@ -116,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CredentialsDTO**](CredentialsDTO.md)
+[**ResponseFormatCredentialsDto**](ResponseFormatCredentialsDto.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ No authorization required
 
 ## postCredentials
 
-> postCredentials(credentialsDTO)
+> ResponseFormatCredentialsDto postCredentials(credentialsDto)
 
 
 
@@ -156,9 +156,10 @@ public class Example {
         defaultClient.setBasePath("http://localhost:8080");
 
         CpoCredentialsApi apiInstance = new CpoCredentialsApi(defaultClient);
-        CredentialsDTO credentialsDTO = new CredentialsDTO(); // CredentialsDTO | 
+        CredentialsDto credentialsDto = new CredentialsDto(); // CredentialsDto | 
         try {
-            apiInstance.postCredentials(credentialsDTO);
+            ResponseFormatCredentialsDto result = apiInstance.postCredentials(credentialsDto);
+            System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoCredentialsApi#postCredentials");
             System.err.println("Status code: " + e.getCode());
@@ -175,11 +176,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **credentialsDTO** | [**CredentialsDTO**](CredentialsDTO.md)|  | |
+| **credentialsDto** | [**CredentialsDto**](CredentialsDto.md)|  | |
 
 ### Return type
 
-null (empty response body)
+[**ResponseFormatCredentialsDto**](ResponseFormatCredentialsDto.md)
 
 ### Authorization
 
@@ -188,7 +189,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: */*
 
 
 ### HTTP response details
@@ -199,7 +200,7 @@ No authorization required
 
 ## putCredentials
 
-> putCredentials(credentialsDTO)
+> putCredentials(credentialsDto)
 
 
 
@@ -219,9 +220,9 @@ public class Example {
         defaultClient.setBasePath("http://localhost:8080");
 
         CpoCredentialsApi apiInstance = new CpoCredentialsApi(defaultClient);
-        CredentialsDTO credentialsDTO = new CredentialsDTO(); // CredentialsDTO | 
+        CredentialsDto credentialsDto = new CredentialsDto(); // CredentialsDto | 
         try {
-            apiInstance.putCredentials(credentialsDTO);
+            apiInstance.putCredentials(credentialsDto);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoCredentialsApi#putCredentials");
             System.err.println("Status code: " + e.getCode());
@@ -238,7 +239,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **credentialsDTO** | [**CredentialsDTO**](CredentialsDTO.md)|  | |
+| **credentialsDto** | [**CredentialsDto**](CredentialsDto.md)|  | |
 
 ### Return type
 

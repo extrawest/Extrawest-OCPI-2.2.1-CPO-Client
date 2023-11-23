@@ -27,106 +27,107 @@ import java.util.Objects;
         ExceptionalPeriod.JSON_PROPERTY_PERIOD_BEGIN,
         ExceptionalPeriod.JSON_PROPERTY_PERIOD_END
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class ExceptionalPeriod {
-  public static final String JSON_PROPERTY_PERIOD_BEGIN = "period_begin";
-  private OffsetDateTime periodBegin;
+    public static final String JSON_PROPERTY_PERIOD_BEGIN = "period_begin";
+    public static final String JSON_PROPERTY_PERIOD_END = "period_end";
+    private OffsetDateTime periodBegin;
+    private OffsetDateTime periodEnd;
 
-  public static final String JSON_PROPERTY_PERIOD_END = "period_end";
-  private OffsetDateTime periodEnd;
-
-  public ExceptionalPeriod() {
-  }
-
-  public ExceptionalPeriod periodBegin(OffsetDateTime periodBegin) {
-    
-    this.periodBegin = periodBegin;
-    return this;
-  }
-
-   /**
-   * Get periodBegin
-   * @return periodBegin
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public OffsetDateTime getPeriodBegin() {
-    return periodBegin;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPeriodBegin(OffsetDateTime periodBegin) {
-    this.periodBegin = periodBegin;
-  }
-
-
-  public ExceptionalPeriod periodEnd(OffsetDateTime periodEnd) {
-    
-    this.periodEnd = periodEnd;
-    return this;
-  }
-
-   /**
-   * Get periodEnd
-   * @return periodEnd
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERIOD_END)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public OffsetDateTime getPeriodEnd() {
-    return periodEnd;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PERIOD_END)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPeriodEnd(OffsetDateTime periodEnd) {
-    this.periodEnd = periodEnd;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public ExceptionalPeriod() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public ExceptionalPeriod periodBegin(OffsetDateTime periodBegin) {
+
+        this.periodBegin = periodBegin;
+        return this;
     }
-    ExceptionalPeriod exceptionalPeriod = (ExceptionalPeriod) o;
-    return Objects.equals(this.periodBegin, exceptionalPeriod.periodBegin) &&
-        Objects.equals(this.periodEnd, exceptionalPeriod.periodEnd);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(periodBegin, periodEnd);
-  }
+    /**
+     * Get periodBegin
+     *
+     * @return periodBegin
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ExceptionalPeriod {\n");
-    sb.append("    periodBegin: ").append(toIndentedString(periodBegin)).append("\n");
-    sb.append("    periodEnd: ").append(toIndentedString(periodEnd)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public OffsetDateTime getPeriodBegin() {
+        return periodBegin;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @JsonProperty(JSON_PROPERTY_PERIOD_BEGIN)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setPeriodBegin(OffsetDateTime periodBegin) {
+        this.periodBegin = periodBegin;
+    }
+
+
+    public ExceptionalPeriod periodEnd(OffsetDateTime periodEnd) {
+
+        this.periodEnd = periodEnd;
+        return this;
+    }
+
+    /**
+     * Get periodEnd
+     *
+     * @return periodEnd
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_PERIOD_END)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public OffsetDateTime getPeriodEnd() {
+        return periodEnd;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_PERIOD_END)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setPeriodEnd(OffsetDateTime periodEnd) {
+        this.periodEnd = periodEnd;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ExceptionalPeriod exceptionalPeriod = (ExceptionalPeriod) o;
+        return Objects.equals(this.periodBegin, exceptionalPeriod.periodBegin) &&
+                Objects.equals(this.periodEnd, exceptionalPeriod.periodEnd);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(periodBegin, periodEnd);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ExceptionalPeriod {\n");
+        sb.append("    periodBegin: ").append(toIndentedString(periodBegin)).append("\n");
+        sb.append("    periodEnd: ").append(toIndentedString(periodEnd)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

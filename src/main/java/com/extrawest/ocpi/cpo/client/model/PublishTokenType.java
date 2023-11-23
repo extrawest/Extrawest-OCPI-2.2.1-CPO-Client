@@ -27,238 +27,229 @@ import java.util.Objects;
         PublishTokenType.JSON_PROPERTY_ISSUER,
         PublishTokenType.JSON_PROPERTY_GROUP_ID
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class PublishTokenType {
-  public static final String JSON_PROPERTY_UID = "uid";
-  private String uid;
-
-  /**
-   * Gets or Sets type
-   */
-  public enum TypeEnum {
-    AD_HOC_USER("AD_HOC_USER"),
-    
-    APP_USER("APP_USER"),
-    
-    OTHER("OTHER"),
-    
-    RFID("RFID");
-
-    private String value;
-
-    TypeEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_UID = "uid";
+    public static final String JSON_PROPERTY_TYPE = "type";
+    public static final String JSON_PROPERTY_VISUAL_NUMBER = "visual_number";
+    public static final String JSON_PROPERTY_ISSUER = "issuer";
+    public static final String JSON_PROPERTY_GROUP_ID = "group_id";
+    private String uid;
+    private TypeEnum type;
+    private String visualNumber;
+    private String issuer;
+    private String groupId;
+    public PublishTokenType() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public PublishTokenType uid(String uid) {
+
+        this.uid = uid;
+        return this;
+    }
+
+    /**
+     * Get uid
+     *
+     * @return uid
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_UID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getUid() {
+        return uid;
+    }
+
+    @JsonProperty(JSON_PROPERTY_UID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public PublishTokenType type(TypeEnum type) {
+
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return type
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_TYPE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public TypeEnum getType() {
+        return type;
+    }
+
+    @JsonProperty(JSON_PROPERTY_TYPE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setType(TypeEnum type) {
+        this.type = type;
+    }
+
+    public PublishTokenType visualNumber(String visualNumber) {
+
+        this.visualNumber = visualNumber;
+        return this;
+    }
+
+    /**
+     * Get visualNumber
+     *
+     * @return visualNumber
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_VISUAL_NUMBER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getVisualNumber() {
+        return visualNumber;
+    }
+
+    @JsonProperty(JSON_PROPERTY_VISUAL_NUMBER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setVisualNumber(String visualNumber) {
+        this.visualNumber = visualNumber;
+    }
+
+    public PublishTokenType issuer(String issuer) {
+
+        this.issuer = issuer;
+        return this;
+    }
+
+    /**
+     * Get issuer
+     *
+     * @return issuer
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_ISSUER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getIssuer() {
+        return issuer;
+    }
+
+    @JsonProperty(JSON_PROPERTY_ISSUER)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setIssuer(String issuer) {
+        this.issuer = issuer;
+    }
+
+    public PublishTokenType groupId(String groupId) {
+
+        this.groupId = groupId;
+        return this;
+    }
+
+    /**
+     * Get groupId
+     *
+     * @return groupId
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_GROUP_ID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    @JsonProperty(JSON_PROPERTY_GROUP_ID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PublishTokenType publishTokenType = (PublishTokenType) o;
+        return Objects.equals(this.uid, publishTokenType.uid) &&
+                Objects.equals(this.type, publishTokenType.type) &&
+                Objects.equals(this.visualNumber, publishTokenType.visualNumber) &&
+                Objects.equals(this.issuer, publishTokenType.issuer) &&
+                Objects.equals(this.groupId, publishTokenType.groupId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uid, type, visualNumber, issuer, groupId);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class PublishTokenType {\n");
+        sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
+        sb.append("    type: ").append(toIndentedString(type)).append("\n");
+        sb.append("    visualNumber: ").append(toIndentedString(visualNumber)).append("\n");
+        sb.append("    issuer: ").append(toIndentedString(issuer)).append("\n");
+        sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static TypeEnum fromValue(String value) {
-      for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  public static final String JSON_PROPERTY_TYPE = "type";
-  private TypeEnum type;
+    /**
+     * Gets or Sets type
+     */
+    public enum TypeEnum {
+        AD_HOC_USER("AD_HOC_USER"),
 
-  public static final String JSON_PROPERTY_VISUAL_NUMBER = "visual_number";
-  private String visualNumber;
+        APP_USER("APP_USER"),
 
-  public static final String JSON_PROPERTY_ISSUER = "issuer";
-  private String issuer;
+        OTHER("OTHER"),
 
-  public static final String JSON_PROPERTY_GROUP_ID = "group_id";
-  private String groupId;
+        RFID("RFID");
 
-  public PublishTokenType() {
-  }
+        private String value;
 
-  public PublishTokenType uid(String uid) {
-    
-    this.uid = uid;
-    return this;
-  }
+        TypeEnum(String value) {
+            this.value = value;
+        }
 
-   /**
-   * Get uid
-   * @return uid
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        @JsonCreator
+        public static TypeEnum fromValue(String value) {
+            for (TypeEnum b : TypeEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
-  public String getUid() {
-    return uid;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-
-  @JsonProperty(JSON_PROPERTY_UID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUid(String uid) {
-    this.uid = uid;
-  }
-
-
-  public PublishTokenType type(TypeEnum type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public TypeEnum getType() {
-    return type;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-
-  public PublishTokenType visualNumber(String visualNumber) {
-    
-    this.visualNumber = visualNumber;
-    return this;
-  }
-
-   /**
-   * Get visualNumber
-   * @return visualNumber
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VISUAL_NUMBER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getVisualNumber() {
-    return visualNumber;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_VISUAL_NUMBER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVisualNumber(String visualNumber) {
-    this.visualNumber = visualNumber;
-  }
-
-
-  public PublishTokenType issuer(String issuer) {
-    
-    this.issuer = issuer;
-    return this;
-  }
-
-   /**
-   * Get issuer
-   * @return issuer
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ISSUER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getIssuer() {
-    return issuer;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ISSUER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIssuer(String issuer) {
-    this.issuer = issuer;
-  }
-
-
-  public PublishTokenType groupId(String groupId) {
-    
-    this.groupId = groupId;
-    return this;
-  }
-
-   /**
-   * Get groupId
-   * @return groupId
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GROUP_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getGroupId() {
-    return groupId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_GROUP_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGroupId(String groupId) {
-    this.groupId = groupId;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    PublishTokenType publishTokenType = (PublishTokenType) o;
-    return Objects.equals(this.uid, publishTokenType.uid) &&
-        Objects.equals(this.type, publishTokenType.type) &&
-        Objects.equals(this.visualNumber, publishTokenType.visualNumber) &&
-        Objects.equals(this.issuer, publishTokenType.issuer) &&
-        Objects.equals(this.groupId, publishTokenType.groupId);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(uid, type, visualNumber, issuer, groupId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class PublishTokenType {\n");
-    sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    visualNumber: ").append(toIndentedString(visualNumber)).append("\n");
-    sb.append("    issuer: ").append(toIndentedString(issuer)).append("\n");
-    sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

@@ -24,141 +24,138 @@ import java.util.Objects;
         EnvironmentalImpact.JSON_PROPERTY_CATEGORY,
         EnvironmentalImpact.JSON_PROPERTY_AMOUNT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class EnvironmentalImpact {
-  /**
-   * Gets or Sets category
-   */
-  public enum CategoryEnum {
-    NUCLEAR_WASTE("NUCLEAR_WASTE"),
-    
-    CARBON_DIOXIDE("CARBON_DIOXIDE");
-
-    private String value;
-
-    CategoryEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_CATEGORY = "category";
+    public static final String JSON_PROPERTY_AMOUNT = "amount";
+    private CategoryEnum category;
+    private Float amount;
+    public EnvironmentalImpact() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public EnvironmentalImpact category(CategoryEnum category) {
+
+        this.category = category;
+        return this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return category
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_CATEGORY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public CategoryEnum getCategory() {
+        return category;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CATEGORY)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setCategory(CategoryEnum category) {
+        this.category = category;
+    }
+
+    public EnvironmentalImpact amount(Float amount) {
+
+        this.amount = amount;
+        return this;
+    }
+
+    /**
+     * Get amount
+     *
+     * @return amount
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_AMOUNT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public Float getAmount() {
+        return amount;
+    }
+
+    @JsonProperty(JSON_PROPERTY_AMOUNT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setAmount(Float amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        EnvironmentalImpact environmentalImpact = (EnvironmentalImpact) o;
+        return Objects.equals(this.category, environmentalImpact.category) &&
+                Objects.equals(this.amount, environmentalImpact.amount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(category, amount);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class EnvironmentalImpact {\n");
+        sb.append("    category: ").append(toIndentedString(category)).append("\n");
+        sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static CategoryEnum fromValue(String value) {
-      for (CategoryEnum b : CategoryEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        return o.toString().replace("\n", "\n    ");
     }
-  }
 
-  public static final String JSON_PROPERTY_CATEGORY = "category";
-  private CategoryEnum category;
+    /**
+     * Gets or Sets category
+     */
+    public enum CategoryEnum {
+        NUCLEAR_WASTE("NUCLEAR_WASTE"),
 
-  public static final String JSON_PROPERTY_AMOUNT = "amount";
-  private Float amount;
+        CARBON_DIOXIDE("CARBON_DIOXIDE");
 
-  public EnvironmentalImpact() {
-  }
+        private String value;
 
-  public EnvironmentalImpact category(CategoryEnum category) {
-    
-    this.category = category;
-    return this;
-  }
+        CategoryEnum(String value) {
+            this.value = value;
+        }
 
-   /**
-   * Get category
-   * @return category
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CATEGORY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        @JsonCreator
+        public static CategoryEnum fromValue(String value) {
+            for (CategoryEnum b : CategoryEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
-  public CategoryEnum getCategory() {
-    return category;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-
-  @JsonProperty(JSON_PROPERTY_CATEGORY)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCategory(CategoryEnum category) {
-    this.category = category;
-  }
-
-
-  public EnvironmentalImpact amount(Float amount) {
-    
-    this.amount = amount;
-    return this;
-  }
-
-   /**
-   * Get amount
-   * @return amount
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Float getAmount() {
-    return amount;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAmount(Float amount) {
-    this.amount = amount;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    EnvironmentalImpact environmentalImpact = (EnvironmentalImpact) o;
-    return Objects.equals(this.category, environmentalImpact.category) &&
-        Objects.equals(this.amount, environmentalImpact.amount);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(category, amount);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class EnvironmentalImpact {\n");
-    sb.append("    category: ").append(toIndentedString(category)).append("\n");
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

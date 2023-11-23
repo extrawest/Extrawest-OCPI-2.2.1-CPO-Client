@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**periodBegin** | **OffsetDateTime** |  |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) |  |  |
+|**periodBegin** | **OffsetDateTime** |  |  |
 |**periodEnd** | **OffsetDateTime** |  |  [optional] |
-|**status** | [**StatusEnum**](#StatusEnum) |  |  [optional] |
 
 
 

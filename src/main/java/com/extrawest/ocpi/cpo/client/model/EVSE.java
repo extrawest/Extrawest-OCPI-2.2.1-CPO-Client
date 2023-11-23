@@ -38,642 +38,617 @@ import java.util.Objects;
         EVSE.JSON_PROPERTY_IMAGES,
         EVSE.JSON_PROPERTY_LAST_UPDATED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class EVSE {
-  public static final String JSON_PROPERTY_UID = "uid";
-  private String uid;
-
-  public static final String JSON_PROPERTY_EVSE_ID = "evse_id";
-  private String evseId;
-
-  /**
-   * Gets or Sets status
-   */
-  public enum StatusEnum {
-    AVAILABLE("AVAILABLE"),
-    
-    BLOCKED("BLOCKED"),
-    
-    CHARGING("CHARGING"),
-    
-    INOPERATIVE("INOPERATIVE"),
-    
-    OUTOFORDER("OUTOFORDER"),
-    
-    PLANNED("PLANNED"),
-    
-    REMOVED("REMOVED"),
-    
-    RESERVED("RESERVED"),
-    
-    UNKNOWN("UNKNOWN");
-
-    private String value;
-
-    StatusEnum(String value) {
-      this.value = value;
+    public static final String JSON_PROPERTY_UID = "uid";
+    public static final String JSON_PROPERTY_EVSE_ID = "evse_id";
+    public static final String JSON_PROPERTY_STATUS = "status";
+    public static final String JSON_PROPERTY_STATUS_SCHEDULE = "status_schedule";
+    public static final String JSON_PROPERTY_CAPABILITIES = "capabilities";
+    public static final String JSON_PROPERTY_CONNECTORS = "connectors";
+    public static final String JSON_PROPERTY_FLOOR_LEVEL = "floor_level";
+    public static final String JSON_PROPERTY_COORDINATES = "coordinates";
+    public static final String JSON_PROPERTY_PHYSICAL_REFERENCE = "physical_reference";
+    public static final String JSON_PROPERTY_DIRECTIONS = "directions";
+    public static final String JSON_PROPERTY_PARKING_RESTRICTIONS = "parking_restrictions";
+    public static final String JSON_PROPERTY_IMAGES = "images";
+    public static final String JSON_PROPERTY_LAST_UPDATED = "last_updated";
+    private String uid;
+    private String evseId;
+    private StatusEnum status;
+    private List<StatusSchedule> statusSchedule;
+    private List<CapabilitiesEnum> capabilities;
+    private List<Connector> connectors = new ArrayList<>();
+    private String floorLevel;
+    private GeoLocation coordinates;
+    private String physicalReference;
+    private List<DisplayText> directions;
+    private List<ParkingRestrictionsEnum> parkingRestrictions;
+    private List<Image> images;
+    private OffsetDateTime lastUpdated;
+    public EVSE() {
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
+    public EVSE uid(String uid) {
+
+        this.uid = uid;
+        return this;
+    }
+
+    /**
+     * Get uid
+     *
+     * @return uid
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_UID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getUid() {
+        return uid;
+    }
+
+    @JsonProperty(JSON_PROPERTY_UID)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public EVSE evseId(String evseId) {
+
+        this.evseId = evseId;
+        return this;
+    }
+
+    /**
+     * Get evseId
+     *
+     * @return evseId
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_EVSE_ID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getEvseId() {
+        return evseId;
+    }
+
+    @JsonProperty(JSON_PROPERTY_EVSE_ID)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setEvseId(String evseId) {
+        this.evseId = evseId;
+    }
+
+    public EVSE status(StatusEnum status) {
+
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return status
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_STATUS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public StatusEnum getStatus() {
+        return status;
+    }
+
+    @JsonProperty(JSON_PROPERTY_STATUS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setStatus(StatusEnum status) {
+        this.status = status;
+    }
+
+    public EVSE statusSchedule(List<StatusSchedule> statusSchedule) {
+
+        this.statusSchedule = statusSchedule;
+        return this;
+    }
+
+    public EVSE addStatusScheduleItem(StatusSchedule statusScheduleItem) {
+        if (this.statusSchedule == null) {
+            this.statusSchedule = new ArrayList<>();
+        }
+        this.statusSchedule.add(statusScheduleItem);
+        return this;
+    }
+
+    /**
+     * Get statusSchedule
+     *
+     * @return statusSchedule
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_STATUS_SCHEDULE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<StatusSchedule> getStatusSchedule() {
+        return statusSchedule;
+    }
+
+    @JsonProperty(JSON_PROPERTY_STATUS_SCHEDULE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setStatusSchedule(List<StatusSchedule> statusSchedule) {
+        this.statusSchedule = statusSchedule;
+    }
+
+    public EVSE capabilities(List<CapabilitiesEnum> capabilities) {
+
+        this.capabilities = capabilities;
+        return this;
+    }
+
+    public EVSE addCapabilitiesItem(CapabilitiesEnum capabilitiesItem) {
+        if (this.capabilities == null) {
+            this.capabilities = new ArrayList<>();
+        }
+        this.capabilities.add(capabilitiesItem);
+        return this;
+    }
+
+    /**
+     * Get capabilities
+     *
+     * @return capabilities
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_CAPABILITIES)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<CapabilitiesEnum> getCapabilities() {
+        return capabilities;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CAPABILITIES)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setCapabilities(List<CapabilitiesEnum> capabilities) {
+        this.capabilities = capabilities;
+    }
+
+    public EVSE connectors(List<Connector> connectors) {
+
+        this.connectors = connectors;
+        return this;
+    }
+
+    public EVSE addConnectorsItem(Connector connectorsItem) {
+        if (this.connectors == null) {
+            this.connectors = new ArrayList<>();
+        }
+        this.connectors.add(connectorsItem);
+        return this;
+    }
+
+    /**
+     * Get connectors
+     *
+     * @return connectors
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_CONNECTORS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public List<Connector> getConnectors() {
+        return connectors;
+    }
+
+    @JsonProperty(JSON_PROPERTY_CONNECTORS)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setConnectors(List<Connector> connectors) {
+        this.connectors = connectors;
+    }
+
+    public EVSE floorLevel(String floorLevel) {
+
+        this.floorLevel = floorLevel;
+        return this;
+    }
+
+    /**
+     * Get floorLevel
+     *
+     * @return floorLevel
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_FLOOR_LEVEL)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getFloorLevel() {
+        return floorLevel;
+    }
+
+    @JsonProperty(JSON_PROPERTY_FLOOR_LEVEL)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setFloorLevel(String floorLevel) {
+        this.floorLevel = floorLevel;
+    }
+
+    public EVSE coordinates(GeoLocation coordinates) {
+
+        this.coordinates = coordinates;
+        return this;
+    }
+
+    /**
+     * Get coordinates
+     *
+     * @return coordinates
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_COORDINATES)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public GeoLocation getCoordinates() {
+        return coordinates;
+    }
+
+    @JsonProperty(JSON_PROPERTY_COORDINATES)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setCoordinates(GeoLocation coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public EVSE physicalReference(String physicalReference) {
+
+        this.physicalReference = physicalReference;
+        return this;
+    }
+
+    /**
+     * Get physicalReference
+     *
+     * @return physicalReference
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_PHYSICAL_REFERENCE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public String getPhysicalReference() {
+        return physicalReference;
+    }
+
+    @JsonProperty(JSON_PROPERTY_PHYSICAL_REFERENCE)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setPhysicalReference(String physicalReference) {
+        this.physicalReference = physicalReference;
+    }
+
+    public EVSE directions(List<DisplayText> directions) {
+
+        this.directions = directions;
+        return this;
+    }
+
+    public EVSE addDirectionsItem(DisplayText directionsItem) {
+        if (this.directions == null) {
+            this.directions = new ArrayList<>();
+        }
+        this.directions.add(directionsItem);
+        return this;
+    }
+
+    /**
+     * Get directions
+     *
+     * @return directions
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_DIRECTIONS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<DisplayText> getDirections() {
+        return directions;
+    }
+
+    @JsonProperty(JSON_PROPERTY_DIRECTIONS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setDirections(List<DisplayText> directions) {
+        this.directions = directions;
+    }
+
+    public EVSE parkingRestrictions(List<ParkingRestrictionsEnum> parkingRestrictions) {
+
+        this.parkingRestrictions = parkingRestrictions;
+        return this;
+    }
+
+    public EVSE addParkingRestrictionsItem(ParkingRestrictionsEnum parkingRestrictionsItem) {
+        if (this.parkingRestrictions == null) {
+            this.parkingRestrictions = new ArrayList<>();
+        }
+        this.parkingRestrictions.add(parkingRestrictionsItem);
+        return this;
+    }
+
+    /**
+     * Get parkingRestrictions
+     *
+     * @return parkingRestrictions
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_PARKING_RESTRICTIONS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<ParkingRestrictionsEnum> getParkingRestrictions() {
+        return parkingRestrictions;
+    }
+
+    @JsonProperty(JSON_PROPERTY_PARKING_RESTRICTIONS)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setParkingRestrictions(List<ParkingRestrictionsEnum> parkingRestrictions) {
+        this.parkingRestrictions = parkingRestrictions;
+    }
+
+    public EVSE images(List<Image> images) {
+
+        this.images = images;
+        return this;
+    }
+
+    public EVSE addImagesItem(Image imagesItem) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.add(imagesItem);
+        return this;
+    }
+
+    /**
+     * Get images
+     *
+     * @return images
+     **/
+    @javax.annotation.Nullable
+    @JsonProperty(JSON_PROPERTY_IMAGES)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    @JsonProperty(JSON_PROPERTY_IMAGES)
+    @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+
+    public EVSE lastUpdated(OffsetDateTime lastUpdated) {
+
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+
+    /**
+     * Get lastUpdated
+     *
+     * @return lastUpdated
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public OffsetDateTime getLastUpdated() {
+        return lastUpdated;
+    }
+
+    @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setLastUpdated(OffsetDateTime lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        EVSE EVSE = (EVSE) o;
+        return Objects.equals(this.uid, EVSE.uid) &&
+                Objects.equals(this.evseId, EVSE.evseId) &&
+                Objects.equals(this.status, EVSE.status) &&
+                Objects.equals(this.statusSchedule, EVSE.statusSchedule) &&
+                Objects.equals(this.capabilities, EVSE.capabilities) &&
+                Objects.equals(this.connectors, EVSE.connectors) &&
+                Objects.equals(this.floorLevel, EVSE.floorLevel) &&
+                Objects.equals(this.coordinates, EVSE.coordinates) &&
+                Objects.equals(this.physicalReference, EVSE.physicalReference) &&
+                Objects.equals(this.directions, EVSE.directions) &&
+                Objects.equals(this.parkingRestrictions, EVSE.parkingRestrictions) &&
+                Objects.equals(this.images, EVSE.images) &&
+                Objects.equals(this.lastUpdated, EVSE.lastUpdated);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uid, evseId, status, statusSchedule, capabilities, connectors, floorLevel, coordinates, physicalReference, directions, parkingRestrictions, images, lastUpdated);
     }
 
     @Override
     public String toString() {
-      return String.valueOf(value);
+        StringBuilder sb = new StringBuilder();
+        sb.append("class EVSE {\n");
+        sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
+        sb.append("    evseId: ").append(toIndentedString(evseId)).append("\n");
+        sb.append("    status: ").append(toIndentedString(status)).append("\n");
+        sb.append("    statusSchedule: ").append(toIndentedString(statusSchedule)).append("\n");
+        sb.append("    capabilities: ").append(toIndentedString(capabilities)).append("\n");
+        sb.append("    connectors: ").append(toIndentedString(connectors)).append("\n");
+        sb.append("    floorLevel: ").append(toIndentedString(floorLevel)).append("\n");
+        sb.append("    coordinates: ").append(toIndentedString(coordinates)).append("\n");
+        sb.append("    physicalReference: ").append(toIndentedString(physicalReference)).append("\n");
+        sb.append("    directions: ").append(toIndentedString(directions)).append("\n");
+        sb.append("    parkingRestrictions: ").append(toIndentedString(parkingRestrictions)).append("\n");
+        sb.append("    images: ").append(toIndentedString(images)).append("\n");
+        sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
+        sb.append("}");
+        return sb.toString();
     }
 
-    @JsonCreator
-    public static StatusEnum fromValue(String value) {
-      for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-  }
-
-  public static final String JSON_PROPERTY_STATUS = "status";
-  private StatusEnum status;
-
-  public static final String JSON_PROPERTY_STATUS_SCHEDULE = "status_schedule";
-  private List<StatusSchedule> statusSchedule;
-
-  /**
-   * Gets or Sets capabilities
-   */
-  public enum CapabilitiesEnum {
-    CHARGING_PROFILE_CAPABLE("CHARGING_PROFILE_CAPABLE"),
-    
-    CHARGING_PREFERENCES_CAPABLE("CHARGING_PREFERENCES_CAPABLE"),
-    
-    CHIP_CARD_SUPPORT("CHIP_CARD_SUPPORT"),
-    
-    CONTACTLESS_CARD_SUPPORT("CONTACTLESS_CARD_SUPPORT"),
-    
-    CREDIT_CARD_PAYABLE("CREDIT_CARD_PAYABLE"),
-    
-    DEBIT_CARD_PAYABLE("DEBIT_CARD_PAYABLE"),
-    
-    PED_TERMINAL("PED_TERMINAL"),
-    
-    REMOTE_START_STOP_CAPABLE("REMOTE_START_STOP_CAPABLE"),
-    
-    RESERVABLE("RESERVABLE"),
-    
-    RFID_READER("RFID_READER"),
-    
-    START_SESSION_CONNECTOR_REQUIRED("START_SESSION_CONNECTOR_REQUIRED"),
-    
-    TOKEN_GROUP_CAPABLE("TOKEN_GROUP_CAPABLE"),
-    
-    UNLOCK_CAPABLE("UNLOCK_CAPABLE");
-
-    private String value;
-
-    CapabilitiesEnum(String value) {
-      this.value = value;
+        return o.toString().replace("\n", "\n    ");
     }
 
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
+    /**
+     * Gets or Sets status
+     */
+    public enum StatusEnum {
+        AVAILABLE("AVAILABLE"),
 
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
+        BLOCKED("BLOCKED"),
 
-    @JsonCreator
-    public static CapabilitiesEnum fromValue(String value) {
-      for (CapabilitiesEnum b : CapabilitiesEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        CHARGING("CHARGING"),
+
+        INOPERATIVE("INOPERATIVE"),
+
+        OUTOFORDER("OUTOFORDER"),
+
+        PLANNED("PLANNED"),
+
+        REMOVED("REMOVED"),
+
+        RESERVED("RESERVED"),
+
+        UNKNOWN("UNKNOWN");
+
+        private String value;
+
+        StatusEnum(String value) {
+            this.value = value;
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-  }
 
-  public static final String JSON_PROPERTY_CAPABILITIES = "capabilities";
-  private List<CapabilitiesEnum> capabilities;
-
-  public static final String JSON_PROPERTY_CONNECTORS = "connectors";
-  private List<Connector> connectors;
-
-  public static final String JSON_PROPERTY_FLOOR_LEVEL = "floor_level";
-  private String floorLevel;
-
-  public static final String JSON_PROPERTY_COORDINATES = "coordinates";
-  private GeoLocation coordinates;
-
-  public static final String JSON_PROPERTY_PHYSICAL_REFERENCE = "physical_reference";
-  private String physicalReference;
-
-  public static final String JSON_PROPERTY_DIRECTIONS = "directions";
-  private List<DisplayText> directions;
-
-  /**
-   * Gets or Sets parkingRestrictions
-   */
-  public enum ParkingRestrictionsEnum {
-    EV_ONLY("EV_ONLY"),
-    
-    PLUGGED("PLUGGED"),
-    
-    DISABLED("DISABLED"),
-    
-    CUSTOMERS("CUSTOMERS"),
-    
-    MOTORCYCLES("MOTORCYCLES");
-
-    private String value;
-
-    ParkingRestrictionsEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static ParkingRestrictionsEnum fromValue(String value) {
-      for (ParkingRestrictionsEnum b : ParkingRestrictionsEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
+        @JsonCreator
+        public static StatusEnum fromValue(String value) {
+            for (StatusEnum b : StatusEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
         }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-  }
 
-  public static final String JSON_PROPERTY_PARKING_RESTRICTIONS = "parking_restrictions";
-  private List<ParkingRestrictionsEnum> parkingRestrictions;
+    /**
+     * Gets or Sets capabilities
+     */
+    public enum CapabilitiesEnum {
+        CHARGING_PROFILE_CAPABLE("CHARGING_PROFILE_CAPABLE"),
 
-  public static final String JSON_PROPERTY_IMAGES = "images";
-  private List<Image> images;
+        CHARGING_PREFERENCES_CAPABLE("CHARGING_PREFERENCES_CAPABLE"),
 
-  public static final String JSON_PROPERTY_LAST_UPDATED = "last_updated";
-  private OffsetDateTime lastUpdated;
+        CHIP_CARD_SUPPORT("CHIP_CARD_SUPPORT"),
 
-  public EVSE() {
-  }
+        CONTACTLESS_CARD_SUPPORT("CONTACTLESS_CARD_SUPPORT"),
 
-  public EVSE uid(String uid) {
-    
-    this.uid = uid;
-    return this;
-  }
+        CREDIT_CARD_PAYABLE("CREDIT_CARD_PAYABLE"),
 
-   /**
-   * Get uid
-   * @return uid
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        DEBIT_CARD_PAYABLE("DEBIT_CARD_PAYABLE"),
 
-  public String getUid() {
-    return uid;
-  }
+        PED_TERMINAL("PED_TERMINAL"),
 
+        REMOTE_START_STOP_CAPABLE("REMOTE_START_STOP_CAPABLE"),
 
-  @JsonProperty(JSON_PROPERTY_UID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUid(String uid) {
-    this.uid = uid;
-  }
+        RESERVABLE("RESERVABLE"),
 
+        RFID_READER("RFID_READER"),
 
-  public EVSE evseId(String evseId) {
-    
-    this.evseId = evseId;
-    return this;
-  }
+        START_SESSION_CONNECTOR_REQUIRED("START_SESSION_CONNECTOR_REQUIRED"),
 
-   /**
-   * Get evseId
-   * @return evseId
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EVSE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+        TOKEN_GROUP_CAPABLE("TOKEN_GROUP_CAPABLE"),
 
-  public String getEvseId() {
-    return evseId;
-  }
+        UNLOCK_CAPABLE("UNLOCK_CAPABLE");
 
+        private String value;
 
-  @JsonProperty(JSON_PROPERTY_EVSE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEvseId(String evseId) {
-    this.evseId = evseId;
-  }
+        CapabilitiesEnum(String value) {
+            this.value = value;
+        }
 
+        @JsonCreator
+        public static CapabilitiesEnum fromValue(String value) {
+            for (CapabilitiesEnum b : CapabilitiesEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
 
-  public EVSE status(StatusEnum status) {
-    
-    this.status = status;
-    return this;
-  }
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
 
-   /**
-   * Get status
-   * @return status
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public StatusEnum getStatus() {
-    return status;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatus(StatusEnum status) {
-    this.status = status;
-  }
-
-
-  public EVSE statusSchedule(List<StatusSchedule> statusSchedule) {
-    
-    this.statusSchedule = statusSchedule;
-    return this;
-  }
-
-  public EVSE addStatusScheduleItem(StatusSchedule statusScheduleItem) {
-    if (this.statusSchedule == null) {
-      this.statusSchedule = new ArrayList<>();
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.statusSchedule.add(statusScheduleItem);
-    return this;
-  }
 
-   /**
-   * Get statusSchedule
-   * @return statusSchedule
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUS_SCHEDULE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+    /**
+     * Gets or Sets parkingRestrictions
+     */
+    public enum ParkingRestrictionsEnum {
+        EV_ONLY("EV_ONLY"),
 
-  public List<StatusSchedule> getStatusSchedule() {
-    return statusSchedule;
-  }
+        PLUGGED("PLUGGED"),
 
+        DISABLED("DISABLED"),
 
-  @JsonProperty(JSON_PROPERTY_STATUS_SCHEDULE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatusSchedule(List<StatusSchedule> statusSchedule) {
-    this.statusSchedule = statusSchedule;
-  }
+        CUSTOMERS("CUSTOMERS"),
 
+        MOTORCYCLES("MOTORCYCLES");
 
-  public EVSE capabilities(List<CapabilitiesEnum> capabilities) {
-    
-    this.capabilities = capabilities;
-    return this;
-  }
+        private String value;
 
-  public EVSE addCapabilitiesItem(CapabilitiesEnum capabilitiesItem) {
-    if (this.capabilities == null) {
-      this.capabilities = new ArrayList<>();
+        ParkingRestrictionsEnum(String value) {
+            this.value = value;
+        }
+
+        @JsonCreator
+        public static ParkingRestrictionsEnum fromValue(String value) {
+            for (ParkingRestrictionsEnum b : ParkingRestrictionsEnum.values()) {
+                if (b.value.equals(value)) {
+                    return b;
+                }
+            }
+            throw new IllegalArgumentException("Unexpected value '" + value + "'");
+        }
+
+        @JsonValue
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(value);
+        }
     }
-    this.capabilities.add(capabilitiesItem);
-    return this;
-  }
-
-   /**
-   * Get capabilities
-   * @return capabilities
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAPABILITIES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<CapabilitiesEnum> getCapabilities() {
-    return capabilities;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CAPABILITIES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCapabilities(List<CapabilitiesEnum> capabilities) {
-    this.capabilities = capabilities;
-  }
-
-
-  public EVSE connectors(List<Connector> connectors) {
-    
-    this.connectors = connectors;
-    return this;
-  }
-
-  public EVSE addConnectorsItem(Connector connectorsItem) {
-    if (this.connectors == null) {
-      this.connectors = new ArrayList<>();
-    }
-    this.connectors.add(connectorsItem);
-    return this;
-  }
-
-   /**
-   * Get connectors
-   * @return connectors
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONNECTORS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Connector> getConnectors() {
-    return connectors;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CONNECTORS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConnectors(List<Connector> connectors) {
-    this.connectors = connectors;
-  }
-
-
-  public EVSE floorLevel(String floorLevel) {
-    
-    this.floorLevel = floorLevel;
-    return this;
-  }
-
-   /**
-   * Get floorLevel
-   * @return floorLevel
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FLOOR_LEVEL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getFloorLevel() {
-    return floorLevel;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_FLOOR_LEVEL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFloorLevel(String floorLevel) {
-    this.floorLevel = floorLevel;
-  }
-
-
-  public EVSE coordinates(GeoLocation coordinates) {
-    
-    this.coordinates = coordinates;
-    return this;
-  }
-
-   /**
-   * Get coordinates
-   * @return coordinates
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public GeoLocation getCoordinates() {
-    return coordinates;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COORDINATES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCoordinates(GeoLocation coordinates) {
-    this.coordinates = coordinates;
-  }
-
-
-  public EVSE physicalReference(String physicalReference) {
-    
-    this.physicalReference = physicalReference;
-    return this;
-  }
-
-   /**
-   * Get physicalReference
-   * @return physicalReference
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PHYSICAL_REFERENCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPhysicalReference() {
-    return physicalReference;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PHYSICAL_REFERENCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPhysicalReference(String physicalReference) {
-    this.physicalReference = physicalReference;
-  }
-
-
-  public EVSE directions(List<DisplayText> directions) {
-    
-    this.directions = directions;
-    return this;
-  }
-
-  public EVSE addDirectionsItem(DisplayText directionsItem) {
-    if (this.directions == null) {
-      this.directions = new ArrayList<>();
-    }
-    this.directions.add(directionsItem);
-    return this;
-  }
-
-   /**
-   * Get directions
-   * @return directions
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DIRECTIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<DisplayText> getDirections() {
-    return directions;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DIRECTIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDirections(List<DisplayText> directions) {
-    this.directions = directions;
-  }
-
-
-  public EVSE parkingRestrictions(List<ParkingRestrictionsEnum> parkingRestrictions) {
-    
-    this.parkingRestrictions = parkingRestrictions;
-    return this;
-  }
-
-  public EVSE addParkingRestrictionsItem(ParkingRestrictionsEnum parkingRestrictionsItem) {
-    if (this.parkingRestrictions == null) {
-      this.parkingRestrictions = new ArrayList<>();
-    }
-    this.parkingRestrictions.add(parkingRestrictionsItem);
-    return this;
-  }
-
-   /**
-   * Get parkingRestrictions
-   * @return parkingRestrictions
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARKING_RESTRICTIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<ParkingRestrictionsEnum> getParkingRestrictions() {
-    return parkingRestrictions;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PARKING_RESTRICTIONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParkingRestrictions(List<ParkingRestrictionsEnum> parkingRestrictions) {
-    this.parkingRestrictions = parkingRestrictions;
-  }
-
-
-  public EVSE images(List<Image> images) {
-    
-    this.images = images;
-    return this;
-  }
-
-  public EVSE addImagesItem(Image imagesItem) {
-    if (this.images == null) {
-      this.images = new ArrayList<>();
-    }
-    this.images.add(imagesItem);
-    return this;
-  }
-
-   /**
-   * Get images
-   * @return images
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMAGES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Image> getImages() {
-    return images;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_IMAGES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImages(List<Image> images) {
-    this.images = images;
-  }
-
-
-  public EVSE lastUpdated(OffsetDateTime lastUpdated) {
-    
-    this.lastUpdated = lastUpdated;
-    return this;
-  }
-
-   /**
-   * Get lastUpdated
-   * @return lastUpdated
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public OffsetDateTime getLastUpdated() {
-    return lastUpdated;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_LAST_UPDATED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLastUpdated(OffsetDateTime lastUpdated) {
-    this.lastUpdated = lastUpdated;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    EVSE EVSE = (EVSE) o;
-    return Objects.equals(this.uid, EVSE.uid) &&
-        Objects.equals(this.evseId, EVSE.evseId) &&
-        Objects.equals(this.status, EVSE.status) &&
-        Objects.equals(this.statusSchedule, EVSE.statusSchedule) &&
-        Objects.equals(this.capabilities, EVSE.capabilities) &&
-        Objects.equals(this.connectors, EVSE.connectors) &&
-        Objects.equals(this.floorLevel, EVSE.floorLevel) &&
-        Objects.equals(this.coordinates, EVSE.coordinates) &&
-        Objects.equals(this.physicalReference, EVSE.physicalReference) &&
-        Objects.equals(this.directions, EVSE.directions) &&
-        Objects.equals(this.parkingRestrictions, EVSE.parkingRestrictions) &&
-        Objects.equals(this.images, EVSE.images) &&
-        Objects.equals(this.lastUpdated, EVSE.lastUpdated);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(uid, evseId, status, statusSchedule, capabilities, connectors, floorLevel, coordinates, physicalReference, directions, parkingRestrictions, images, lastUpdated);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class EVSE {\n");
-    sb.append("    uid: ").append(toIndentedString(uid)).append("\n");
-    sb.append("    evseId: ").append(toIndentedString(evseId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    statusSchedule: ").append(toIndentedString(statusSchedule)).append("\n");
-    sb.append("    capabilities: ").append(toIndentedString(capabilities)).append("\n");
-    sb.append("    connectors: ").append(toIndentedString(connectors)).append("\n");
-    sb.append("    floorLevel: ").append(toIndentedString(floorLevel)).append("\n");
-    sb.append("    coordinates: ").append(toIndentedString(coordinates)).append("\n");
-    sb.append("    physicalReference: ").append(toIndentedString(physicalReference)).append("\n");
-    sb.append("    directions: ").append(toIndentedString(directions)).append("\n");
-    sb.append("    parkingRestrictions: ").append(toIndentedString(parkingRestrictions)).append("\n");
-    sb.append("    images: ").append(toIndentedString(images)).append("\n");
-    sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 
 }
 

@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## getSessions
 
-> List&lt;SessionDTO&gt; getSessions(dateFrom, dateTo, offset, limit)
+> ResponseFormatListSessionDto getSessions(dateFrom, dateTo, offset, limit)
 
 
 
@@ -36,7 +36,7 @@ public class Example {
         Integer offset = 0; // Integer | 
         Integer limit = 56; // Integer | 
         try {
-            List<SessionDTO> result = apiInstance.getSessions(dateFrom, dateTo, offset, limit);
+            ResponseFormatListSessionDto result = apiInstance.getSessions(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoSessionsApi#getSessions");
@@ -61,7 +61,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;SessionDTO&gt;**](SessionDTO.md)
+[**ResponseFormatListSessionDto**](ResponseFormatListSessionDto.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ No authorization required
 
 ## putChargingPreferences
 
-> ChargingPreferencesDTO putChargingPreferences(sessionId, chargingPreferencesDTO)
+> ResponseFormatChargingPreferences putChargingPreferences(sessionId, chargingPreferences)
 
 
 
@@ -102,9 +102,9 @@ public class Example {
 
         CpoSessionsApi apiInstance = new CpoSessionsApi(defaultClient);
         String sessionId = "sessionId_example"; // String | 
-        ChargingPreferencesDTO chargingPreferencesDTO = new ChargingPreferencesDTO(); // ChargingPreferencesDTO | 
+        ChargingPreferences chargingPreferences = new ChargingPreferences(); // ChargingPreferences | 
         try {
-            ChargingPreferencesDTO result = apiInstance.putChargingPreferences(sessionId, chargingPreferencesDTO);
+            ResponseFormatChargingPreferences result = apiInstance.putChargingPreferences(sessionId, chargingPreferences);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoSessionsApi#putChargingPreferences");
@@ -123,11 +123,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **String**|  | |
-| **chargingPreferencesDTO** | [**ChargingPreferencesDTO**](ChargingPreferencesDTO.md)|  | |
+| **chargingPreferences** | [**ChargingPreferences**](ChargingPreferences.md)|  | |
 
 ### Return type
 
-[**ChargingPreferencesDTO**](ChargingPreferencesDTO.md)
+[**ResponseFormatChargingPreferences**](ResponseFormatChargingPreferences.md)
 
 ### Authorization
 

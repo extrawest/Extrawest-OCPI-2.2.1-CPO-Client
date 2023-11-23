@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**latitude** | **String** |  |  [optional] |
-|**longitude** | **String** |  |  [optional] |
+|**latitude** | **String** |  |  |
+|**longitude** | **String** |  |  |
 
 
 

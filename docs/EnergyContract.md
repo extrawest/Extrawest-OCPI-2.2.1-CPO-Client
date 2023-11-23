@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**supplierName** | **String** |  |  [optional] |
+|**supplierName** | **String** |  |  |
 |**contractId** | **String** |  |  [optional] |
 
 

@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**startPeriod** | **Integer** |  |  [optional] |
-|**limit** | **Float** |  |  [optional] |
+|**startPeriod** | **Integer** |  |  |
+|**limit** | **Float** |  |  |
 
 
 

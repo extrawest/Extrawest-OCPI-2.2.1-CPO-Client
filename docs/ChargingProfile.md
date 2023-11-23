@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**startDateTime** | **OffsetDateTime** |  |  [optional] |
 |**duration** | **Integer** |  |  [optional] |
-|**chargingRateUnit** | [**ChargingRateUnitEnum**](#ChargingRateUnitEnum) |  |  [optional] |
+|**chargingRateUnit** | [**ChargingRateUnitEnum**](#ChargingRateUnitEnum) |  |  |
 |**minChargingRate** | **Float** |  |  [optional] |
 |**chargingProfilePeriod** | [**List&lt;ChargingProfilePeriod&gt;**](ChargingProfilePeriod.md) |  |  [optional] |
 

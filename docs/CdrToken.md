@@ -7,11 +7,11 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**countryCode** | **String** |  |  [optional] |
-|**partyId** | **String** |  |  [optional] |
-|**uid** | **String** |  |  [optional] |
-|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
-|**contractId** | **String** |  |  [optional] |
+|**countryCode** | **String** |  |  |
+|**partyId** | **String** |  |  |
+|**uid** | **String** |  |  |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  |
+|**contractId** | **String** |  |  |
 
 
 

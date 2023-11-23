@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## postCommand
 
-> CommandResponseDTO postCommand(command, abstractCommand)
+> ResponseFormatCommandResponse postCommand(command, abstractCommand)
 
 
 
@@ -33,7 +33,7 @@ public class Example {
         String command = "CANCEL_RESERVATION"; // String | 
         AbstractCommand abstractCommand = new AbstractCommand(); // AbstractCommand | 
         try {
-            CommandResponseDTO result = apiInstance.postCommand(command, abstractCommand);
+            ResponseFormatCommandResponse result = apiInstance.postCommand(command, abstractCommand);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoCommandsApi#postCommand");
@@ -56,7 +56,7 @@ public class Example {
 
 ### Return type
 
-[**CommandResponseDTO**](CommandResponseDTO.md)
+[**ResponseFormatCommandResponse**](ResponseFormatCommandResponse.md)
 
 ### Authorization
 

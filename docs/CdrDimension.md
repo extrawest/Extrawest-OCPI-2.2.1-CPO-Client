@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**type** | [**TypeEnum**](#TypeEnum) |  |  [optional] |
-|**volume** | **Float** |  |  [optional] |
+|**type** | [**TypeEnum**](#TypeEnum) |  |  |
+|**volume** | **Float** |  |  |
 
 
 

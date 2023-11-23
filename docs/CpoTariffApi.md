@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost:8080*
 
 ## getTariffs
 
-> List&lt;TariffDTO&gt; getTariffs(dateFrom, dateTo, offset, limit)
+> ResponseFormatListTariffDto getTariffs(dateFrom, dateTo, offset, limit)
 
 
 
@@ -35,7 +35,7 @@ public class Example {
         Integer offset = 0; // Integer | 
         Integer limit = 56; // Integer | 
         try {
-            List<TariffDTO> result = apiInstance.getTariffs(dateFrom, dateTo, offset, limit);
+            ResponseFormatListTariffDto result = apiInstance.getTariffs(dateFrom, dateTo, offset, limit);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CpoTariffApi#getTariffs");
@@ -60,7 +60,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;TariffDTO&gt;**](TariffDTO.md)
+[**ResponseFormatListTariffDto**](ResponseFormatListTariffDto.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: */*
+- **Accept**: application/json
 
 
 ### HTTP response details

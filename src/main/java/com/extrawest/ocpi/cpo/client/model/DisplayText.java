@@ -26,106 +26,107 @@ import java.util.Objects;
         DisplayText.JSON_PROPERTY_LANGUAGE,
         DisplayText.JSON_PROPERTY_TEXT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T18:01:53.215553+03:00[Europe/Kiev]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-23T13:23:59.711846+02:00[Europe/Kiev]")
 public class DisplayText {
-  public static final String JSON_PROPERTY_LANGUAGE = "language";
-  private String language;
+    public static final String JSON_PROPERTY_LANGUAGE = "language";
+    public static final String JSON_PROPERTY_TEXT = "text";
+    private String language;
+    private String text;
 
-  public static final String JSON_PROPERTY_TEXT = "text";
-  private String text;
-
-  public DisplayText() {
-  }
-
-  public DisplayText language(String language) {
-    
-    this.language = language;
-    return this;
-  }
-
-   /**
-   * Get language
-   * @return language
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANGUAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getLanguage() {
-    return language;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_LANGUAGE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLanguage(String language) {
-    this.language = language;
-  }
-
-
-  public DisplayText text(String text) {
-    
-    this.text = text;
-    return this;
-  }
-
-   /**
-   * Get text
-   * @return text
-  **/
-  @javax.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getText() {
-    return text;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setText(String text) {
-    this.text = text;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public DisplayText() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public DisplayText language(String language) {
+
+        this.language = language;
+        return this;
     }
-    DisplayText displayText = (DisplayText) o;
-    return Objects.equals(this.language, displayText.language) &&
-        Objects.equals(this.text, displayText.text);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(language, text);
-  }
+    /**
+     * Get language
+     *
+     * @return language
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_LANGUAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class DisplayText {\n");
-    sb.append("    language: ").append(toIndentedString(language)).append("\n");
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public String getLanguage() {
+        return language;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @JsonProperty(JSON_PROPERTY_LANGUAGE)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+
+    public DisplayText text(String text) {
+
+        this.text = text;
+        return this;
+    }
+
+    /**
+     * Get text
+     *
+     * @return text
+     **/
+    @javax.annotation.Nonnull
+    @JsonProperty(JSON_PROPERTY_TEXT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
+    public String getText() {
+        return text;
+    }
+
+
+    @JsonProperty(JSON_PROPERTY_TEXT)
+    @JsonInclude(value = JsonInclude.Include.ALWAYS)
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        DisplayText displayText = (DisplayText) o;
+        return Objects.equals(this.language, displayText.language) &&
+                Objects.equals(this.text, displayText.text);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(language, text);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class DisplayText {\n");
+        sb.append("    language: ").append(toIndentedString(language)).append("\n");
+        sb.append("    text: ").append(toIndentedString(text)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 
 }
 

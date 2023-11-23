@@ -7,19 +7,19 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uid** | **String** |  |  [optional] |
+|**uid** | **String** |  |  |
 |**evseId** | **String** |  |  [optional] |
-|**status** | [**StatusEnum**](#StatusEnum) |  |  [optional] |
+|**status** | [**StatusEnum**](#StatusEnum) |  |  |
 |**statusSchedule** | [**List&lt;StatusSchedule&gt;**](StatusSchedule.md) |  |  [optional] |
 |**capabilities** | [**List&lt;CapabilitiesEnum&gt;**](#List&lt;CapabilitiesEnum&gt;) |  |  [optional] |
-|**connectors** | [**List&lt;Connector&gt;**](Connector.md) |  |  [optional] |
+|**connectors** | [**List&lt;Connector&gt;**](Connector.md) |  |  |
 |**floorLevel** | **String** |  |  [optional] |
 |**coordinates** | [**GeoLocation**](GeoLocation.md) |  |  [optional] |
 |**physicalReference** | **String** |  |  [optional] |
 |**directions** | [**List&lt;DisplayText&gt;**](DisplayText.md) |  |  [optional] |
 |**parkingRestrictions** | [**List&lt;ParkingRestrictionsEnum&gt;**](#List&lt;ParkingRestrictionsEnum&gt;) |  |  [optional] |
 |**images** | [**List&lt;Image&gt;**](Image.md) |  |  [optional] |
-|**lastUpdated** | **OffsetDateTime** |  |  [optional] |
+|**lastUpdated** | **OffsetDateTime** |  |  |
 
 
 
