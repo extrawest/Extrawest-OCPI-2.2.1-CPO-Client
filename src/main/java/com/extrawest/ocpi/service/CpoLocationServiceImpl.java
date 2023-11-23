@@ -11,6 +11,7 @@ import java.util.List;
 
 @Service
 public class CpoLocationServiceImpl implements CpoLocationService{
+
     @Override
     public List<Location> getLocations(LocalDateTime dateFrom, LocalDateTime dateTo, Integer offset, Integer limit) {
         return null;
@@ -22,17 +23,17 @@ public class CpoLocationServiceImpl implements CpoLocationService{
     }
 
     @Override
-    public Location getLocation(String countryCode, String partyId, String locationId) {
+    public Location getLocation(String locationId) {
         return null;
     }
 
     @Override
-    public EVSE getEvse(String countryCode, String partyId, String locationId, String evseUid) {
+    public EVSE getEvse(String locationId, String evseUid) {
         return null;
     }
 
     @Override
-    public Connector getConnector(String countryCode, String partyId, String locationId, String evseUid, String connectorId) {
+    public Connector getConnector(String locationId, String evseUid, String connectorId) {
         return null;
     }
 }
