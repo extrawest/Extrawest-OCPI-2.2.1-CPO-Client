@@ -4,7 +4,7 @@ import com.extrawest.ocpi.model.dto.CredentialsDto;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CpoCredentialsServiceImpl implements CpoCredentialsService{
+public class CpoCredentialsServiceImpl implements CpoCredentialsService {
     @Override
     public CredentialsDto getCredentials() {
         return null;

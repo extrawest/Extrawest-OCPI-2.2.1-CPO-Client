@@ -1,6 +1,5 @@
 package com.extrawest.ocpi.service;
 
-import com.extrawest.ocpi.model.dto.AbstractDomainObject;
 import com.extrawest.ocpi.model.dto.location.Connector;
 import com.extrawest.ocpi.model.dto.location.EVSE;
 import com.extrawest.ocpi.model.dto.location.Location;
@@ -10,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class CpoLocationServiceImpl implements CpoLocationService{
+public class CpoLocationServiceImpl implements CpoLocationService {
 
     @Override
     public List<Location> getLocations(LocalDateTime dateFrom, LocalDateTime dateTo, Integer offset, Integer limit) {

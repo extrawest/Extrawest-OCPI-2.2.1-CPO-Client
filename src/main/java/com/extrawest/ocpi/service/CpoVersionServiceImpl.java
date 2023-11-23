@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CpoVersionServiceImpl implements CpoVersionService{
+public class CpoVersionServiceImpl implements CpoVersionService {
     @Override
     public List<VersionDto> getVersions() {
         return null;

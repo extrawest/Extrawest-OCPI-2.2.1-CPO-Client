@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class CpoCdrServiceImpl implements CpoCdrService{
+public class CpoCdrServiceImpl implements CpoCdrService {
     @Override
     public List<CDRDto> getCdr(LocalDateTime dateFrom, LocalDateTime dateTo, Integer offset, Integer limit) {
         return null;

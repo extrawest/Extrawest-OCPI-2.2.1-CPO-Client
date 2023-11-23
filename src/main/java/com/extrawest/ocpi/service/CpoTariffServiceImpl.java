@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class CpoTariffServiceImpl implements CpoTariffService{
+public class CpoTariffServiceImpl implements CpoTariffService {
     private final TariffRepository tariffRepository;
     private final TariffMapper tariffMapper;
 

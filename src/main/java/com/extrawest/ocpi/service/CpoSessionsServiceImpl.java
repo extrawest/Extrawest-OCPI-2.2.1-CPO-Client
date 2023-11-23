@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class CpoSessionsServiceImpl implements CpoSessionsService{
+public class CpoSessionsServiceImpl implements CpoSessionsService {
     @Override
     public List<SessionDto> getSessions(LocalDateTime dateFrom, LocalDateTime dateTo, Integer offset, Integer limit) {
         return null;

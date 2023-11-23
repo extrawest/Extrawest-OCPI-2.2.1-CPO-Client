@@ -5,7 +5,7 @@ import com.extrawest.ocpi.model.enums.TokenType;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CpoTokensServiceImpl implements CpoTokensService{
+public class CpoTokensServiceImpl implements CpoTokensService {
     @Override
     public TokenDto getToken(String countryCode, String partyId, String tokenUid, TokenType type) {
         return null;
